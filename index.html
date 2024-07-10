@@ -3,20 +3,44 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/style.scss" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
         <title>Okinea Dev</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const projectTabs = document.querySelectorAll('.project-tab');
+                projectTabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+                        const link = tab.getAttribute('repo-link');
+                        if (link) {
+                            window.open(link, '_blank')
+                        }
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
+        <img class="bubbles" src="images/bubbles.webp" alt="Bubbles">
         <div class="profile-card">
             <div class="info">
                 <h1 class="name">Okinea Dev</h1>
                 <div class="meta-info">
                     <span class="meta-item">
-                        <img src="icons/location.svg" />
+                        <img class="icon" src="icons/location.svg" alt="Location"/>
+                        <img class="emoji" src="emojis/ua-flag.webp" alt="UA" />
                         <span>Ukraine</span>
                     </span>
                     <span class="meta-item">
-                        <img src="icons/github.svg" />
+                        <img class="icon" src="icons/github.svg" alt="GitHub"/>
                         <a href="https://github.com/okineadev">
                             <span>okineadev<span>
                         </a>
@@ -24,14 +48,75 @@
                 </div>
                 <div class="description">
                     <p>
-                        Hello <img src="emojis/hello.png" width="18">, my name is <b>Yura</b> and I am a developer. I write mainly in <b>Python</b>, <b>JavaScript</b> and <b>Bash</b>
+                        Hello <img class="emoji" src="emojis/hello.webp" alt="Waving Hand" />, my name is <b>Yura</b> and I am a developer. I write mainly in <b>Python</b>, <b>JavaScript</b> and <b>Bash</b>
                     </p>
                     <p>I also have experience with <b>Linux</b> and understand hardware</p>
                     <p>If I have time, I help open source projects like <a href="https://github.com/material-extensions/vscode-material-icon-theme"><b>vscode-material-icon-theme</b></a>, <a href="https://github.com/tldr-pages/tldr"><b>tldr</b></a> and sponsor them, and I also make notes about how I fixed bugs on my <a href="https://gist.github.com/okineadev"><b>Gist</b></a></p>
                 </div>
             </div>
             <div class="avatar">
-                <img src="avatar.jpg" alt="Avatar" />
+                <img src="images/avatar.webp" alt="Avatar" />
+            </div>
+        </div>
+
+        <h1 class="center">My projects</h1>
+
+        <p>List of my best projects</p>
+
+        <div class="projects">
+            <div class="project-tab" repo-link="https://github.com/okineadev/dotload">
+                <div class="project-header">
+                    <div class="repo">
+                        <img class="icon" src="icons/repo.svg" alt="Repo" />
+                        <span class="name">dotload</span>
+                    </div>
+
+                    <img src="icons/open.svg" alt="Open">
+                </div>
+
+                <div class="description">
+                    <p>Simple, intuitive and fast⚡tool for installing <b>dotfiles</b> and other tools on <b>any</b> machine!</p>
+                </div>
+            </div>
+            <div class="project-tab" repo-link="https://github.com/instoll-sh/instoll">
+                <div class="project-header">
+                    <div class="repo">
+                        <img class="icon" src="icons/repo.svg" alt="Repo" />
+                        <span class="name">instoll</span>
+                    </div>
+
+                    <img src="icons/open.svg" alt="Open">
+                </div>
+                <div class="description">
+                    <p>A tool to easily install packages from <b>GitHub</b> that have an <b>install.sh</b> file</p>
+                </div>
+            </div>
+            <div class="project-tab" repo-link="https://github.com/okineadev/carbonize-browser-extension">
+                <div class="project-header">
+                    <div class="repo">
+                        <img class="icon" src="icons/repo.svg" alt="Repo" />
+                        <span class="name">carbonize-browser-extension</span>
+                    </div>
+
+                    <img src="icons/open.svg" alt="Open">
+                </div>
+                <div class="description">
+                    <p>Create Carbon screenshots of selected code</p>
+                </div>
+            </div>
+
+            <div class="project-tab" repo-link="https://github.com/okineadev/neko-chan-bot">
+                <div class="project-header">
+                    <div class="repo">
+                        <img class="icon" src="icons/repo.svg" alt="Repo" />
+                        <span class="name">Lorem, ipsum dolor</span>
+                    </div>
+
+                    <img src="icons/open.svg" alt="Open">
+                </div>
+                <div class="description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi?</p>
+                </div>
             </div>
         </div>
     </body>
