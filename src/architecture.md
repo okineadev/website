@@ -39,3 +39,4 @@
 - [`vite-plugin-browser-sync`](https://github.com/Applelo/vite-plugin-browser-sync): Used for live browser sync.
 - [`vite-plugin-compression2`](https://github.com/nonzzz/vite-plugin-compression): Used for compression of assets.
 - [`vite-plugin-html`](https://github.com/vbenjs/vite-plugin-html): Used for HTML template processing.
+- [`vite-plugin-sitemap`](https://github.com/jbaubree/vite-plugin-sitemap): Used for generating sitemap.
