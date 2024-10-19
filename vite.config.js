@@ -2,6 +2,7 @@ import liveReload from "vite-plugin-live-reload";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { compression } from "vite-plugin-compression2";
 // import VitePluginBrowserSync from 'vite-plugin-browser-sync'
+import Sitemap from "vite-plugin-sitemap";
 import { defineConfig } from "vite";
 
 /**
@@ -51,6 +52,7 @@ export default defineConfig({
 			filter: /\.(js|css|html)$/i,
 			// verbose: true
 		}),
+		Sitemap({ hostname: "https://okinea.website" }),
 		// VitePluginBrowserSync()
 	],
 	root: "src",
