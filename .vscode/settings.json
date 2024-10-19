@@ -7,7 +7,7 @@
 	},
 	"github.copilot.chat.experimental.codeGeneration.instructions": [
 		{
-			"file": "/architecture.md"
+			"file": "/src/architecture.md"
 		}
 	],
 	"github.copilot.chat.experimental.codeGeneration.useInstructionFiles": true

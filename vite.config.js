@@ -53,10 +53,13 @@ export default defineConfig({
 		}),
 		// VitePluginBrowserSync()
 	],
+	root: "src",
 	server: {
 		open: true,
 	},
 	build: {
+		outDir: "../dist",
+		emptyOutDir: true,
 		// assetsInlineLimit: 0
 	},
 });

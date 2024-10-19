@@ -85,7 +85,7 @@ i.icon {
 	}
 
 	&.unsplash {
-		@include monochromeIcon("/other/Unsplash-symbol-dark.svg");
+		@include monochromeIcon("/../other/Unsplash-symbol-dark.svg");
 	}
 
 	&.medium {
