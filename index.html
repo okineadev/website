@@ -1,147 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Okinea Dev</title>
-        <meta name="description" content="Information about me">
-        <meta name="image" content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/images/preview.png" />
-
-        <!-- Open Graph-->
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/images/preview.png">
-        <meta property="og:url" content="okinea.is-a.dev" />
-		<meta property="og:title" content="Okinea Dev website" />
-        <meta
-			property="og:description"
-			content="Information about me"
+		<title>Okinea Dev</title>
+		<meta name="description" content="Information about me" />
+		<meta
+			name="image"
+			content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/images/preview.png"
 		/>
-        <meta property="og:image:alt" content="Image" />
 
-        <link rel="stylesheet" href="/style.scss" />
+		<!-- Open Graph-->
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/images/preview.png"
+		/>
+		<meta property="og:url" content="https://okinea.website" />
+		<meta property="og:title" content="Okinea Dev" />
+		<meta property="og:description" content="Information about me" />
+		<!-- <meta property="og:image:alt" content="Image" /> -->
 
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+		<!-- <meta
+			http-equiv="Content-Security-Policy"
+			content="script-src 'self'"
+		/> -->
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TM7HRVX06"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "okineadev",
+				"url": "https://okinea.website",
+				"birthDate": "2008",
+				"gender": "male",
+				"nationality": "Ukrainian",
+				"sameAs": ["https://github.com/okineadev", "https://t.me/okineadev"],
+				"jobTitle": "Software Developer"
+			}
+		</script>
 
-        gtag('config', 'G-0TM7HRVX06');
-        </script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const projectTabs = document.querySelectorAll('.project-tab');
-                projectTabs.forEach(tab => {
-                    tab.addEventListener('click', function () {
-                        const link = tab.getAttribute('repo-link');
-                        if (link) {
-                            window.open(link, '_blank')
-                        }
-                    });
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <img class="bubbles" src="images/bubbles.webp" alt="Bubbles">
-        <div class="profile-card">
-            <div class="info">
-                <h1 class="name">Okinea Dev</h1>
-                <div class="meta-info">
-                    <span class="meta-item">
-                        <img class="icon" src="icons/location.svg" alt="Location"/>
-                        <img class="emoji" src="emojis/ua-flag.webp" alt="UA" />
-                        <span>Ukraine</span>
-                    </span>
-                    <span class="meta-item">
-                        <img class="icon" src="icons/github.svg" alt="GitHub"/>
-                        <a href="https://github.com/okineadev">
-                            <span>okineadev<span>
-                        </a>
-                    </span>
-                </div>
-                <div class="description">
-                    <p>
-                        Hello <img class="emoji" src="emojis/hello.webp" alt="Waving Hand" />, my name is <b>Yura</b> and I am a developer. I write mainly in <b>Python</b>, <b>JavaScript</b> and <b>Bash</b>
-                    </p>
-                    <p>I also have experience with <b>Linux</b> and understand hardware</p>
-                    <p>If I have time, I help open source projects like <a href="https://github.com/material-extensions/vscode-material-icon-theme"><b>vscode-material-icon-theme</b></a>, <a href="https://github.com/tldr-pages/tldr"><b>tldr</b></a> and sponsor them, and I also make notes about how I fixed bugs on my <a href="https://gist.github.com/okineadev"><b>Gist</b></a></p>
-                </div>
-            </div>
-            <div class="avatar">
-                <img src="images/avatar.webp" alt="Avatar" />
-            </div>
-        </div>
+		<link rel="preconnect" href="https://skillicons.dev" />
 
-        <h1 class="center">My projects</h1>
+		<link rel="stylesheet" href="scss/style.scss" />
 
-        <p>List of my best projects</p>
+		<!-- Google tag (gtag.js) -->
+		<%- gtagScript %>
+	</head>
+	<body>
+		<!-- Color theme switch slider -->
+		<button
+			class="theme-toggle"
+			id="theme-toggle"
+			title="Toggles light &amp; dark"
+			aria-label="dark"
+			aria-live="polite"
+		>
+			<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+				<mask class="moon" id="moon-mask">
+					<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+					<circle cx="24" cy="10" r="6" fill="black"></circle>
+				</mask>
+				<circle
+					class="sun"
+					cx="12"
+					cy="12"
+					r="6"
+					mask="url(#moon-mask)"
+					fill="currentColor"
+				></circle>
+				<g class="sun-beams" stroke="currentColor">
+					<line x1="12" y1="1" x2="12" y2="3"></line>
+					<line x1="12" y1="21" x2="12" y2="23"></line>
+					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+					<line x1="1" y1="12" x2="3" y2="12"></line>
+					<line x1="21" y1="12" x2="23" y2="12"></line>
+					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+				</g>
+			</svg>
+		</button>
 
-        <div class="projects">
-            <div class="project-tab" repo-link="https://github.com/okineadev/dotload">
-                <div class="project-header">
-                    <div class="repo">
-                        <img class="icon" src="icons/repo.svg" alt="Repo" />
-                        <span class="name">dotload</span>
-                    </div>
+		<div class="background-gradient"></div>
+		<picture id="rock">
+			<source srcset="images/rock.webp" type="image/webp" fetchpriority="high" />
+			<source srcset="images/rock.png" type="image/png" fetchpriority="high" />
+			<img src="images/rock.png" alt="" fetchpriority="high" />
+		</picture>
 
-                    <img src="icons/open.svg" alt="Open">
-                </div>
+		<div class="content">
+			<div class="profile-card">
+				<div id="dots"></div>
 
-                <div class="description">
-                    <p>Simple, intuitive and fast⚡tool for installing <b>dotfiles</b> and other tools on <b>any</b> machine!</p>
-                </div>
-            </div>
-            <div class="project-tab" repo-link="https://github.com/instoll-sh/instoll">
-                <div class="project-header">
-                    <div class="repo">
-                        <img class="icon" src="icons/repo.svg" alt="Repo" />
-                        <span class="name">instoll</span>
-                    </div>
+				<div class="info">
+					<h1 class="name">Okinea Dev</h1>
+					<div class="meta-info">
+						<span class="meta-item">
+							<i class="icon location"></i>
+							<i class="emoji ua-flag"></i>
+							<span>Ukraine</span>
+						</span>
+						<span class="meta-item">
+							<i class="icon github"></i>
+							<a href="https://github.com/okineadev">
+								<span>okineadev</span>
+							</a>
+						</span>
+					</div>
+					<div class="description">
+						<p>
+							Hello <i class="emoji hello"></i>, my name is <b>Yura</b> and I am a developer. I
+							write mainly in <b>Python</b>, <b>JavaScript</b> and
+							<b>Bash</b>
+						</p>
+						<p>I also have experience with <b>Linux</b> and understand hardware</p>
+						<p>
+							If I have time, I help open source projects like
+							<a href="https://github.com/material-extensions/vscode-material-icon-theme"
+								><b>vscode-material-icon-theme</b></a
+							>,
+							<a href="https://github.com/tldr-pages/tldr"><b>tldr</b></a>
+							and sponsor them, and I also make notes about how I fixed bugs on my
+							<a href="https://gist.github.com/okineadev"><b>Gist</b></a>
+						</p>
+					</div>
+				</div>
 
-                    <img src="icons/open.svg" alt="Open">
-                </div>
-                <div class="description">
-                    <p>A tool to easily install packages from <b>GitHub</b> that have an <b>install.sh</b> file</p>
-                </div>
-            </div>
-            <div class="project-tab" repo-link="https://github.com/okineadev/carbonize-browser-extension">
-                <div class="project-header">
-                    <div class="repo">
-                        <img class="icon" src="icons/repo.svg" alt="Repo" />
-                        <span class="name">carbonize-browser-extension</span>
-                    </div>
+				<div class="dynamic-blobs-container">
+					<div class="blue blob"></div>
+					<div class="cyan blob"></div>
+					<div class="purple blob"></div>
+				</div>
+			</div>
 
-                    <img src="icons/open.svg" alt="Open">
-                </div>
-                <div class="description">
-                    <p>Create Carbon screenshots of selected code</p>
-                </div>
-            </div>
+			<h1 class="center" id="projects">My projects</h1>
 
-            <div class="project-tab" repo-link="https://github.com/okineadev/neko-chan-bot">
-                <div class="project-header">
-                    <div class="repo">
-                        <img class="icon" src="icons/repo.svg" alt="Repo" />
-                        <span class="name">neko-chan-bot</span>
-                    </div>
+			<p>List of my best projects</p>
 
-                    <img src="icons/open.svg" alt="Open">
-                </div>
-                <div class="description">
-                    <p>A Telegram bot with cute nekos (and not only) 😺</p>
-                </div>
-            </div>
-        </div>
-    </body>
+			<div class="projects">
+				<div class="project-tab" data-link="https://github.com/okineadev/dotload">
+					<div class="main-tab">
+						<div class="project-header">
+							<div class="repo">
+								<i class="icon repo"></i>
+								<span class="name">dotload</span>
+							</div>
+
+							<i class="icon open"></i>
+						</div>
+
+						<div class="description">
+							<p>
+								Simple, intuitive and fast⚡tool for installing
+								<b>dotfiles</b> and other tools on <b>any</b> machine!
+							</p>
+						</div>
+					</div>
+
+					<div class="slider">
+						<picture>
+							<source srcset="images/dotload-banner.webp" type="image/webp" fetchpriority="low" />
+							<source srcset="images/dotload-banner.png" type="image/png" fetchpriority="low" />
+							<img src="images/dotload-banner.png" alt="dotload banner" fetchpriority="low" />
+						</picture>
+					</div>
+				</div>
+				<div class="project-tab" data-link="https://github.com/instoll-sh/instoll">
+					<div class="main-tab">
+						<div class="project-header">
+							<div class="repo">
+								<i class="icon repo"></i>
+								<span class="name">instoll</span>
+							</div>
+
+							<i class="icon open"></i>
+						</div>
+						<div class="description">
+							<p>
+								A tool to easily install packages from
+								<b>GitHub</b> that have an <b>install.sh</b> file
+							</p>
+						</div>
+
+						<div class="slider">
+							<img src="images/instoll-banner.png" alt="instoll banner" fetchpriority="low" />
+						</div>
+					</div>
+				</div>
+
+				<div class="project-tab" data-link="https://github.com/okineadev/okineadev-website">
+					<div class="main-tab">
+						<div class="project-header">
+							<div class="repo">
+								<i class="icon repo"></i>
+								<span class="name">okineadev-website</span>
+							</div>
+
+							<i class="icon open"></i>
+						</div>
+						<div class="description">
+							<p>This cool website</p>
+						</div>
+
+						<div class="slider">
+							<picture>
+								<source
+									srcset="images/website-screenshot.webp"
+									type="image/webp"
+									fetchpriority="low"
+								/>
+								<source
+									srcset="images/website-screenshot.png"
+									type="image/png"
+									fetchpriority="low"
+								/>
+								<img
+									src="images/website-screenshot.png"
+									alt="Website screenshot"
+									fetchpriority="low"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="project-tab"
+					data-link="https://github.com/okineadev/platform-tools-installer-gui"
+				>
+					<div class="main-tab">
+						<div class="project-header">
+							<div class="repo">
+								<i class="icon repo"></i>
+								<span class="name">platform-tools-installer-gui</span>
+							</div>
+
+							<i class="icon open"></i>
+						</div>
+						<div class="description">
+							<p>Unofficial platform-tools graphical installer (adb, fastboot) for Windows™</p>
+						</div>
+
+						<div class="slider">
+							<picture>
+								<source srcset="images/Android.webp" type="image/webp" fetchpriority="low" />
+								<source srcset="images/Android.png" type="image/png" fetchpriority="low" />
+								<img src="images/Android.png" alt="Android" fetchpriority="low" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h1 class="center skills-title" id="skills">Skills</h1>
+
+			<div class="skills">
+				<a href="https://www.python.org/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=py" alt="python logo" width="45" height="45"
+				/></a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=js"
+						alt="javascript logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://www.typescriptlang.org/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=ts"
+						alt="typescript logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"
+					><img src="https://skillicons.dev/icons?i=html" alt="html5 logo" width="45" height="45"
+				/></a>
+				<a href="https://jquery.com/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=jquery"
+						alt="jquery logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"
+					><img src="https://skillicons.dev/icons?i=css" alt="css3 logo" width="45" height="45"
+				/></a>
+				<a href="https://getbootstrap.com/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=bootstrap"
+						alt="bootstrap logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://sass-lang.com/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=sass" alt="sass logo" width="45" height="45"
+				/></a>
+				<a href="https://vuejs.org/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=vue" alt="vuejs logo" width="45" height="45"
+				/></a>
+				<a href="https://babeljs.io/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=babel" alt="babel logo" width="45" height="45"
+				/></a>
+				<a href="https://jestjs.io/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=jest" alt="jest logo" width="45" height="45"
+				/></a>
+				<a href="https://vitejs.dev/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=vite" alt="vite logo" width="45" height="45"
+				/></a>
+				<a href="https://webpack.js.org/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=webpack"
+						alt="webpack logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://gulpjs.com/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=gulp" alt="gulp logo" width="45" height="45"
+				/></a>
+
+				<a href="https://github.com/features/actions" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=githubactions"
+						alt="githubactions logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://wikipedia.org/wiki/Bash" target="_blank"
+					><img src="https://skillicons.dev/icons?i=bash" alt="bash logo" width="45" height="45"
+				/></a>
+				<a href="https://learn.microsoft.com/powershell/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=powershell"
+						alt="PowerShell logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://git-scm.com/" target="_blank"
+					><img src="https://skillicons.dev/icons?i=git" alt="git logo" width="45" height="45"
+				/></a>
+				<a href="https://wikipedia.org/wiki/Linux" target="_blank"
+					><img src="https://skillicons.dev/icons?i=linux" alt="linux logo" width="45" height="45"
+				/></a>
+				<a href="https://ubuntu.com/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=ubuntu"
+						alt="ubuntu logo"
+						width="45"
+						height="45"
+				/></a>
+				<a href="https://www.docker.com/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=docker"
+						alt="docker logo"
+						width="45"
+						height="45"
+				/></a>
+				<img src="https://skillicons.dev/icons?i=sqlite" alt="sqlite logo" width="45" height="45" />
+				<a href="https://www.electronjs.org/" target="_blank"
+					><img
+						src="https://skillicons.dev/icons?i=electron"
+						alt="electron logo"
+						width="45"
+						height="45"
+				/></a>
+			</div>
+
+			<h1 class="center" id="socials">Socials</h1>
+
+			<div class="contacts">
+				<a href="https://github.com/okineadev" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon github" width="50" height="50"></i>
+						</div>
+						<span>GitHub</span>
+					</div>
+				</a>
+				<a href="https://unsplash.com/@okineadev" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon unsplash" width="50" height="50"></i>
+						</div>
+						<span>Unsplash</span>
+					</div>
+				</a>
+				<a href="https://t.me/okinea" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon telegram" width="50" height="50"></i>
+						</div>
+						<span>Telegram</span>
+					</div>
+				</a>
+				<a href="https://okineadev.medium.com" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon medium" width="50" height="50"></i>
+						</div>
+						<span>Medium</span>
+					</div>
+				</a>
+				<a href="https://discord.com/users/okineadev" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon discord" width="50" height="50"></i>
+						</div>
+						<span>Discord</span>
+					</div>
+				</a>
+				<a href="https://stackoverflow.com/users/21165921/okinea-dev" target="_blank">
+					<div class="social">
+						<div class="social-icon">
+							<i class="icon stack-overflow"></i>
+						</div>
+						<span>Stack Overflow</span>
+					</div>
+				</a>
+			</div>
+
+			<h1 class="center">
+				My posts on
+				<img src="images/medium.svg" class="medium-logo" alt="Medium" height="34" />
+			</h1>
+
+			<div class="medium-posts-container">
+				<div
+					class="post"
+					data-link="https://medium.com/@okineadev/how-to-get-a-free-macos-machine-for-testing-b2f6c72415fd"
+				>
+					<i class="icon open"></i>
+
+					<!-- Photo by Manuel Cosentino on Unsplash -->
+					<!-- https://unsplash.com/photos/mt-fuji-n--CMLApjfI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+					<picture>
+						<source srcset="/images/illustration-1.webp" type="image/webp" />
+						<source srcset="/images/illustration-1.jpg" type="image/jpg" />
+						<img
+							src="/images/illustration-1.jpg"
+							alt="Mount Fuji with a Japanese pagoda in the foreground"
+						/>
+					</picture>
+					<div class="info">
+						<h2>How to get a free macOS machine for testing?</h2>
+						<p>
+							It happens that you have created a program and want to test it on different operating
+							systems (including macOS) but if ...
+						</p>
+					</div>
+				</div>
+				<div
+					class="post"
+					data-link="https://medium.com/@okineadev/how-to-set-up-vnc-on-a-headless-raspberry-pi-with-ubuntu-server-24-04-96cc8ddf65bc"
+				>
+					<i class="icon open"></i>
+
+					<!-- Photo by Pramod Tiwari on Unsplash -->
+					<!-- https://unsplash.com/photos/a-room-with-a-desk-and-a-chair-in-it-qxhrOLO52os?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+					<picture>
+						<source srcset="/images/illustration-2.webp" type="image/webp" />
+						<source srcset="/images/illustration-2.jpg" type="image/jpg" />
+						<img
+							src="/images/illustration-2.jpg"
+							alt="3D-rendered room with a desk, computer, and bookshelf"
+						/>
+					</picture>
+					<div class="info">
+						<h2>How to set up VNC on a headless Raspberry Pi...</h2>
+						<p>
+							If you have Ubuntu Server installed on your Raspberry Pi and you want to connect to
+							its interface without a monitor or mouse?
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<!--
+
+	This script adds an animation effect to elements within the ".content" container when they come into view, provided the user has not set a preference for reduced motion.
+
+	- The script checks if the user has no preference for reduced motion using `window.matchMedia`.
+	- It selects all direct child elements of the ".content" container.
+	- An `IntersectionObserver` is created to observe when these elements intersect with the viewport.
+	- When an element intersects, it adds the "animate" class to the element with a delay based on the element's index.
+	- The observer stops observing an element once it has been animated.
+	- The threshold for intersection is set to 0.1, meaning the callback is triggered when 10% of the element is visible.
+	-->
+	<script>
+		if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+			const contentElements = document.querySelectorAll(".content > *");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry, index) => {
+						if (entry.isIntersecting) {
+							setTimeout(() => {
+								entry.target.classList.add("animate");
+								observer.unobserve(entry.target); // Stop observing once animated
+							}, index * 200); // Apply delay based on index
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			); // Adjust threshold as needed
+
+			contentElements.forEach((element) => {
+				observer.observe(element);
+			});
+		}
+	</script>
+
+	<script src="js/main.js" type="module"></script>
+
+	<svg style="display: none">
+		<filter id="noiseFilter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch" />
+			<feColorMatrix
+				in="colorNoise"
+				type="matrix"
+				values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
+			/>
+			<!-- <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/> -->
+			<!-- <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" /> -->
+		</filter>
+	</svg>
 </html>

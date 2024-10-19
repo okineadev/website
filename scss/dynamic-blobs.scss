@@ -1,0 +1,82 @@
+@use "variables.scss";
+@use "/animations/keyframes.scss";
+
+// Blob container styles
+.dynamic-blobs-container {
+	position: relative;
+	z-index: -3;
+
+	width: 250px;
+	height: 250px;
+	/* position: absolute; */
+	/* right: calc((100% - 50rem) / 2 + 25px); */
+	top: 40px;
+
+	margin-inline: auto;
+
+	// Fade animation (not infinite)
+	@media (prefers-reduced-motion: no-preference) {
+		animation: fade 1.5s ease-out forwards;
+	}
+
+	.blob {
+		border-radius: 100px;
+		filter: blur(75px);
+
+		position: absolute;
+
+		&.blue {
+			background-color: var(--blue-gradient-blob-color);
+			height: 225px;
+
+			width: 225px;
+
+			@media (prefers-reduced-motion: no-preference) {
+				animation: blue 8s infinite ease;
+			}
+
+			@media (prefers-reduced-motion) {
+				top: 120px;
+				left: 100px;
+
+				transform: scale(1.1);
+			}
+		}
+
+		&.cyan {
+			background-color: var(--cyan-gradient-blob-color);
+			height: 120px;
+
+			width: 170px;
+
+			@media (prefers-reduced-motion: no-preference) {
+				animation: cyan 8s infinite ease;
+			}
+
+			@media (prefers-reduced-motion) {
+				top: 50px;
+				right: -20px;
+
+				transform: scale(1);
+			}
+		}
+
+		&.purple {
+			background-color: var(--purple-gradient-blob-color);
+			height: 150px;
+
+			width: 150px;
+
+			@media (prefers-reduced-motion: no-preference) {
+				animation: purple 8s infinite linear;
+			}
+
+			@media (prefers-reduced-motion) {
+				top: 190px;
+				right: 60px;
+
+				transform: scale(1.1);
+			}
+		}
+	}
+}

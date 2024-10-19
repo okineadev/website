@@ -1,0 +1,98 @@
+// SCSS variables and mixins for theming
+
+// Constants
+:root {
+	// Ease timing functions
+	--ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+	--ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+	--ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+	--ease-out-5: cubic-bezier(0, 0, 0, 1);
+
+	--blue-gradient-blob-color: #007bff;
+	--cyan-gradient-blob-color: cyan;
+	--purple-gradient-blob-color: #9700c4;
+
+	--medium-logo-background-color: #00ff90;
+	--medium-post-title-color: white;
+	--medium-post-caption-color: #d9d9d9;
+}
+
+// ====== Dark and light themes ======
+
+// Dark theme
+@mixin dark-theme() {
+	// Background and text colors
+	--background-color: #101010;
+	--text-color: white;
+
+	--socials-caption-hover-color: white;
+
+	// Link colors
+	--link-color: #949292;
+	--link-hover-color: #bbbbbb;
+
+	// Icon and dots colors
+	--icons-color: rgb(255, 255, 255);
+	--dots-color: #212121;
+	--devicon-remix-color: #242938;
+	--theme-switch-color: #abb3ba;
+	--theme-switch-hover-color: #e2e6e9;
+
+	// Meta info colors
+	--meta-info-color: #c2bfbf;
+
+	// Project tab colors
+	--project-tab-background-color: #262525;
+	--project-tab-description-text-color: #939393;
+}
+
+// Light theme
+@mixin light-theme() {
+	// Background and text colors
+	--background-color: #fff;
+	--text-color: black;
+
+	--socials-caption-hover-color: black;
+
+	// Link colors
+	--link-color: #6d6d6d;
+	--link-hover-color: #484848;
+
+	// Icon and dots colors
+	--icons-color: black;
+	--dots-color: #e4e4e4;
+	--devicon-remix-color: white;
+	--theme-switch-color: #454d54;
+	--theme-switch-hover-color: #22262a;
+
+	// Meta info colors
+	--meta-info-color: #4c4c4c;
+
+	// Project tab colors
+	--project-tab-background-color: #ffffff;
+	--project-tab-description-text-color: #757575;
+}
+
+// Apply dark theme based on user's system preference
+@media (prefers-color-scheme: dark) {
+	body {
+		@include dark-theme();
+	}
+}
+
+// Apply light theme based on user's system preference
+@media (prefers-color-scheme: light) {
+	body {
+		@include light-theme();
+	}
+}
+
+// Apply dark theme to body with class 'dark'
+body.dark {
+	@include dark-theme();
+}
+
+// Apply light theme to body with class 'light'
+body.light {
+	@include light-theme();
+}

@@ -1,0 +1,427 @@
+/*
+
+	This SCSS file is the main stylesheet for the okineadev website. It includes various modules and styles for different sections of the website.
+
+	Modules:
+	- variables.scss: Contains theme colors.
+	- /animations/keyframes.scss: Contains keyframes for animations.
+	- icons.scss: Contains icon styles.
+	- dynamic-blobs.scss: Contains styles for dynamic gradient blobs on the page.
+	- theme-switch.scss: Contains styles for the theme switcher.
+	- project-cards.scss: Contains styles for project cards.
+	- medium-posts.scss: Contains styles for the Medium posts section.
+
+	Google Fonts:
+	- Raleway: Used for headings (h1, h2, h3, h4).
+	- Readex Pro: Used for paragraphs (p) and spans.
+
+	Global Styles:
+	- Sets box-sizing to border-box for all elements.
+
+	Body Styles:
+	- Sets margin, overflow, padding, background color, and text color for the body.
+
+	Content Styles:
+	- Centers content and applies padding and width.
+	- Animates first-level elements within .content if prefers-reduced-motion is not set.
+
+	Font Family Styles:
+	- Applies Raleway font to headings.
+	- Applies Readex Pro font to paragraphs and spans.
+
+	Heading Styles:
+	- Sets font size and margin for h1.
+
+	Paragraph Styles:
+	- Sets font size for paragraphs.
+
+	Bold Text Styles:
+	- Sets font weight for bold text.
+
+	Link Styles:
+	- Sets color and white-space for links.
+	- Adds hover effect and transition for links if prefers-reduced-motion is not set.
+
+	Center Alignment:
+	- Centers text for elements with the .center class.
+
+	Magic Pattern Styles:
+	- Styles for the #dots element, including size, mask, background color, position, and animation.
+
+	Noise Filter Styles:
+	- Adds a noise filter overlay to the body.
+
+	Profile Card Styles:
+	- Styles for the .profile-card element, including layout and child elements (.info, .name, .meta-info, .meta-item, .description).
+
+	Skills Section Styles:
+	- Styles for the .skills section, including layout, gap, and hover effects for skill icons.
+
+	Background Gradient Styles:
+	- Styles for the .background-gradient element, including gradient, size, position, and animation.
+
+	Contacts Section Styles:
+	- Styles for the .contacts section, including layout and hover effects for social icons.
+
+	Rock Element Styles:
+	- Styles for the #rock element, including position and size.
+
+	Media Queries:
+	- Hides .dynamic-blobs-container on screens smaller than 890px.
+	- Adjusts .content width and .profile-card .info .name font size on screens smaller than 550px.
+*/
+@use "variables.scss"; // Theme colors
+@use "/animations/keyframes.scss"; // Keyframes for animations
+@use "icons.scss"; // Icons
+@use "dynamic-blobs.scss"; // Dynamic gradient blobs on the page
+@use "theme-switch.scss"; // Theme switcher
+@use "project-cards.scss"; // Cards with my projects
+@use "medium-posts.scss"; // Medium posts section
+
+// Importing Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+// Global styles
+* {
+	box-sizing: border-box;
+}
+
+// Body styles
+body {
+	margin: 0;
+	overflow-x: hidden;
+
+	padding-bottom: 30px;
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-inline: 20px;
+	width: 85%;
+	position: relative;
+
+	margin-top: 30px;
+
+	// Animation of all first-level elements in .content
+	& > * {
+		@media (prefers-reduced-motion: no-preference) {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		&.animate {
+			animation: fadeInUp 0.8s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+// Font family styles
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Raleway", sans-serif;
+}
+
+p,
+span {
+	font-family: "Readex Pro", sans-serif;
+}
+
+// Heading styles
+h1 {
+	font-size: 40px;
+	margin-block: 50px;
+}
+
+// Paragraph styles
+p {
+	font-size: 20px;
+}
+
+// Bold text styles
+b {
+	font-weight: 500;
+}
+
+// Link styles
+a {
+	color: var(--link-color);
+	white-space: nowrap;
+
+	&:hover {
+		color: var(--link-hover-color);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		transition: color 0.15s ease-in-out;
+	}
+}
+
+// Center alignment
+.center {
+	text-align: center;
+}
+
+// Magic pattern styles
+#dots {
+	width: 700px;
+	height: 700px;
+
+	mask-size: cover;
+	mask-image: url("/images/dots.svg");
+
+	background-color: var(--dots-color);
+	position: absolute;
+	z-index: -1;
+
+	// left: calc(((100% - 70rem) / 2) - 40px);
+	left: -40px;
+	top: -80px;
+
+	object-position: left;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: fade 1s ease-out forwards;
+	}
+}
+
+// Noise filter styles
+body::after {
+	content: "";
+	position: fixed;
+
+	left: 0;
+	top: 0;
+
+	width: 100%;
+	height: 100%;
+
+	z-index: -2;
+	opacity: 13%;
+	filter: url(#noiseFilter);
+}
+
+// Profile card styles
+.profile-card {
+	display: flex;
+	justify-content: space-between;
+
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: flex-start;
+
+	// Info section styles
+	.info {
+		display: flex;
+		flex-direction: column;
+
+		width: 500px;
+
+		.name {
+			font-size: 70px;
+			max-width: 100%;
+
+			margin: 0;
+		}
+
+		// Meta info styles
+		.meta-info {
+			display: flex;
+			flex-wrap: wrap;
+
+			margin-left: 6px;
+
+			span,
+			a {
+				color: var(--meta-info-color);
+			}
+
+			// Meta item styles
+			.meta-item {
+				display: flex;
+				align-items: center;
+
+				margin-right: 10px;
+			}
+		}
+
+		// Description section styles
+		.description {
+			padding-block: 10px;
+			margin-top: 10px;
+
+			p {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+// Skills section styles
+.skills {
+	display: flex;
+	flex-direction: row;
+
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: center;
+
+	max-width: 1000px;
+	margin-inline: auto;
+
+	// Skill icon
+	a {
+		display: inline-block;
+
+		@media (prefers-reduced-motion: no-preference) {
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	a:hover img,
+	img:hover {
+		transform: scale(1.15) translateY(-4px);
+	}
+
+	img {
+		display: block;
+		height: 45px;
+	}
+}
+
+// Background gradient styles
+.background-gradient {
+	background: linear-gradient(
+		135deg,
+		rgb(0, 208, 255),
+		rgba(0, 255, 255, 0.6),
+		rgba(0, 128, 128, 0.6)
+	);
+
+	width: 400px;
+	height: 300px;
+
+	border-radius: 100%;
+	z-index: -2;
+	position: absolute;
+
+	top: 420px;
+	left: -385px;
+
+	transform: rotate(90deg);
+	filter: blur(100px);
+
+	@media (prefers-reduced-motion: no-preference) {
+		opacity: 0.1;
+		animation: showGradient 1s ease-out forwards;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		opacity: 0.4;
+		left: -385px;
+	}
+}
+
+.contacts {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	align-items: flex-start;
+	gap: 15px;
+
+	justify-content: center;
+
+	a {
+		text-decoration: none;
+
+		.social {
+			display: flex;
+			flex-direction: column;
+
+			align-items: center;
+			cursor: pointer;
+
+			&:hover {
+				.social-icon {
+					transform: scale(1.1) translateY(-5px);
+				}
+
+				span {
+					color: var(--socials-caption-hover-color);
+				}
+			}
+
+			// Social icon styles
+			.social-icon {
+				padding: 10px;
+				box-sizing: content-box;
+
+				background-color: var(--devicon-remix-color);
+				border-radius: 20px;
+
+				.icon {
+					width: 50px !important;
+					height: 50px !important;
+
+					margin: 0 !important;
+				}
+
+				@media (prefers-reduced-motion: no-preference) {
+					transition: transform 0.2s ease-in-out;
+				}
+			}
+
+			span {
+				width: min-content;
+				text-wrap: wrap;
+
+				font-size: 14px;
+				margin-top: 5px;
+				padding-inline: 4px;
+
+				color: var(--project-tab-description-text-color);
+
+				@media (prefers-reduced-motion: no-preference) {
+					transition: color 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+#rock {
+	position: absolute;
+	width: 120px;
+
+	top: -42px;
+	left: -46px;
+
+	img {
+		width: inherit;
+	}
+}
+
+// Media queries
+@media (max-width: 890px) {
+	.dynamic-blobs-container {
+		display: none;
+	}
+}
+
+@media (max-width: 550px) {
+	.content {
+		width: 100%;
+
+		.profile-card .info .name {
+			font-size: 50px;
+		}
+	}
+}

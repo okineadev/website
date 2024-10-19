@@ -1,4 +1,14 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "commentTranslate.targetLanguage": "en"
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"prettier.useTabs": true,
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg"
+	},
+	"github.copilot.chat.experimental.codeGeneration.instructions": [
+		{
+			"file": "/architecture.md"
+		}
+	],
+	"github.copilot.chat.experimental.codeGeneration.useInstructionFiles": true
 }

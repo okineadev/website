@@ -1,0 +1,113 @@
+// This file contains mixins and styles for handling icons and emojis in the project.
+
+// Dependencies:
+// - variables.scss: This file is used for importing variables.
+
+// Mixins:
+// - iconBase($filename, $margin: 0 5px): Base mixin for setting up icon styles with a mask image.
+//   Parameters:
+//   - $filename: The URL of the icon image.
+//   - $margin: The margin around the icon (default: 0 5px).
+
+// - monochromeIcon($filename): Mixin for setting up monochrome icons with a mask image and a background color.
+//   Parameters:
+//   - $filename: The URL of the icon image.
+
+// - coloredIcon($filename): Mixin for setting up colored icons with a background image.
+//   Parameters:
+//   - $filename: The URL of the icon image.
+
+// - emoji($filename): Mixin for setting up emoji styles with a background image.
+//   Parameters:
+//   - $filename: The URL of the emoji image.
+
+@use "variables.scss";
+
+@mixin iconBase($filename, $margin: 0 5px) {
+	margin: $margin;
+	mask-size: cover;
+
+	mask-image: url($filename);
+	display: block;
+}
+
+@mixin monochromeIcon($filename) {
+	@include iconBase($filename);
+
+	background-color: var(--icons-color);
+	width: 16px;
+
+	height: 16px;
+}
+
+@mixin coloredIcon($filename) {
+	background-image: url($filename);
+	background-size: cover;
+
+	display: block;
+}
+
+// Mixin for emoji styles
+@mixin emoji($filename) {
+	@include coloredIcon($filename);
+
+	width: 18px;
+	height: 18px;
+
+	display: inline-block;
+	margin-right: 3px;
+}
+
+// Icon styles
+i.icon {
+	&.github {
+		@include monochromeIcon("/icons/github.svg");
+	}
+
+	&.location {
+		@include monochromeIcon("/icons/location.svg");
+	}
+
+	&.open {
+		@include monochromeIcon("/icons/open.svg");
+	}
+
+	&.repo {
+		@include monochromeIcon("/icons/repo.svg");
+	}
+
+	&.arrow {
+		@include monochromeIcon("/icons/arrow.svg");
+	}
+
+	&.telegram {
+		@include coloredIcon("/icons/telegram.svg");
+	}
+
+	&.unsplash {
+		@include monochromeIcon("/other/Unsplash-symbol-dark.svg");
+	}
+
+	&.medium {
+		@include monochromeIcon("/icons/medium-circles.svg");
+	}
+
+	&.discord {
+		@include coloredIcon("/icons/discord.svg");
+	}
+
+	&.stack-overflow {
+		@include coloredIcon("/icons/stack-overflow.svg");
+	}
+}
+
+// Emoji styles
+i.emoji {
+	&.hello {
+		@include emoji("/emojis/hello.webp");
+	}
+
+	&.ua-flag {
+		@include emoji("/emojis/ua-flag.webp");
+	}
+}

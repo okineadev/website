@@ -1,0 +1,114 @@
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+
+		transform: translateY(0);
+	}
+}
+
+// Fade animation
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes showGradient {
+	0% {
+		opacity: 0.1;
+		left: -400px;
+	}
+	100% {
+		opacity: 0.4;
+		left: -385px;
+	}
+}
+
+@keyframes blue {
+	0% {
+		top: 100px;
+		left: 50px;
+
+		transform: scale(1);
+	}
+	30% {
+		top: 120px;
+		left: 100px;
+
+		transform: scale(1.1);
+	}
+	60% {
+		top: 80px;
+		left: 0;
+
+		transform: scale(1.2);
+	}
+	100% {
+		top: 100px;
+		left: 50px;
+
+		transform: scale(1);
+	}
+}
+
+@keyframes cyan {
+	0% {
+		top: 30px;
+		right: -20px;
+
+		transform: scale(1.1);
+	}
+	30% {
+		top: 50px;
+		right: -20px;
+
+		transform: scale(1);
+	}
+	60% {
+		top: 40px;
+		right: 40px;
+
+		transform: scale(1);
+	}
+	100% {
+		top: 30px;
+		right: -20px;
+
+		transform: scale(1.1);
+	}
+}
+
+@keyframes purple {
+	0% {
+		top: 170px;
+		right: 0px;
+
+		transform: scale(0.9);
+	}
+	30% {
+		top: 220px;
+		right: 80px;
+
+		transform: scale(1.1);
+	}
+	60% {
+		top: 220px;
+		right: -80px;
+
+		transform: scale(1);
+	}
+	100% {
+		top: 170px;
+		right: 0px;
+
+		transform: scale(0.9);
+	}
+}

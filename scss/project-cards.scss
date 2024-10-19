@@ -1,0 +1,154 @@
+@use "variables.scss";
+@use "/animations/keyframes.scss";
+
+// Projects styles
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 10px;
+	margin-bottom: 10px;
+	align-items: flex-start;
+
+	.project-tab {
+		--border-radius: 15px;
+		border-radius: var(--border-radius);
+
+		padding: 14px;
+		width: -webkit-fill-available;
+		height: auto;
+
+		cursor: pointer;
+		background-color: var(--project-tab-background-color);
+
+		position: relative;
+		flex: 1 1 230px;
+		// Temporary fix for height issue
+		min-height: 115.31px;
+
+		@media (prefers-reduced-motion: no-preference) {
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.slider {
+			display: block;
+			max-height: 0;
+
+			overflow: hidden;
+			margin-top: 10px;
+
+			@media (prefers-reduced-motion: no-preference) {
+				transition: max-height 0.7s ease-in-out;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+
+				display: block;
+				margin: 0 auto;
+				border-radius: var(--border-radius);
+
+				position: relative;
+				background-repeat: no-repeat;
+
+				background-size: contain;
+			}
+		}
+
+		&:hover {
+			transform: translateY(-10px);
+
+			.project-header .icon.open {
+				opacity: 1;
+			}
+
+			&::before {
+				opacity: 0.3;
+			}
+
+			.slider {
+				max-height: 500px; // Adjust this value based on the content height
+				opacity: 1;
+			}
+		}
+
+		.project-header {
+			display: flex;
+			justify-content: space-between;
+
+			align-items: stretch;
+			margin: 0;
+
+			.icon.open {
+				opacity: 0;
+
+				@media (prefers-reduced-motion: no-preference) {
+					transition: opacity 0.3s ease-in-out;
+				}
+			}
+
+			.repo {
+				display: inline-flex;
+				align-items: center;
+
+				flex-wrap: nowrap;
+				flex-direction: row;
+
+				.icon {
+					margin-right: 5px;
+				}
+
+				.name {
+					font-size: 17px;
+					text-wrap-mode: nowrap;
+				}
+			}
+		}
+
+		.description p {
+			font-size: 12px;
+			color: var(--project-tab-description-text-color);
+
+			margin: 4px 0 0;
+		}
+
+		&::before {
+			content: "";
+			z-index: -9999;
+
+			position: absolute;
+
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			background: linear-gradient(-45deg, #e81cff, #40c9ff);
+			transform: translateZ(0) scale(0.9);
+
+			filter: blur(20px);
+			opacity: 0;
+			border-radius: inherit;
+
+			@media (prefers-reduced-motion: no-preference) {
+				transition: opacity 0.3s;
+			}
+		}
+
+		&::after {
+			content: "";
+			z-index: -1;
+
+			position: absolute;
+
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			background: inherit;
+			border-radius: inherit;
+		}
+	}
+}
