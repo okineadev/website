@@ -1,9 +1,14 @@
 name: Deploy website
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    paths:
+      - ".github/**"
+      - "other/**"
+      - ".gitignore"
+      - "package.json"
+      - "vite.config.js"
+      - "src/**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,6 +30,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
