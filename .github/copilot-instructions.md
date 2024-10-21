@@ -11,7 +11,7 @@
 
 ## Additional Notes
 
-- Refer to the [`architecture.md`](/src/architecture.md) file for detailed information on the project architecture.
+- Refer to the [`/architecture.md`](/architecture.md) file for detailed information on the project architecture.
 - Use the provided Vite plugins to enhance development workflow and optimize the project.
 
 ## 📚 Resources

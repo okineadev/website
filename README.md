@@ -66,22 +66,23 @@ This project uses the following main dependencies:
 
 - `vite`
 - `sass`
-- `vite-plugin-browser-sync`
 - `vite-plugin-compression2`
 - `vite-plugin-html`
 - `vite-plugin-live-reload`
-- `vite-plugin-pwa`
+- `vite-plugin-sitemap`
 
 ## 📚 Project Structure
 
-- [`index.html`](./index.html): The main HTML file.
+- [`src/`](src/): Directory containing the source code.
+  - [`index.html`](src/index.html): The main HTML file.
+  - [`scss/`](src/scss/): Directory containing SCSS stylesheets.
+  - [`images/`](src/images/): Directory containing image assets.
+  - [`js/`](src/js/): Directory containing JavaScript files:
+    - [`main.js`](src/js/main.js): Main JavaScript file handling interactivity and theme preference.
+  - [`assets/`](src/assets/): Directory containing favicon and other icons.
+- [`NOTES.md`](NOTES.md): Notes and thanks to the authors of the photos I use.
 - [`vite.config.js`](./vite.config.js): Configuration file for Vite.
-- [`package.json`](./package.json): Project metadata and dependencies.
-- [`scss/`](./scss/): Directory containing SCSS stylesheets.
-- [`images/`](./images/): Directory containing image assets.
-- [`js/`](./js/): Directory containing JavaScript files:
-  - [`main.js`](./js/main.js): Main JavaScript file handling interactivity and theme preference.
-- [`assets/`](./assets/): Directory containing favicon and other icons.
+- [`package.json`](/package.json): Project metadata and dependencies.
 
 ---
 
