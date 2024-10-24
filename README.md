@@ -15,8 +15,7 @@ To get started with this project, follow these steps:
 
 2. **Install dependencies:**
 
-   > [!IMPORTANT]
-   > This project uses the **Bun** runtime, if you haven't installed it, install it using this command:
+   > **📝 Important**: This project uses the **Bun** runtime, if you haven't installed it, install it using this command:
 
    ```plaintext
    # Linux / macOS
