@@ -47,10 +47,9 @@ jobs:
       - name: 📦 Cache Bun dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: ${{ runner.os }}-bun-cache-${{ hashFiles('bun.lockb') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-cache-
+          path: |
+            ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-cache-${{ hashFiles('**/bun.lockb') }}
 
       - name: 📦 Install Bun dependencies
         run: bun install
