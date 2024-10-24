@@ -279,10 +279,6 @@ body::after {
 	// Skill icon
 	a {
 		display: inline-block;
-
-		@media (prefers-reduced-motion: no-preference) {
-			transition: all 0.2s ease-in-out;
-		}
 	}
 
 	a:hover img,
@@ -293,6 +289,10 @@ body::after {
 	img {
 		display: block;
 		height: 45px;
+
+		@media (prefers-reduced-motion: no-preference) {
+			transition: all 0.2s ease-in-out;
+		}
 	}
 }
 
