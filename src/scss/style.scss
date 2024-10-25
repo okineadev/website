@@ -266,11 +266,13 @@ body::after {
 
 // Skills section styles
 .skills {
+	--gap: 8px;
+
 	display: flex;
 	flex-direction: row;
 
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: var(--gap);
 	justify-content: center;
 
 	max-width: 1000px;
@@ -279,19 +281,21 @@ body::after {
 	// Skill icon
 	a {
 		display: inline-block;
-	}
+		margin: calc(-1 * var(--gap));
+		padding: var(--gap);
 
-	a:hover img,
-	img:hover {
-		transform: scale(1.15) translateY(-4px);
-	}
+		img {
+			display: block;
+			height: 45px;
+			width: 45px; // Ensure consistent size for all img elements
 
-	img {
-		display: block;
-		height: 45px;
+			@media (prefers-reduced-motion: no-preference) {
+				transition: all 0.2s ease-in-out;
+			}
+		}
 
-		@media (prefers-reduced-motion: no-preference) {
-			transition: all 0.2s ease-in-out;
+		&:hover img {
+			transform: scale(1.15) translateY(-4px);
 		}
 	}
 }
