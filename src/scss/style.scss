@@ -280,36 +280,54 @@ body::after {
 
 // Skills section styles
 .skills {
-	--gap: 8px;
-
 	display: flex;
 	flex-direction: row;
 
-	flex-wrap: wrap;
-	gap: var(--gap);
+	gap: 30px;
 	justify-content: center;
-
 	max-width: 1000px;
+
 	margin-inline: auto;
+	flex-wrap: nowrap;
 
-	// Skill icon
-	a {
-		display: inline-block;
-		margin: calc(-1 * var(--gap));
-		padding: var(--gap);
+	.section {
+		display: flex;
+		flex-direction: column;
 
-		img {
-			display: block;
-			height: 45px;
-			width: 45px; // Ensure consistent size for all img elements
+		flex-wrap: nowrap;
 
-			@media (prefers-reduced-motion: no-preference) {
-				transition: all 0.2s ease-in-out;
+		.skills-list {
+			--gap: 8px;
+
+			display: flex;
+			flex-direction: row;
+
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			gap: var(--gap);
+
+			min-width: 150px;
+
+			// Skill icon
+			a {
+				display: inline-block;
+				margin: calc(-1 * var(--gap));
+				padding: var(--gap);
+
+				img {
+					display: block;
+					height: 45px;
+					width: 45px; // Ensure consistent size for all img elements
+
+					@media (prefers-reduced-motion: no-preference) {
+						transition: all 0.2s ease-in-out;
+					}
+				}
+
+				&:hover img {
+					transform: scale(1.15) translateY(-4px);
+				}
 			}
-		}
-
-		&:hover img {
-			transform: scale(1.15) translateY(-4px);
 		}
 	}
 }
@@ -417,6 +435,15 @@ body::after {
 
 // Media queries
 @media (max-width: 890px) {
+	.skills {
+		flex-wrap: wrap;
+		.section {
+			align-items: center;
+			.skills-list {
+				justify-content: center;
+			}
+		}
+	}
 	.dynamic-blobs-container {
 		display: none;
 	}

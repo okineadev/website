@@ -1,7 +1,6 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
-	"prettier.useTabs": true,
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
 			"file": "/src/architecture.md"
