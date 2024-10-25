@@ -2,13 +2,10 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"prettier.useTabs": true,
-	"[svg]": {
-		"editor.defaultFormatter": "jock.svg"
-	},
-	"github.copilot.chat.experimental.codeGeneration.instructions": [
+	"github.copilot.chat.codeGeneration.instructions": [
 		{
 			"file": "/src/architecture.md"
 		}
 	],
-	"github.copilot.chat.experimental.codeGeneration.useInstructionFiles": true
+	"github.copilot.chat.codeGeneration.useInstructionFiles": true
 }
