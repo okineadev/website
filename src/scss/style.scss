@@ -192,6 +192,19 @@ a {
 	}
 }
 
+#rock {
+	position: absolute;
+	width: 120px;
+
+	top: -42px;
+	left: -46px;
+	opacity: 0.9;
+
+	img {
+		width: inherit;
+	}
+}
+
 // Noise filter styles
 body::after {
 	content: "";
@@ -229,6 +242,7 @@ body::after {
 			max-width: 100%;
 
 			margin: 0;
+			text-shadow: -4px -4px 20px #0000001c;
 		}
 
 		// Meta info styles
@@ -398,18 +412,6 @@ body::after {
 				}
 			}
 		}
-	}
-}
-
-#rock {
-	position: absolute;
-	width: 120px;
-
-	top: -42px;
-	left: -46px;
-
-	img {
-		width: inherit;
 	}
 }
 
