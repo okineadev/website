@@ -423,6 +423,10 @@ body::after {
 }
 
 @media (max-width: 550px) {
+	#rock {
+		top: -60px;
+		left: -60px;
+	}
 	.content {
 		width: 100%;
 
