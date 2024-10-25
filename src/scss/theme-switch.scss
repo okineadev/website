@@ -7,15 +7,13 @@
 
 // Theme toggle button styles
 .theme-toggle {
-	--size: 2rem;
-
 	background: none;
 	border: none;
 
 	padding: 0;
 	inline-size: var(--size);
-
 	block-size: var(--size);
+
 	position: absolute;
 
 	top: 30px;
@@ -23,11 +21,11 @@
 
 	border-radius: 50%;
 	cursor: pointer;
-
 	touch-action: manipulation;
-	-webkit-tap-highlight-color: transparent;
 
+	-webkit-tap-highlight-color: transparent;
 	z-index: 9999;
+	width: 40px;
 
 	& > svg {
 		inline-size: 100%;
@@ -129,7 +127,7 @@
 		}
 	}
 
-	@media (hover: none) {
-		--size: 48px;
-	}
+	// @media (hover: none) {
+	// 	--size: 48px;
+	// }
 }
