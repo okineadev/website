@@ -79,7 +79,3 @@ console.log(
 	messageStyle,
 	messageStyle
 );
-
-console.log(
-	`\n🎁: ${atob("aHR0cHM6Ly90Lm1lL3NlbmQ/c3RhcnQ9Q1FFeVJlN0Z5WnBR")}`
-);
