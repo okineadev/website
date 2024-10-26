@@ -23,86 +23,117 @@
 
 @use "variables.scss";
 
-@mixin iconBase($filename, $margin: 0 5px) {
+@mixin iconBase($filename, $margin: 0 3px 0 0) {
 	margin: $margin;
-	mask-size: cover;
+	mask-size: contain;
 
 	mask-image: url($filename);
-	display: block;
 }
 
 @mixin monochromeIcon($filename) {
 	@include iconBase($filename);
 
 	background-color: var(--icons-color);
-	width: 16px;
-
-	height: 16px;
 }
 
 @mixin coloredIcon($filename) {
 	background-image: url($filename);
 	background-size: cover;
-
-	display: block;
 }
 
 // Mixin for emoji styles
 @mixin emoji($filename) {
 	@include coloredIcon($filename);
-
-	width: 18px;
-	height: 18px;
-
-	display: inline-block;
-	margin-right: 3px;
 }
 
 // Icon styles
 i.icon {
-	&.github {
-		@include monochromeIcon("/icons/github.svg");
-	}
+	display: inline-block;
 
-	&.location {
-		@include monochromeIcon("/icons/location.svg");
-	}
+	width: 1em;
+	height: 1em;
 
-	&.open {
-		@include monochromeIcon("/icons/open.svg");
-	}
-
-	&.repo {
-		@include monochromeIcon("/icons/repo.svg");
-	}
+	vertical-align: -0.125em;
+	mask-position: center;
+	mask-repeat: no-repeat;
 
 	&.arrow {
 		@include monochromeIcon("/icons/arrow.svg");
 	}
 
-	&.telegram {
-		@include coloredIcon("/icons/telegram.svg");
+	&.bolt {
+		@include monochromeIcon("/icons/bolt.svg");
 	}
 
-	&.unsplash {
-		@include monochromeIcon("/../other/Unsplash-symbol-dark.svg");
-	}
-
-	&.medium {
-		@include monochromeIcon("/icons/medium-circles.svg");
+	&.code {
+		@include monochromeIcon("/icons/code.svg");
 	}
 
 	&.discord {
 		@include coloredIcon("/icons/discord.svg");
 	}
 
+	&.github {
+		@include monochromeIcon("/icons/github.svg");
+	}
+
+	&.globe {
+		@include monochromeIcon("/icons/globe.svg");
+	}
+
+	&.location {
+		@include monochromeIcon("/icons/location.svg");
+	}
+
+	&.medium {
+		@include monochromeIcon("/icons/medium-circles.svg");
+	}
+
+	&.newspaper {
+		@include monochromeIcon("/icons/newspaper.svg");
+	}
+
+	&.open {
+		@include monochromeIcon("/icons/open.svg");
+	}
+
+	&.palette {
+		@include monochromeIcon("/icons/palette.svg");
+	}
+
+	&.repo {
+		@include monochromeIcon("/icons/repo.svg");
+	}
+
 	&.stack-overflow {
 		@include coloredIcon("/icons/stack-overflow.svg");
+	}
+
+	&.table {
+		@include monochromeIcon("/icons/table.svg");
+	}
+
+	&.telegram {
+		@include coloredIcon("/icons/telegram.svg");
+	}
+
+	&.tools {
+		@include monochromeIcon("/icons/tools.svg");
+	}
+
+	&.unsplash {
+		@include monochromeIcon("/../other/Unsplash-symbol-dark.svg");
 	}
 }
 
 // Emoji styles
 i.emoji {
+	width: 1.2em;
+	height: 1.2em;
+
+	display: inline-block;
+	margin-right: 3px;
+
 	&.hello {
 		@include emoji("/emojis/hello.webp");
 	}

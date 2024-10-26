@@ -139,7 +139,7 @@
 				</div>
 			</div>
 
-			<h1 class="center" id="projects">My projects</h1>
+			<h1 class="center" id="projects"><i class="icon table"></i> My projects</h1>
 
 			<p>List of my best projects</p>
 
@@ -263,11 +263,11 @@
 				</div>
 			</div>
 
-			<h1 class="center skills-title" id="skills">Skills</h1>
+			<h1 class="center skills-title" id="skills"><i class="icon bolt"></i> Skills</h1>
 
 			<div class="skills">
 				<div class="section programming" aria-labelledby="programming-skills-title">
-					<h2 id="programming-skills-title">Programming</h2>
+					<h2 id="programming-skills-title"><i class="icon code" aria-hidden="true"></i> Programming</h2>
 
 					<div class="skills-list">
 						<a href="https://www.python.org/" target="_blank" aria-label="Python">
@@ -334,7 +334,7 @@
 				</div>
 
 				<div class="section design" aria-labelledby="design-skills-title">
-					<h2 id="design-skills-title">Design</h2>
+					<h2 id="design-skills-title"><i class="icon palette"></i> Design</h2>
 
 					<div class="skills-list">
 						<a href="https://www.figma.com/" target="_blank" aria-label="Figma">
@@ -363,7 +363,7 @@
 				</div>
 
 				<div class="section tools" aria-labelledby="tools-skills-title">
-					<h2 id="tools-skills-title">Tools</h2>
+					<h2 id="tools-skills-title"><i class="icon tools" aria-hidden="true"></i> Tools</h2>
 
 					<div class="skills-list">
 						<a href="https://code.visualstudio.com/" target="_blank" aria-label="Visual Studio Code">
@@ -429,7 +429,7 @@
 				</div> -->
 			</div>
 
-			<h1 class="center" id="socials">Socials</h1>
+			<h1 class="center" id="socials"><i class="icon globe" aria-hidden="true"></i> Socials</h1>
 
 			<div class="contacts" aria-labelledby="socials">
 				<a href="https://github.com/okineadev" target="_blank" aria-label="GitHub">
@@ -483,6 +483,7 @@
 			</div>
 
 			<h1 class="center" id="medium-posts-title">
+				<i class="icon newspaper" aria-hidden="true"></i>
 				My posts on
 				<img src="images/medium.svg" class="medium-logo" alt="Medium" height="34" />
 			</h1>
@@ -538,17 +539,6 @@
 		</div>
 	</body>
 
-	<!--
-
-	This script adds an animation effect to elements within the ".content" container when they come into view, provided the user has not set a preference for reduced motion.
-
-	- The script checks if the user has no preference for reduced motion using `window.matchMedia`.
-	- It selects all direct child elements of the ".content" container.
-	- An `IntersectionObserver` is created to observe when these elements intersect with the viewport.
-	- When an element intersects, it adds the "animate" class to the element with a delay based on the element's index.
-	- The observer stops observing an element once it has been animated.
-	- The threshold for intersection is set to 0.1, meaning the callback is triggered when 10% of the element is visible.
-	-->
 	<script>
 		if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
 			const contentElements = document.querySelectorAll(".content > *");
