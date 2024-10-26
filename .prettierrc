@@ -1,17 +1,16 @@
 {
 	"useTabs": true,
+	"tabWidth": 4,
+	"printWidth": 120,
 	"overrides": [
 		{
 			"files": "*.html",
-			"options": {
-				"printWidth": 120
-			}
+			"options": {}
 		},
 		{
 			"files": "*.scss",
 			"options": {
-				"useTabs": true,
-				"tabWidth": 4
+				"useTabs": true
 			}
 		}
 	]
