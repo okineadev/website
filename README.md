@@ -17,7 +17,7 @@ To get started with this project, follow these steps:
 
    > **📝 Important**: This project uses the **Bun** runtime, if you haven't installed it, install it using this command:
 
-   ```plaintext
+   ```bash
    # Linux / macOS
    curl -fsSL https://bun.sh/install | bash
 
@@ -79,9 +79,12 @@ This project uses the following main dependencies:
   - [`js/`](src/js/): Directory containing JavaScript files:
     - [`main.js`](src/js/main.js): Main JavaScript file handling interactivity and theme preference.
   - [`assets/`](src/assets/): Directory containing favicon and other icons.
-- [`NOTES.md`](NOTES.md): Notes and thanks to the authors of the photos I use.
-- [`vite.config.js`](./vite.config.js): Configuration file for Vite.
-- [`package.json`](/package.json): Project metadata and dependencies.
+- [`.prettierrc`](.prettierrc): Prettier configuration file.
+- [`architecture.md`](architecture.md): Document describing the project's architecture.
+- [`bunfig.toml`](bunfig.toml): Bun runtime configuration file.
+- [`NOTES.md`](NOTES.md): Document containing notes and credits.
+- [`svgo.config.js`](svgo.config.js): [SVGO](https://svgo.dev) configuration file.
+- [`vite.config.js`](vite.config.js): [Vite configuration file](https://vitejs.dev/config/).
 
 ---
 

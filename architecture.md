@@ -26,7 +26,8 @@
   - [`js/`](src/js/): Directory containing JavaScript files.
     - [`main.js`](src/js/main.js): Main JavaScript file handling interactivity, theme preference, and event listeners for user interactions.
 
-- [`vite.config.js`](vite.config.js): Vite configuration file containing plugins and settings.
+- [`vite.config.js`](vite.config.js): [Vite configuration file](https://vitejs.dev/config/) containing plugins and settings.
+- [`svgo.config.js`](svgo.config.js): [SVGO](https://svgo.dev) configuration file for.
 
 ### 4. Images and Icons
 
