@@ -1,7 +1,7 @@
 {
 	"name": "okineadev-website",
 	"version": "0.0.0",
-	"description": "My own website",
+	"description": "A personal portfolio website showcasing my projects, blog posts, and contact information.",
 	"author": "Okinea Dev",
 	"homepage": "https://okineadev.dev",
 	"repository": {
@@ -10,6 +10,7 @@
 	"bugs": {
 		"url": "https://github.com/okineadev/okineadev-website/issues"
 	},
+	"license": "MIT",
 	"private": true,
 	"type": "module",
 	"scripts": {
