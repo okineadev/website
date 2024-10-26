@@ -1,6 +1,6 @@
 import liveReload from "vite-plugin-live-reload";
 import { createHtmlPlugin } from "vite-plugin-html";
-import { compression } from "vite-plugin-compression2";
+import { compression as viteCompression } from "vite-plugin-compression2";
 import Sitemap from "vite-plugin-sitemap";
 import { defineConfig } from "vite";
 
@@ -48,11 +48,11 @@ export default defineConfig({
 				},
 			},
 		}),
-		compression({
+		viteCompression({
 			filter: /\.(js|css|html)$/i,
 			// verbose: true
 		}),
-		Sitemap({ hostname: "https://okinea.website" }),
+		Sitemap({ hostname: "https://okinea.dev" }),
 	],
 	root: "src",
 	server: {
