@@ -1,6 +1,6 @@
 // SCSS variables and mixins for theming
 
-// Constants
+// Root CSS Variables
 :root {
 	// Ease timing functions
 	--ease-3: cubic-bezier(0.25, 0, 0.3, 1);
@@ -19,7 +19,7 @@
 
 // ====== Dark and light themes ======
 
-// Dark theme
+// Dark theme mixin to apply dark mode styles
 @mixin dark-theme() {
 	// Background and text colors
 	--background-color: #101010;
@@ -47,6 +47,7 @@
 }
 
 // Light theme
+// Mixin for applying light theme styles
 @mixin light-theme() {
 	// Background and text colors
 	--background-color: #fff;
@@ -73,7 +74,7 @@
 	--project-tab-description-text-color: #757575;
 }
 
-// Apply dark theme based on user's system preference
+// Apply dark theme based on user's system preference for dark mode
 @media (prefers-color-scheme: dark) {
 	body {
 		@include dark-theme();
@@ -88,11 +89,15 @@
 }
 
 // Apply dark theme to body with class 'dark'
+// This class is used to manually switch the theme to dark mode
+// regardless of the user's system preference.
 body.dark {
 	@include dark-theme();
 }
 
 // Apply light theme to body with class 'light'
+// This class is used to manually switch the theme to light mode
+// regardless of the user's system preference.
 body.light {
 	@include light-theme();
 }

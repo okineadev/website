@@ -14,7 +14,7 @@
 
 	margin-inline: auto;
 
-	// Fade animation (not infinite)
+	// Fade animation for the dynamic blobs container (not infinite)
 	@media (prefers-reduced-motion: no-preference) {
 		animation: fade 1.5s ease-out forwards;
 	}

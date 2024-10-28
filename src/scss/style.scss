@@ -217,7 +217,7 @@ body::after {
 	height: 100%;
 
 	z-index: -2;
-	opacity: 13%;
+	opacity: 0.13;
 	filter: url(#noiseFilter);
 }
 
@@ -317,7 +317,8 @@ body::after {
 				img {
 					display: block;
 					height: 45px;
-					width: 45px; // Ensure consistent size for all img elements
+					// Ensure consistent size for all img elements
+					width: 45px;
 
 					@media (prefers-reduced-motion: no-preference) {
 						transition: all 0.2s ease-in-out;
@@ -334,12 +335,7 @@ body::after {
 
 // Background gradient styles
 .background-gradient {
-	background: linear-gradient(
-		135deg,
-		rgb(0, 208, 255),
-		rgba(0, 255, 255, 0.6),
-		rgba(0, 128, 128, 0.6)
-	);
+	background: linear-gradient(135deg, rgb(0, 208, 255), rgba(0, 255, 255, 0.6), rgba(0, 128, 128, 0.6));
 
 	width: 400px;
 	height: 300px;
