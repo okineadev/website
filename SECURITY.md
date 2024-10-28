@@ -6,4 +6,4 @@ If you notice any vulnerability in this project, please contact me and report th
 
 You can contact me in these messengers:
 
-- **Telegram**: [@okinea](https://t.me/okinea)
+- **Telegram**: [@stadius_lucioni](https://t.me/stadius_lucioni)
