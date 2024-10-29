@@ -26,6 +26,8 @@
 		// Temporary fix for height issue
 		min-height: 115.31px;
 
+		box-shadow: var(--box-shadow);
+
 		@media (prefers-reduced-motion: no-preference) {
 			transition: transform 0.3s ease-in-out;
 		}

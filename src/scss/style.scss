@@ -316,6 +316,7 @@ body::after {
 
 				img {
 					display: block;
+
 					height: 45px;
 					// Ensure consistent size for all img elements
 					width: 45px;
@@ -398,6 +399,7 @@ body::after {
 
 				background-color: var(--devicon-remix-color);
 				border-radius: 20px;
+				box-shadow: var(--box-shadow);
 
 				.icon {
 					width: 50px !important;
