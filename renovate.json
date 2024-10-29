@@ -4,5 +4,5 @@
     "config:recommended",
     "helpers:pinGitHubActionDigests"
   ],
-  "assignees": "okineadev"
+  "assignees": ["okineadev"]
 }
