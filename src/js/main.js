@@ -1,10 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const interactiveElements = document.querySelectorAll(
-		".project-tab, .medium-posts-container .post"
-	);
+document.addEventListener("DOMContentLoaded", () => {
+	const interactiveElements = document.querySelectorAll(".project-tab, .medium-posts-container .post");
 
+	// biome-ignore lint/complexity/noForEach: <explanation>
 	interactiveElements.forEach((tab) => {
-		tab.addEventListener("click", function () {
+		tab.addEventListener("click", () => {
 			const link = tab.getAttribute("data-link");
 			if (link) {
 				window.open(link, "_blank");
@@ -17,11 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const getColorPreference = () => {
 		if (localStorage.getItem(storageKey)) {
 			return localStorage.getItem(storageKey);
-		} else {
-			return window.matchMedia("(prefers-color-scheme: dark)").matches
-				? "dark"
-				: "light";
 		}
+		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 	};
 
 	const setPreference = () => {
@@ -30,16 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 	/**
-	 * Updates the document's theme based on the current theme value.
+	 * Updates the document's theme based on the current theme preference.
 	 *
-	 * This function sets the class attribute of the document body to the current theme value.
-	 * It also updates the aria-label attribute of the theme toggle button to reflect the current theme.
+	 * This function sets the body's class attribute to the current theme value,
+	 * updates the aria-label of the theme toggle button, and adjusts the
+	 * theme-color meta tag to match the CSS variable for the theme color.
 	 */
 	const reflectPreference = () => {
 		document.body.setAttribute("class", theme.value);
-		document
-			.querySelector("#theme-toggle")
-			?.setAttribute("aria-label", theme.value);
+		document.querySelector("#theme-toggle")?.setAttribute("aria-label", theme.value);
+
+		// Update theme-color meta tag based on CSS variable
+		const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+		const computedStyles = getComputedStyle(document.body);
+		const themeColor = computedStyles.getPropertyValue("--theme-color").trim();
+		themeColorMeta.setAttribute("content", themeColor);
 	};
 
 	const theme = {
@@ -53,12 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		setPreference();
 	});
 
-	window
-		.matchMedia("(prefers-color-scheme: dark)")
-		.addEventListener("change", ({ matches: isDark }) => {
-			theme.value = isDark ? "dark" : "light";
-			setPreference();
-		});
+	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches: isDark }) => {
+		theme.value = isDark ? "dark" : "light";
+		setPreference();
+	});
 });
 
 const messageStyle = `
@@ -74,8 +73,8 @@ const messageStyle = `
 `;
 
 console.log(
-	`%c🐈 Sources are available at: https://github.com/okinea-website%cPlease consider giving it a ⭐ if you like it\n` +
-		`My Telegram channel: https://t.me/okinea_blog`,
+	"%c🐈 Sources are available at: https://github.com/okinea-website%cPlease consider giving it a ⭐ if you like it\n" +
+		"My Telegram channel: https://t.me/okinea_blog",
 	messageStyle,
 	messageStyle
 );
