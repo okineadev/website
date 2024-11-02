@@ -12,7 +12,6 @@ import { defineConfig } from "vite";
  *
  * @constant {string} googleTagScript
  */
-
 const googleTagScript = `
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TM7HRVX06"></script>
 <script>
@@ -34,7 +33,6 @@ const googleTagScript = `
  *
  * @plugin liveReload - Enables live reloading during development.
  * @plugin createHtmlPlugin - Generates HTML files with optional minification and script injection.
- * @plugin VitePluginBrowserSync - (Commented out) Enables BrowserSync for synchronized browser testing.
  */
 export default defineConfig({
 	plugins: [
@@ -43,8 +41,7 @@ export default defineConfig({
 			minify: true,
 			inject: {
 				data: {
-					gtagScript:
-						process.env.NODE_ENV === "production" ? googleTagScript : "",
+					gtagScript: process.env.NODE_ENV === "production" ? googleTagScript : "",
 				},
 			},
 		}),
