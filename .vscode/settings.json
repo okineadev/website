@@ -1,5 +1,8 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[biome_syntax_tree]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
 	"editor.formatOnSave": true,
 	"github.copilot.chat.codeGeneration.instructions": [
 		{

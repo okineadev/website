@@ -1,0 +1,31 @@
+{
+	"formatter": {
+		"enabled": true,
+		"useEditorconfig": true,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"lineWidth": 120,
+		"attributePosition": "auto",
+		"bracketSpacing": true
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"trailingCommas": "all",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"quoteStyle": "single",
+			"attributePosition": "auto",
+			"bracketSpacing": true
+		}
+	},
+	"overrides": [
+		{ "include": ["*.html"], "formatter": { "indentWidth": 2 } },
+		{ "include": ["*.yml"], "formatter": { "indentWidth": 2 } },
+		{ "include": ["*.json"], "formatter": { "indentWidth": 2 } }
+	]
+}
