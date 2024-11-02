@@ -9,5 +9,25 @@
 			"file": "/architecture.md"
 		}
 	],
-	"github.copilot.chat.codeGeneration.useInstructionFiles": true
+	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
+	"links.resources": [
+		{
+			"url": "https://github.com/okineadev/okineadev-website",
+			"title": "GitHub Repo"
+		},
+		{
+			"url": "https://okinea.dev",
+			"title": "This Website"
+		},
+		{
+			"url": "https://github.com/okineadev/okineadev-website/issues",
+			"title": "Issues",
+			"description": "Report bugs, suggest features, or ask questions."
+		},
+		{
+			"url": "https://github.com/okineadev/okineadev-website/blob/main/NOTES.md",
+			"title": "Notes and attributions",
+			"description": "Notes and attributions for this website."
+		}
+	]
 }
