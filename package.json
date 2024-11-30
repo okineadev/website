@@ -17,6 +17,8 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
+		"lint": "biome lint",
+		"format": "biome format --write",
 		"svgo": "svgo src/images/*.svg src/icons/*.svg"
 	},
 	"devDependencies": {

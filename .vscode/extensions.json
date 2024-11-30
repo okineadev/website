@@ -1,3 +1,7 @@
 {
-	"recommendations": ["davidanson.vscode-markdownlint", "jock.svg", "biomejs.biome"]
+	"recommendations": [
+		"davidanson.vscode-markdownlint",
+		"jock.svg",
+		"biomejs.biome"
+	]
 }

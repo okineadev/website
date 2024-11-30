@@ -1,29 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const interactiveElements = document.querySelectorAll(".project-tab, .medium-posts-container .post");
+document.addEventListener('DOMContentLoaded', () => {
+	const interactiveElements = document.querySelectorAll(
+		'.project-tab, .medium-posts-container .post',
+	)
 
 	// biome-ignore lint/complexity/noForEach: <explanation>
 	interactiveElements.forEach((tab) => {
-		tab.addEventListener("click", () => {
-			const link = tab.getAttribute("data-link");
+		tab.addEventListener('click', () => {
+			const link = tab.getAttribute('data-link')
 			if (link) {
-				window.open(link, "_blank");
+				window.open(link, '_blank')
 			}
-		});
-	});
+		})
+	})
 
-	const storageKey = "theme-preference";
+	const storageKey = 'theme-preference'
 
 	const getColorPreference = () => {
 		if (localStorage.getItem(storageKey)) {
-			return localStorage.getItem(storageKey);
+			return localStorage.getItem(storageKey)
 		}
-		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-	};
+		return window.matchMedia('(prefers-color-scheme: dark)').matches
+			? 'dark'
+			: 'light'
+	}
 
 	const setPreference = () => {
-		localStorage.setItem(storageKey, theme.value);
-		reflectPreference();
-	};
+		localStorage.setItem(storageKey, theme.value)
+		reflectPreference()
+	}
 
 	/**
 	 * Updates the document's theme based on the current theme preference.
@@ -33,32 +37,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	 * theme-color meta tag to match the CSS variable for the theme color.
 	 */
 	const reflectPreference = () => {
-		document.body.setAttribute("class", theme.value);
-		document.querySelector("#theme-toggle")?.setAttribute("aria-label", theme.value);
+		document.body.setAttribute('class', theme.value)
+		document
+			.querySelector('#theme-toggle')
+			?.setAttribute('aria-label', theme.value)
 
 		// Update theme-color meta tag based on CSS variable
-		const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-		const computedStyles = getComputedStyle(document.body);
-		const themeColor = computedStyles.getPropertyValue("--theme-color").trim();
-		themeColorMeta.setAttribute("content", themeColor);
-	};
+		const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+		const computedStyles = getComputedStyle(document.body)
+		const themeColor = computedStyles.getPropertyValue('--theme-color').trim()
+		themeColorMeta.setAttribute('content', themeColor)
+	}
 
 	const theme = {
 		value: getColorPreference(),
-	};
+	}
 
-	reflectPreference();
+	reflectPreference()
 
-	document.querySelector("#theme-toggle").addEventListener("click", () => {
-		theme.value = theme.value === "light" ? "dark" : "light";
-		setPreference();
-	});
+	document.querySelector('#theme-toggle').addEventListener('click', () => {
+		theme.value = theme.value === 'light' ? 'dark' : 'light'
+		setPreference()
+	})
 
-	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches: isDark }) => {
-		theme.value = isDark ? "dark" : "light";
-		setPreference();
-	});
-});
+	window
+		.matchMedia('(prefers-color-scheme: dark)')
+		.addEventListener('change', ({ matches: isDark }) => {
+			theme.value = isDark ? 'dark' : 'light'
+			setPreference()
+		})
+})
 
 const messageStyle = `
 	background-color: white;
@@ -70,11 +78,11 @@ const messageStyle = `
 	font-weight: bold;
 	font-family: "Raleway", sans-serif;
 	margin: 3px;
-`;
+`
 
 console.log(
-	"%c🐈 Sources are available at: https://github.com/okinea-website%cPlease consider giving it a ⭐ if you like it\n" +
-		"My Telegram channel: https://t.me/okinea_blog",
+	'%c🐈 Sources are available at: https://github.com/okinea-website%cPlease consider giving it a ⭐ if you like it\n' +
+		'My Telegram channel: https://t.me/okinea_blog',
 	messageStyle,
-	messageStyle
-);
+	messageStyle,
+)

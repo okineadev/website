@@ -1,31 +1,34 @@
 {
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": [
+			"dist",
+			"node_modules",
+			"package.json",
+			"bun.lockb",
+			"tsconfig*.json"
+		]
+	},
 	"formatter": {
 		"enabled": true,
 		"useEditorconfig": true,
-		"formatWithErrors": false,
 		"indentStyle": "tab",
-		"indentWidth": 4,
-		"lineEnding": "lf",
-		"lineWidth": 120,
-		"attributePosition": "auto",
-		"bracketSpacing": true
+		"indentWidth": 2
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
 	},
 	"javascript": {
 		"formatter": {
-			"jsxQuoteStyle": "double",
-			"quoteProperties": "asNeeded",
-			"trailingCommas": "all",
-			"semicolons": "asNeeded",
-			"arrowParentheses": "always",
-			"bracketSameLine": false,
 			"quoteStyle": "single",
-			"attributePosition": "auto",
-			"bracketSpacing": true
+			"semicolons": "asNeeded"
 		}
-	},
-	"overrides": [
-		{ "include": ["*.html"], "formatter": { "indentWidth": 2 } },
-		{ "include": ["*.yml"], "formatter": { "indentWidth": 2 } },
-		{ "include": ["*.json"], "formatter": { "indentWidth": 2 } }
-	]
+	}
 }

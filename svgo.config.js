@@ -13,14 +13,14 @@ module.exports = {
 	precision: 2,
 	plugins: /** @type {PluginConfig[]} */ ([
 		{
-			name: "preset-default",
+			name: 'preset-default',
 		},
-		"convertStyleToAttrs",
-		"removeDimensions",
-		"removeOffCanvasPaths",
-		"removeScriptElement",
-		"removeStyleElement",
-		"reusePaths",
-		"sortAttrs",
+		'convertStyleToAttrs',
+		'removeDimensions',
+		'removeOffCanvasPaths',
+		'removeScriptElement',
+		'removeStyleElement',
+		'reusePaths',
+		'sortAttrs',
 	]),
-};
+}

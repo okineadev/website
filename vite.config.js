@@ -1,9 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 // import liveReload from "vite-plugin-live-reload";
-import { createHtmlPlugin } from "vite-plugin-html";
-import { compression as viteCompression } from "vite-plugin-compression2";
-import Sitemap from "vite-plugin-sitemap";
-import autoprefixer from "autoprefixer";
+import { createHtmlPlugin } from 'vite-plugin-html'
+import { compression as viteCompression } from 'vite-plugin-compression2'
+import Sitemap from 'vite-plugin-sitemap'
+import autoprefixer from 'autoprefixer'
 
 /**
  * Google Tag Manager script to be included in the HTML.
@@ -22,7 +22,7 @@ const googleTagScript = `
 	gtag("js", new Date());
 	gtag("config", "G-0TM7HRVX06");
 </script>
-`;
+`
 
 /**
  * Vite configuration file.
@@ -37,7 +37,8 @@ export default defineConfig({
 			minify: true,
 			inject: {
 				data: {
-					gtagScript: process.env.NODE_ENV === "production" ? googleTagScript : "",
+					gtagScript:
+						process.env.NODE_ENV === 'production' ? googleTagScript : '',
 				},
 			},
 		}),
@@ -45,20 +46,20 @@ export default defineConfig({
 			filter: /\.(js|css|html)$/i,
 			// verbose: true
 		}),
-		Sitemap({ hostname: "https://okinea.dev" }),
+		Sitemap({ hostname: 'https://okinea.dev' }),
 	],
 	css: {
 		postcss: {
 			plugins: [autoprefixer()],
 		},
 	},
-	root: "src",
+	root: 'src',
 	server: {
 		open: true,
 	},
 	build: {
-		outDir: "../dist",
+		outDir: '../dist',
 		emptyOutDir: true,
 		// assetsInlineLimit: 0
 	},
-});
+})
