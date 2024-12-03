@@ -1,0 +1,9 @@
+.spark {
+	position: absolute;
+	width: 30px;
+	height: 8px;
+	border-radius: 3px;
+	// background-color: #212121;
+	backdrop-filter: invert(100%); // https://stackoverflow.com/a/77307800/21165921
+	transform: none;
+}

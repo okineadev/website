@@ -1,8 +1,7 @@
-// @ts-nocheck
-
 import { createApp } from 'vue'
 import './scss/style.scss'
 import App from './App.vue'
+import makeBurst from './animations/sparks'
 
 const app = createApp(App)
 app.mount('#app')
@@ -30,19 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
-	// const interactiveElements = document.querySelectorAll(
-	// 	'.project-tab, .medium-posts-container .post',
-	// )
-
-	// // biome-ignore lint/complexity/noForEach: <explanation>
-	// interactiveElements.forEach((tab) => {
-	// 	tab.addEventListener('click', () => {
-	// 		const link = tab.getAttribute('data-link')
-	// 		if (link) {
-	// 			window.open(link, '_blank')
-	// 		}
-	// 	})
-	// })
+	// Cool click effect
+	document.addEventListener('click', (e) => {
+		const center = { x: e.pageX, y: e.pageY }
+		makeBurst(center)
+	})
 })
 
 const messageStyle = `
