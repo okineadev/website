@@ -1,4 +1,4 @@
-<style src="../scss/dynamic-blobs.scss"></style>
+<style lang="scss" src="../scss/dynamic-blobs.scss"></style>
 
 <template>
 	<div class="dynamic-blobs-container" aria-hidden="true">

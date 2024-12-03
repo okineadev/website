@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { compression as viteCompression } from 'vite-plugin-compression2'
-import Sitemap from 'vite-plugin-sitemap'
+// import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
 
 /**
@@ -38,15 +38,18 @@ export default defineConfig({
 			inject: {
 				data: {
 					gtagScript:
+						// @ts-ignore
 						process.env.NODE_ENV === 'production' ? googleTagScript : '',
 				},
 			},
 		}),
+		// @ts-expect-error
 		viteCompression({ filter: /\.(js|css|html)$/i }),
-		Sitemap({ hostname: 'https://okinea.dev' }),
+		// Sitemap({ hostname: 'https://okinea.dev' }),
 	],
 	css: {
 		postcss: {
+			// @ts-expect-error
 			plugins: [autoprefixer()],
 		},
 	},

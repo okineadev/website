@@ -1,4 +1,4 @@
-<style src="../scss/theme-switch.scss"></style>
+<style lang="scss" src="../scss/theme-switch.scss"></style>
 
 <template>
 	<!-- Color theme switch slider -->
@@ -24,7 +24,7 @@
 	</button>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 // @ts-nocheck
 const storageKey = 'theme-preference'
 

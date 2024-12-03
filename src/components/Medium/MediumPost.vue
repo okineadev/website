@@ -10,9 +10,7 @@ defineProps<{
 }>()
 </script>
 
-<style lang="scss" scoped>
-@import '../../scss/medium-posts.scss';
-</style>
+<style lang="scss" src="../../scss/medium-posts.scss" scoped></style>
 
 <template>
 	<a class="post" :href="link" role="article" :aria-labelledby="titleId">
