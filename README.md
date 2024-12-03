@@ -8,83 +8,67 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
 
-   ```sh
-   git clone https://github.com/okineadev/okineadev-website.git --depth=1
-   cd okineadev-website
-   ```
+    ```sh
+    git clone https://github.com/okineadev/okineadev-website.git --depth=1
+    cd okineadev-website
+    ```
 
 2. **Install dependencies:**
 
-   > **📝 Important**: This project uses the **Bun** runtime, if you haven't installed it, install it using this command:
+    > **📝 Important**: This project uses the **Bun** runtime, if you haven't installed it, install it using this command:
 
-   ```bash
-   # Linux / macOS
-   curl -fsSL https://bun.sh/install | bash
+    ```bash
+    # Linux / macOS
+    curl -fsSL https://bun.sh/install | bash
 
-   # Windows (PowerShell)
-   powershell -c "irm bun.sh/install.ps1 | iex"
-   ```
+    # Windows (PowerShell)
+    powershell -c "irm bun.sh/install.ps1 | iex"
+    ```
 
-   **Verify the installation:**
+    **Verify the installation:**
 
-   ```bash
-   bun --version
-   ```
+    ```bash
+    bun --version
+    ```
 
-   For more information, visit the [Bun documentation](https://bun.sh/docs).
+    For more information, visit the [Bun documentation](https://bun.sh/docs).
 
-   ***
+    ***
 
-   Next, install the project dependencies:
+    Next, install the project dependencies:
 
-   ```bash
-   bun install
-   ```
+    ```bash
+    bun install
+    ```
 
 3. **Run the development server:**
 
-   ```sh
-   bun run dev
-   ```
+    ```sh
+    bun run dev
+    ```
 
 4. **Build the project for production:**
 
-   ```sh
-   bun run build
-   ```
+    ```sh
+    bun run build
+    ```
 
 5. **Preview the production build:**
 
-   ```bash
-   bun run preview
-   ```
+    ```bash
+    bun run preview
+    ```
 
-## 📦 Dependencies
+## 📝 License
 
-This project uses the following main dependencies:
+```plaintext
+Copyright © 2024 Yurii Bogdan. All Rights Reserved.
 
-- `vite`
-- `sass`
-- `vite-plugin-compression2`
-- `vite-plugin-html`
-- `vite-plugin-live-reload`
-- `vite-plugin-sitemap`
+This website and its source code are the exclusive property of Yurii Bogdan.
+Permission is granted to use specific components of this project for personal or educational purposes, provided they are not copied or replicated 1-to-1, and proper credit is given to the author.
 
-## 📚 Project Structure
-
-- [`src/`](src/): Directory containing the source code.
-  - [`index.html`](src/index.html): The main HTML file.
-  - [`scss/`](src/scss/): Directory containing SCSS stylesheets.
-  - [`images/`](src/images/): Directory containing image assets.
-  - [`js/`](src/js/): Directory containing JavaScript files:
-    - [`main.js`](src/js/main.js): Main JavaScript file handling interactivity and theme preference.
-  - [`assets/`](src/assets/): Directory containing favicon and other icons.
-- [`.prettierrc`](.prettierrc): Prettier configuration file.
-- [`architecture.md`](architecture.md): Document describing the project's architecture.
-- [`bunfig.toml`](bunfig.toml): Bun runtime configuration file.
-- [`NOTES.md`](NOTES.md): Document containing notes and credits.
-- [`svgo.config.js`](svgo.config.js): [SVGO](https://svgo.dev) configuration file.
-- [`vite.config.js`](vite.config.js): [Vite configuration file](https://vitejs.dev/config/).
+Commercial use, reproduction of the full project, or significant portions of it, as well as any form of redistribution without prior written consent from the author, are strictly prohibited.
+```
 
 ---
 
