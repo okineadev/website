@@ -70,17 +70,14 @@
 	- Hides .dynamic-blobs-container on screens smaller than 890px.
 	- Adjusts .content width and .profile-card .info .name font size on screens smaller than 550px.
 */
-@use "variables.scss"; // Theme colors
-@use "/animations/keyframes.scss"; // Keyframes for animations
-@use "icons.scss"; // Icons
-@use "dynamic-blobs.scss"; // Dynamic gradient blobs on the page
-@use "theme-switch.scss"; // Theme switcher
-@use "project-cards.scss"; // Cards with my projects
-@use "medium-posts.scss"; // Medium posts section
+@use '../animations/keyframes.scss'; // Keyframes for animations
+@use 'project-cards.scss'; // Project cards styles
+@use 'variables.scss'; // Theme colors
+@use 'icons.scss'; // Icons
 
 // Importing Google fonts
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
 // Global styles
 * {
@@ -92,7 +89,7 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
 	background-color: var(--background-color);
 	color: var(--text-color);
 }
@@ -102,6 +99,7 @@ body {
 	margin-right: auto;
 
 	padding-inline: 20px;
+	padding-bottom: 40px;
 	width: 85%;
 	position: relative;
 
@@ -126,12 +124,12 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "Raleway", sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 p,
 span {
-	font-family: "Readex Pro", sans-serif;
+	font-family: 'Readex Pro', sans-serif;
 }
 
 // Heading styles
@@ -175,7 +173,7 @@ a {
 	height: 700px;
 
 	mask-size: cover;
-	mask-image: url("/images/dots.svg");
+	mask-image: url('../images/dots.svg');
 
 	background-color: var(--dots-color);
 	position: absolute;
@@ -207,7 +205,7 @@ a {
 
 // Noise filter styles
 body::after {
-	content: "";
+	content: '';
 	position: fixed;
 
 	left: 0;
@@ -429,6 +427,16 @@ body::after {
 				}
 			}
 		}
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+
+	#dino {
+		bottom: -4px;
+		position: relative;
 	}
 }
 

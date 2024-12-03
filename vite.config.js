@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-// import liveReload from "vite-plugin-live-reload";
+import vue from '@vitejs/plugin-vue'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { compression as viteCompression } from 'vite-plugin-compression2'
 import Sitemap from 'vite-plugin-sitemap'
@@ -32,7 +32,7 @@ const googleTagScript = `
  */
 export default defineConfig({
 	plugins: [
-		// liveReload(),
+		vue(),
 		createHtmlPlugin({
 			minify: true,
 			inject: {
@@ -42,24 +42,12 @@ export default defineConfig({
 				},
 			},
 		}),
-		viteCompression({
-			filter: /\.(js|css|html)$/i,
-			// verbose: true
-		}),
+		viteCompression({ filter: /\.(js|css|html)$/i }),
 		Sitemap({ hostname: 'https://okinea.dev' }),
 	],
 	css: {
 		postcss: {
 			plugins: [autoprefixer()],
 		},
-	},
-	root: 'src',
-	server: {
-		open: true,
-	},
-	build: {
-		outDir: '../dist',
-		emptyOutDir: true,
-		// assetsInlineLimit: 0
 	},
 })

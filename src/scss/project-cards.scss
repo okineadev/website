@@ -1,5 +1,5 @@
-@use "variables.scss";
-@use "/animations/keyframes.scss";
+@use 'variables.scss';
+@use '../animations/keyframes.scss';
 
 // Projects styles
 .projects {
@@ -9,6 +9,10 @@
 	gap: 10px;
 	margin-bottom: 10px;
 	align-items: flex-start;
+
+	a {
+		text-decoration: none;
+	}
 
 	.project-tab {
 		--border-radius: 15px;
@@ -32,32 +36,6 @@
 			transition: transform 0.3s ease-in-out;
 		}
 
-		.slider {
-			display: block;
-			max-height: 0;
-
-			overflow: hidden;
-			margin-top: 10px;
-
-			@media (prefers-reduced-motion: no-preference) {
-				transition: max-height 0.7s ease-in-out;
-			}
-
-			img {
-				max-width: 100%;
-				height: auto;
-
-				display: block;
-				margin: 0 auto;
-				border-radius: var(--border-radius);
-
-				position: relative;
-				background-repeat: no-repeat;
-
-				background-size: contain;
-			}
-		}
-
 		&:hover {
 			transform: translateY(-10px);
 
@@ -67,11 +45,6 @@
 
 			&::before {
 				opacity: 0.3;
-			}
-
-			.slider {
-				max-height: 500px; // Adjust this value based on the content height
-				opacity: 1;
 			}
 		}
 
@@ -104,6 +77,8 @@
 				.name {
 					font-size: 17px;
 					text-wrap-mode: nowrap;
+
+					color: var(--text-color);
 				}
 			}
 		}
@@ -113,10 +88,12 @@
 			color: var(--project-tab-description-text-color);
 
 			margin: 4px 0 0;
+			text-wrap-mode: wrap;
+			// white-space: pre-line
 		}
 
 		&::before {
-			content: "";
+			content: '';
 			z-index: -9999;
 
 			position: absolute;
@@ -139,7 +116,7 @@
 		}
 
 		&::after {
-			content: "";
+			content: '';
 			z-index: -1;
 
 			position: absolute;

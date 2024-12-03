@@ -9,6 +9,10 @@
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
+	"[vue]": {
+		"editor.defaultFormatter": "Vue.volar"
+	},
+	"vite.devCommand": "bun run dev",
 	"editor.formatOnSave": true,
 	"github.copilot.chat.codeGeneration.instructions": [
 		{

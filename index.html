@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Okinea Dev</title>
+		<meta name="description" content="Information about me" />
+		<meta
+			name="image"
+			content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/src/images/preview.png"
+		/>
+
+		<!-- Open Graph-->
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://raw.githubusercontent.com/okineadev/okienadev-website/main/src/images/preview.png"
+		/>
+		<meta property="og:image:width" content="1024" />
+		<meta property="og:image:height" content="576" />
+		<meta property="og:url" content="https://okinea.dev" />
+		<meta property="og:title" content="Okinea Dev" />
+		<meta property="og:description" content="Information about me" />
+		<!-- <meta property="og:image:alt" content="Image" /> -->
+
+		<!-- <meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://skillicons.dev https://cdn.jsdelivr.net; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; frame-src 'none';"
+		/> -->
+
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+		<link rel="icon" type="image/x-icon" sizes="any" href="assets/favicon.ico" />
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#262525" />
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "okineadev",
+				"url": "https://okinea.dev",
+				"birthDate": "2008",
+				"gender": "male",
+				"nationality": "Ukrainian",
+				"sameAs": ["https://github.com/okineadev", "https://t.me/stadius_lucioni"],
+				"jobTitle": "Software Developer"
+			}
+		</script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link rel="preconnect" href="https://skillicons.dev" />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+		<!-- Google tag (gtag.js) -->
+		<%- gtagScript %>
+	</head>
+	<body>
+		<div id="app"></div>
+	</body>
+
+	<script src="src/main.ts" type="module"></script>
+
+	<svg style="display: none">
+		<filter id="noiseFilter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch" />
+			<feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+			<!-- <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/> -->
+			<!-- <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" /> -->
+		</filter>
+	</svg>
+</html>

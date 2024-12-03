@@ -3,7 +3,7 @@
  *
  * This SCSS file contains styles for a theme toggle button that allows users to switch between light and dark themes.
  */
-@use "variables.scss";
+@use 'variables.scss';
 
 // Theme toggle button styles
 .theme-toggle {
@@ -86,7 +86,7 @@
 		}
 	}
 
-	&[aria-label="dark"] {
+	&[aria-label='dark'] {
 		.sun-and-moon {
 			.sun {
 				transform: scale(1.75);

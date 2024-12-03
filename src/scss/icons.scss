@@ -21,7 +21,7 @@
 //   Parameters:
 //   - $filename: The URL of the emoji image.
 
-@use "variables.scss";
+@use 'variables.scss';
 
 @mixin iconBase($filename, $margin: 0 3px 0 0) {
 	margin: $margin;
@@ -58,71 +58,71 @@ i.icon {
 	mask-repeat: no-repeat;
 
 	&.arrow {
-		@include monochromeIcon("/icons/arrow.svg");
+		@include monochromeIcon('../icons/arrow.svg');
 	}
 
 	&.bolt {
-		@include monochromeIcon("/icons/bolt.svg");
+		@include monochromeIcon('../icons/bolt.svg');
 	}
 
 	&.code {
-		@include monochromeIcon("/icons/code.svg");
+		@include monochromeIcon('../icons/code.svg');
 	}
 
 	&.discord {
-		@include coloredIcon("/icons/discord.svg");
+		@include coloredIcon('../icons/discord.svg');
 	}
 
 	&.github {
-		@include monochromeIcon("/icons/github.svg");
+		@include monochromeIcon('../icons/github.svg');
 	}
 
 	&.globe {
-		@include monochromeIcon("/icons/globe.svg");
+		@include monochromeIcon('../icons/globe.svg');
 	}
 
 	&.location {
-		@include monochromeIcon("/icons/location.svg");
+		@include monochromeIcon('../icons/location.svg');
 	}
 
 	&.medium {
-		@include monochromeIcon("/icons/medium-circles.svg");
+		@include monochromeIcon('../icons/medium-circles.svg');
 	}
 
 	&.newspaper {
-		@include monochromeIcon("/icons/newspaper.svg");
+		@include monochromeIcon('../icons/newspaper.svg');
 	}
 
 	&.open {
-		@include monochromeIcon("/icons/open.svg");
+		@include monochromeIcon('../icons/open.svg');
 	}
 
 	&.palette {
-		@include monochromeIcon("/icons/palette.svg");
+		@include monochromeIcon('../icons/palette.svg');
 	}
 
 	&.repo {
-		@include monochromeIcon("/icons/repo.svg");
+		@include monochromeIcon('../icons/repo.svg');
 	}
 
 	&.stack-overflow {
-		@include coloredIcon("/icons/stack-overflow.svg");
+		@include coloredIcon('../icons/stack-overflow.svg');
 	}
 
 	&.table {
-		@include monochromeIcon("/icons/table.svg");
+		@include monochromeIcon('../icons/table.svg');
 	}
 
 	&.telegram {
-		@include coloredIcon("/icons/telegram.svg");
+		@include coloredIcon('../icons/telegram.svg');
 	}
 
 	&.tools {
-		@include monochromeIcon("/icons/tools.svg");
+		@include monochromeIcon('../icons/tools.svg');
 	}
 
 	&.unsplash {
-		@include monochromeIcon("/../other/Unsplash-symbol-dark.svg");
+		@include monochromeIcon('../../other/Unsplash-symbol-dark.svg');
 	}
 }
 
@@ -135,10 +135,10 @@ i.emoji {
 	margin-right: 3px;
 
 	&.hello {
-		@include emoji("/emojis/hello.webp");
+		@include emoji('../emojis/hello.webp');
 	}
 
 	&.ua-flag {
-		@include emoji("/emojis/ua-flag.webp");
+		@include emoji('../emojis/ua-flag.webp');
 	}
 }
