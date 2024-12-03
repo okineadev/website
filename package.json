@@ -26,6 +26,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "^1.1.14",
 		"@vitejs/plugin-vue": "^5.2.1",
 		"autoprefixer": "^10.4.20",
 		"sass-embedded": "^1.81.0",
