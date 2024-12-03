@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - "other/*"
-      - ".gitignore"
-      - "package.json"
-      - "bunfig.toml"
-      - "vite.config.js"
+      - 'other/*'
+      - '.gitignore'
+      - 'package.json'
+      - 'bunfig.toml'
+      - 'vite.config.js'
       # - "svgo.config.js"
-      - "src/**"
-      - ".github/workflows/**"
+      - 'src/**'
+      - '.github/workflows/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +26,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -49,6 +49,9 @@ jobs:
         with:
           bun-version: latest
 
+      - name: 🩼
+        run: 'bun install @esbuild/linux-x64 sass-embedded-linux-x64 --dev --no-save'
+
       - name: 📦 Cache Bun dependencies
         uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4
         with:
@@ -65,7 +68,7 @@ jobs:
       - name: 📤 Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: "dist"
+          path: 'dist'
 
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
