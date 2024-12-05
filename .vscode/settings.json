@@ -39,5 +39,6 @@
 			"title": "Notes and attributions",
 			"description": "Notes and attributions for this website."
 		}
-	]
+	],
+	"material-icon-theme.activeIconPack": "vue"
 }
