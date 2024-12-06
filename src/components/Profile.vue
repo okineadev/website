@@ -23,18 +23,16 @@ import DynamicBlobs from './DynamicBlobs™.vue'
 			</div>
 			<div class="description">
 				<p>
-					Hello <i class="emoji hello" aria-hidden="true"></i>, my name is <b>Yura</b> and I am a developer. I write
-					mainly in <b>Python</b>, <b>JavaScript</b> and
-					<b>Bash</b>
+					Hello <i class="emoji hello" aria-hidden="true"></i>, my name is <b>Yura</b>, I'm 16 years old, programmer,
+					designer, I create cool websites, amazing CLI applications and I also write posts on Medium from time to time
+					:)
 				</p>
-				<p>I also have experience with <b>Linux</b> and understand hardware</p>
 				<p>
-					If I have time, I help open source projects like
-					<a
-						href="https://github.com/material-extensions/vscode-material-icon-theme"><b>vscode-material-icon-theme</b></a>,
-					<a href="https://github.com/tldr-pages/tldr"><b>tldr</b></a>
-					and sponsor them, and I also make notes about how I fixed bugs on my
-					<a href="https://gist.github.com/okineadev"><b>Gist</b></a>
+					I work on open source projects, create my own and help others. I am the maintainer of the <a
+						href="https://github.com/material-extensions/vscode-material-icon-theme"><b>Material Icon
+							Theme</b></a> extension for VS Code, Co-founder
+					of <a href="https://github.com/ZGalera"><b>Zgalera Inc.</b></a>
+
 				</p>
 			</div>
 		</div>
