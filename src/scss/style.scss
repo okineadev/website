@@ -100,7 +100,7 @@ body {
 	margin-right: auto;
 
 	padding-inline: 20px;
-	padding-bottom: 40px;
+	// padding-bottom: 40px;
 	width: 85%;
 	position: relative;
 
@@ -129,6 +129,7 @@ h4 {
 }
 
 p,
+a,
 span {
 	font-family: 'Readex Pro', sans-serif;
 }
@@ -428,16 +429,6 @@ body::after {
 				}
 			}
 		}
-	}
-}
-
-footer {
-	display: flex;
-	justify-content: center;
-
-	#dino {
-		bottom: -4px;
-		position: relative;
 	}
 }
 

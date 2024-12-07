@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// @ts-expect-error
 import ThemeSwitch from './components/ThemeSwitch.vue'
 import Profile from './components/Profile.vue'
 import Project from './components/Project.vue'
 import Skills from './components/Skills/Skills.vue'
 import Socials from './components/Socials/Socials.vue'
 import MediumPosts from './components/Medium/MediumPosts.vue'
+import Footer from './components/Footer.vue'
 
 import myProjects from './projects'
 
@@ -50,5 +50,7 @@ const projects = ref(myProjects)
 		</h1>
 
 		<MediumPosts />
+
+		<Footer />
 	</div>
 </template>
