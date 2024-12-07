@@ -1,4 +1,4 @@
-@use "variables.scss";
+@use 'variables.scss';
 
 .medium-posts-container {
 	display: flex;
@@ -67,8 +67,10 @@
 			transition: opacity 0.3s ease-out;
 			box-shadow: 0 -4px 20px 0px #0000001a;
 
+			text-wrap-mode: wrap;
+
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 
 				top: 0;

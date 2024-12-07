@@ -23,8 +23,10 @@ import DynamicBlobs from './DynamicBlobs™.vue'
 			</div>
 			<div class="description">
 				<p>
-					Hello <i class="emoji hello" aria-hidden="true"></i>, my name is <b>Yura</b>, I'm 16 years old, programmer,
-					designer, I create cool websites, amazing CLI applications and I also write posts on Medium from time to time
+					Hello <i class="emoji hello" aria-hidden="true"></i>, my name is <b>Yura</b>, I'm 16 years old,
+					programmer,
+					designer, I create cool websites, amazing CLI applications and I also write posts on Medium from
+					time to time
 					:)
 				</p>
 				<p>
