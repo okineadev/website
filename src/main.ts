@@ -27,13 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		contentElements.forEach((element) => {
 			observer.observe(element)
 		})
-	}
 
-	// Cool click effect
-	document.addEventListener('click', (e) => {
-		const center = { x: e.pageX, y: e.pageY }
-		makeBurst(center)
-	})
+		// Cool click effect
+		document.addEventListener('click', (e) => {
+			const center = { x: e.pageX, y: e.pageY }
+			if (center.x && center.y ) {
+				makeBurst(center)
+			}
+		})
+	}
 })
 
 const messageStyle = `

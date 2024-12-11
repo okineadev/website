@@ -95,6 +95,7 @@ body {
 	color: var(--text-color);
 }
 
+// Ensure the content container has appropriate margin or padding to not overlap with #dots
 .content {
 	margin-left: auto;
 	margin-right: auto;
@@ -105,6 +106,16 @@ body {
 	position: relative;
 
 	margin-top: 30px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	// overflow: hidden;
+
+	// position: relative;
+	z-index: 1;
+	// padding-top: 700px; // Adjust this value as needed to ensure content is not overlapped by #dots
 
 	// Animation of all first-level elements in .content
 	& > * {
@@ -137,7 +148,8 @@ span {
 // Heading styles
 h1 {
 	font-size: 40px;
-	margin-block: 50px;
+	// margin-block: 50px;
+	margin: 0;
 }
 
 // Paragraph styles
@@ -181,8 +193,8 @@ a {
 	position: absolute;
 	z-index: -1;
 
-	// left: calc(((100% - 70rem) / 2) - 40px);
-	left: -40px;
+	left: calc(((100% - 70rem) / 2) - 40px);
+	// left: -40px;
 	top: -80px;
 
 	object-position: left;

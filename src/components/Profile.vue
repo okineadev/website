@@ -4,8 +4,6 @@ import DynamicBlobs from './DynamicBlobs™.vue'
 
 <template>
 	<div class="profile-card" aria-labelledby="profile-card-title">
-		<div id="dots" aria-hidden="true"></div>
-
 		<div class="info">
 			<h1 class="name" id="profile-card-title">Okinea Dev</h1>
 			<div class="meta-info">

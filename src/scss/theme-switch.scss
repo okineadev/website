@@ -7,31 +7,31 @@
 
 // Theme toggle button styles
 .theme-toggle {
+	$size: 40px;
 	background: none;
 	border: none;
 
 	padding: 0;
-	inline-size: var(--size);
-	block-size: var(--size);
 
 	position: absolute;
 
 	top: 30px;
 	right: 30px;
 
-	border-radius: 50%;
+	border-radius: $size;
 	cursor: pointer;
 	touch-action: manipulation;
 
 	-webkit-tap-highlight-color: transparent;
 	z-index: 9999;
-	width: 40px;
+	width: $size;
 
 	& > svg {
 		inline-size: 100%;
 		block-size: 100%;
 
 		stroke-linecap: round;
+		display: block;
 	}
 
 	.sun-and-moon {

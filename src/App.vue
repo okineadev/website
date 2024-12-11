@@ -18,21 +18,29 @@ const projects = ref(myProjects)
 	<ThemeSwitch />
 	<div class="background-gradient" aria-hidden="true"></div>
 
+	<!-- Decorative elements -->
 	<picture id="rock" aria-hidden="true">
 		<source srcset="./images/rock.webp" type="image/webp" fetchpriority="high" />
 		<source srcset="./images/rock.png" type="image/png" fetchpriority="high" />
 		<img src="./images/rock.png" fetchpriority="high" />
 	</picture>
 
+	<div id="dots" aria-hidden="true"></div>
+	<!------------------------->
+
 	<div class="content">
+		<!-- Info about me -->
 		<Profile></Profile>
 
 		<h1 class="center" id="projects"><i class="icon table"></i> My projects</h1>
 
-		<p>List of my best projects</p>
+		<div id="my-projects">
+			<p>List of my best projects</p>
 
-		<div class="projects">
-			<Project v-for="(project, index) in projects" :key="index" :project="project"></Project>
+			<!-- List of projects -->
+			<div class="projects-list">
+				<Project v-for="(project, index) in projects" :key="index" :project="project"></Project>
+			</div>
 		</div>
 
 		<h1 class="center skills-title" id="skills"><i class="icon bolt"></i> Skills</h1>
@@ -50,7 +58,8 @@ const projects = ref(myProjects)
 		</h1>
 
 		<MediumPosts />
-
-		<Footer />
 	</div>
+
+	<Footer />
+
 </template>

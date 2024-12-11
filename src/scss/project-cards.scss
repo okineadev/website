@@ -1,8 +1,12 @@
 @use 'variables.scss';
 @use '../animations/keyframes.scss';
 
+#my-projects > p {
+	margin-top: 0;
+}
+
 // Projects styles
-.projects {
+.projects-list {
 	display: flex;
 	flex-wrap: wrap;
 
