@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import DynamicBlobs from './DynamicBlobs™.vue'
+
+import Emoji from './Other/Emoji.vue';
+import Icon from './Other/Icon.vue';
 </script>
 
 <template>
@@ -8,12 +11,12 @@ import DynamicBlobs from './DynamicBlobs™.vue'
 			<h1 class="name" id="profile-card-title">Okinea Dev</h1>
 			<div class="meta-info">
 				<span class="meta-item">
-					<i class="icon location" aria-hidden="true"></i>
-					<i class="emoji ua-flag" aria-hidden="true"></i>
+					<Icon name="location" />
+					<Emoji name="ua-flag" />
 					<span>Ukraine</span>
 				</span>
 				<span class="meta-item">
-					<i class="icon github" aria-hidden="true"></i>
+					<Icon name="github" />
 					<a href="https://github.com/okineadev">
 						<span>okineadev</span>
 					</a>
@@ -21,7 +24,8 @@ import DynamicBlobs from './DynamicBlobs™.vue'
 			</div>
 			<div class="description">
 				<p>
-					Hello <i class="emoji hello" aria-hidden="true"></i>, my name is <b>Yura</b>, I'm 16 years old,
+					Hello
+					<Emoji name="hello" />, my name is <b>Yura</b>, I'm 16 years old,
 					programmer,
 					designer, I create cool websites, amazing CLI applications and I also write posts on Medium from
 					time to time

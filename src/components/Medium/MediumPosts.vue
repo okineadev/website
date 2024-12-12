@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import MediumPost from './MediumPost.vue'
-import illustration1Webp from '../../images/illustration-1.webp'
-import illustration1Jpg from '../../images/illustration-1.jpg'
-import illustration2Webp from '../../images/illustration-2.webp'
-import illustration2Jpg from '../../images/illustration-2.jpg'
+import illustration1Webp from '../../assets/images/illustration-1.webp'
+import illustration1Jpg from '../../assets/images/illustration-1.jpg'
+import illustration2Webp from '../../assets/images/illustration-2.webp'
+import illustration2Jpg from '../../assets/images/illustration-2.jpg'
 </script>
 
 <style lang="scss" src="../../scss/medium-posts.scss"></style>

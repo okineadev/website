@@ -51,7 +51,7 @@ const messageStyle = `
 `
 
 console.log(
-	'%c🐈 Sources are available at: https://github.com/okinea-website%cPlease consider giving it a ⭐ if you like it\n' +
+	'%c🐈 Sources are available at: https://github.com/okineadev/okineadev-website%cPlease consider giving it a ⭐ if you like it\n' +
 		'My Telegram channel: https://t.me/okinea_blog',
 	messageStyle,
 	messageStyle,

@@ -73,7 +73,6 @@
 @use '../animations/keyframes.scss'; // Keyframes for animations
 @use 'project-cards.scss'; // Project cards styles
 @use 'variables.scss'; // Theme colors
-@use 'icons.scss'; // Icons
 @use 'sparks.scss';
 
 // Importing Google fonts
@@ -178,7 +177,7 @@ a {
 
 // Center alignment
 .center {
-	text-align: center;
+	align-self: center;
 }
 
 // Magic pattern styles
@@ -187,7 +186,7 @@ a {
 	height: 700px;
 
 	mask-size: cover;
-	mask-image: url('../images/dots.svg');
+	mask-image: url('../assets/images/dots.svg');
 
 	background-color: var(--dots-color);
 	position: absolute;

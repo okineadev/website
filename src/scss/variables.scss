@@ -50,6 +50,9 @@
 		inset 0px 0px 0.5px rgba(255, 255, 255, 0.3);
 
 	--theme-color: var(--project-tab-background-color);
+
+	--code-background: #1e1e1e;
+	--code-font-color: #d4d4d4;
 }
 
 // Light theme
@@ -84,6 +87,9 @@
 		inset 0px 0px 0.5px rgba(255, 255, 255, 0.3);
 
 	--theme-color: var(--project-tab-background-color);
+
+	--code-background: #f5f5f5;
+	--code-font-color: #333;
 }
 
 // Apply dark theme based on user's system preference for dark mode

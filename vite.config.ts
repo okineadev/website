@@ -4,6 +4,9 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import { compression as viteCompression } from 'vite-plugin-compression2'
 import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
+// import svgLoader from 'vite-svg-loader'
+
+import magicalSvg from 'vite-plugin-magical-svg'
 
 /**
  * Google Tag Manager script to be included in the HTML.
@@ -27,12 +30,20 @@ const googleTagScript = `
 /**
  * Vite configuration file.
  *
- * @file vite.config.js
- * @description This configuration file sets up Vite with various plugins and settings for development and production environments.
+ * This configuration file sets up Vite with various plugins and settings for development and production environments.
  */
 export default defineConfig({
 	plugins: [
 		vue(),
+		// svgLoader({
+		// 	defaultImport: 'component',
+		// }),
+
+		magicalSvg({
+			target: 'vue',
+			preserveWidthHeight: true
+		}),
+
 		createHtmlPlugin({
 			minify: true,
 			inject: {
