@@ -15,10 +15,6 @@ module.exports = {
 		{
 			name: 'preset-default',
 		},
-		// {
-    //   name: 'removeAttrs',
-    //   params: { attrs: '(fill|stroke)' }
-    // },
 		'removeViewBox',
 		'removeDimensions',
 		'convertStyleToAttrs',

@@ -31,7 +31,7 @@ watchEffect(async () => {
 	height: auto;
 	aspect-ratio: 1/1;
 	vertical-align: -0.125em;
-	fill: var(--icons-color);
+	color: var(--icons-color);
 	margin: 0 3px 0 0;
 }
 </style>

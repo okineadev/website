@@ -41,7 +41,8 @@ const copyCode = () => {
 	color: var(--code-font-color);
 	border-radius: 15px;
 	overflow-x: auto;
-	width: 500px;
+	width: 100%;
+	max-width: 500px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
