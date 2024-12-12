@@ -63,7 +63,7 @@ const projects = ref(myProjects)
 		<Code class="center">npx okineadev</Code>
 
 		<h1 class="center" id="medium-posts-title">
-			<Icon name="newspaper" /> My posts on <img src="./assets/images/medium.svg" class="medium-logo" alt="Medium"
+			<Icon name="newspaper" /> My posts on <img src="./assets/images/medium.svg?url" class="medium-logo" alt="Medium"
 				height="34" />
 		</h1>
 
