@@ -25,7 +25,7 @@ const projects = ref(myProjects)
 	<picture id="rock" aria-hidden="true">
 		<source srcset="./assets/images/rock.webp" type="image/webp" fetchpriority="high" />
 		<source srcset="./assets/images/rock.png" type="image/png" fetchpriority="high" />
-		<img src="./images/rock.png" fetchpriority="high" />
+		<img src="./assets/images/rock.png" fetchpriority="high" />
 	</picture>
 
 	<div id="dots" aria-hidden="true"></div>
