@@ -5,6 +5,7 @@
 	"author": "Okinea Dev",
 	"homepage": "https://okinea.dev",
 	"repository": {
+		"type": "git",
 		"url": "https://github.com/okineadev/okineadev-website.git"
 	},
 	"bugs": {
