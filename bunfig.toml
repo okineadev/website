@@ -1,3 +1,3 @@
 [install]
-optional = false
+# optional = false
 saveTextLockfile = true
