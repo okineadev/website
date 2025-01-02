@@ -1,4 +1,4 @@
-name: Deploy website
+name: 🚀 Deploy website
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
         with:
           bun-version: latest
 
-      - name: 🩼
-        run: 'bun install @esbuild/linux-x64 sass-embedded-linux-x64 --dev --no-save'
+      # - name: 🩼
+      #   run: 'bun install @esbuild/linux-x64 sass-embedded-linux-x64 --dev --no-save'
 
       - name: 📦 Cache Bun dependencies
         uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4
         with:
           path: |
             ~/.bun/install/cache
-          key: bun-cache-${{ hashFiles('**/bun.lockb') }}
+          key: bun-cache-${{ hashFiles('**/bun.lock') }}
 
       - name: 📦 Install Bun dependencies
         run: bun install
