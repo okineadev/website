@@ -25,9 +25,12 @@ const copyCode = () => {
 
 <template>
 	<div class="code">
-		<code><slot></slot></code>
+		<code>
+			<slot></slot>
+		</code>
 		<div class="icon-wrapper">
-			<Icon :name="copied ? 'check' : 'copy'" @click="copyCode" :title="copied ? 'Copied!' : 'Copy to clipboard'" />
+			<Icon :name="copied ? 'check' : 'copy'" @click="copyCode"
+				:title="copied ? 'Copied!' : 'Copy to clipboard'" />
 			<span class="tooltip" :class="{ show: showTooltip }">Copied!</span>
 		</div>
 	</div>

@@ -94,6 +94,14 @@ body {
 	cursor: default;
 
 	background-image: url('../assets/noise.svg');
+
+	// Remove scrollbar
+	-ms-overflow-style: none;
+}
+
+// https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+body::-webkit-scrollbar {
+	display: none;
 }
 
 // Ensure the content container has appropriate margin or padding to not overlap with #dots
