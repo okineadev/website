@@ -351,7 +351,7 @@ a {
 
 // Background gradient styles
 .background-gradient {
-	background: linear-gradient(135deg, rgb(0, 208, 255), rgba(0, 255, 255, 0.6), rgba(0, 128, 128, 0.6));
+	background: linear-gradient(135deg, rgba(0, 208, 255, 0.4), rgba(0, 255, 255, 0.3), rgba(0, 128, 128, 0.3));
 
 	width: 400px;
 	height: 300px;
@@ -367,12 +367,10 @@ a {
 	filter: blur(100px);
 
 	@media (prefers-reduced-motion: no-preference) {
-		opacity: 0.1;
 		animation: showGradient 1s ease-out forwards;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		opacity: 0.4;
 		left: -385px;
 	}
 }
