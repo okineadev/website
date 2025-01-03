@@ -3,7 +3,6 @@
 ## Coding Guidelines
 
 - Follow the existing project structure and naming conventions.
-- Ensure all code is formatted using Prettier with the settings specified in [`.prettierrc`](/.prettierrc).
 - Write clean, modular, and well-documented code.
 - Use SCSS for styling and ensure styles are organized and maintainable.
 - Ensure JavaScript code is efficient and handles interactivity and theme preferences effectively.

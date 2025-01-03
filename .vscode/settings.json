@@ -12,6 +12,9 @@
 	"[vue]": {
 		"editor.defaultFormatter": "Vue.volar"
 	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
 	"vite.devCommand": "bun run dev",
 	"editor.formatOnSave": true,
 	"github.copilot.chat.codeGeneration.instructions": [
