@@ -89,12 +89,11 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 
-	// padding-bottom: 30px;
 	background-color: var(--background-color);
 	color: var(--text-color);
+	cursor: default;
 
 	background-image: url('../assets/noise.svg');
-	// opacity: 0.13;
 }
 
 // Ensure the content container has appropriate margin or padding to not overlap with #dots
