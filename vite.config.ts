@@ -6,14 +6,11 @@ import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
 
-/**
- * Google Tag Manager script to be included in the HTML.
- *
- * This script asynchronously loads the Google Tag Manager library and initializes it with the provided tracking ID.
- * It also sets up the `gtag` function to push events to the `dataLayer`.
- */
+const googleTagID = 'G-0TM7HRVX06'
+
+/** Google Tag Manager script to be included in the HTML */
 const googleTagScript = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0TM7HRVX06"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=${googleTagID}"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag() {
@@ -21,7 +18,7 @@ const googleTagScript = `
 	}
 
 	gtag("js", new Date());
-	gtag("config", "G-0TM7HRVX06");
+	gtag("config", "${googleTagID}");
 </script>
 `
 
