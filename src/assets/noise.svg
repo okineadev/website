@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 	<defs>
-		<filter id="prefix__a" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
+		<filter id="noise" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
 			color-interpolation-filters="sRGB">
 			<feTurbulence type="fractalNoise" baseFrequency=".6" stitchTiles="stitch" />
 			<feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
 		</filter>
 	</defs>
-	<rect width="100%" height="100%" filter="url(#prefix__a)" opacity=".15" />
+	<rect width="100%" height="100%" filter="url(#noise)" opacity=".12" />
 </svg>
