@@ -32,7 +32,7 @@ import Icon from './Other/Icon.vue';
 					:)
 				</p>
 				<p>
-					I work on open source projects, create my own and help others. I am the maintainer of the <a
+					I work on open source projects, create my own and help others. I am the (ex) maintainer of the <a
 						href="https://github.com/material-extensions/vscode-material-icon-theme"><b>Material Icon
 							Theme</b></a> extension for VS Code, Co-founder
 					of <a href="https://github.com/ZGalera"><b>Zgalera Inc.</b></a>
