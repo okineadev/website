@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Cool click effect
 		document.addEventListener('click', (e) => {
 			const center = { x: e.pageX, y: e.pageY }
-			if (center.x && center.y ) {
+			if (center.x && center.y) {
 				makeBurst(center)
 			}
 		})

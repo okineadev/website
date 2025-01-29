@@ -1,26 +1,26 @@
 <script setup>
-import Icon from './Other/Icon.vue';
-import { ref } from 'vue';
+import Icon from './Other/Icon.vue'
+import { ref } from 'vue'
 
-const copied = ref(false);
-const showTooltip = ref(false);
+const copied = ref(false)
+const showTooltip = ref(false)
 
 const copyCode = () => {
-	const codeContent = document.querySelector('.code code').textContent;
+	const codeContent = document.querySelector('.code code').textContent
 	navigator.clipboard
 		.writeText(codeContent)
 		.then(() => {
-			copied.value = true;
-			showTooltip.value = true;
+			copied.value = true
+			showTooltip.value = true
 			setTimeout(() => {
-				copied.value = false;
-				showTooltip.value = false;
-			}, 2000);
+				copied.value = false
+				showTooltip.value = false
+			}, 2000)
 		})
 		.catch((err) => {
-			console.error('Failed to copy:', err);
-		});
-};
+			console.error('Failed to copy:', err)
+		})
+}
 </script>
 
 <template>
@@ -29,8 +29,11 @@ const copyCode = () => {
 			<slot></slot>
 		</code>
 		<div class="icon-wrapper">
-			<Icon :name="copied ? 'check' : 'copy'" @click="copyCode"
-				:title="copied ? 'Copied!' : 'Copy to clipboard'" />
+			<Icon
+				:name="copied ? 'check' : 'copy'"
+				@click="copyCode"
+				:title="copied ? 'Copied!' : 'Copy to clipboard'"
+			/>
 			<span class="tooltip" :class="{ show: showTooltip }">Copied!</span>
 		</div>
 	</div>

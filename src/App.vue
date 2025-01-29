@@ -35,9 +35,7 @@ const projects = ref(myProjects)
 		<!-- Info about me -->
 		<Profile></Profile>
 
-		<h1 class="center" id="projects">
-			<Icon name="table" /> My projects
-		</h1>
+		<h1 class="center" id="projects"><Icon name="table" /> My projects</h1>
 
 		<div id="my-projects">
 			<p>List of my best projects</p>
@@ -48,28 +46,23 @@ const projects = ref(myProjects)
 			</div>
 		</div>
 
-		<h1 class="center skills-title" id="skills">
-			<Icon name="bolt" /> Skills
-		</h1>
+		<h1 class="center skills-title" id="skills"><Icon name="bolt" /> Skills</h1>
 
 		<Skills />
 
-		<h1 class="center" id="socials">
-			<Icon name="globe" /> Socials
-		</h1>
+		<h1 class="center" id="socials"><Icon name="globe" /> Socials</h1>
 
 		<Socials />
 
 		<Code class="center">npx okineadev</Code>
 
 		<h1 class="center" id="medium-posts-title">
-			<Icon name="newspaper" /> My posts on <img src="./assets/images/medium.svg?url" class="medium-logo"
-				alt="Medium" height="34" />
+			<Icon name="newspaper" /> My posts on
+			<img src="./assets/images/medium.svg?url" class="medium-logo" alt="Medium" height="34" />
 		</h1>
 
 		<MediumPosts />
 	</div>
 
 	<Footer />
-
 </template>

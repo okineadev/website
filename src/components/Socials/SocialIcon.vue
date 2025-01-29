@@ -11,7 +11,12 @@ defineProps<{
 	<a :href="url" target="_blank" :aria-label="platform">
 		<div class="social">
 			<div class="social-icon">
-				<Icon :name="platform.toLowerCase().replace(/\s+/g, '-')" width="50" height="50" aria-hidden="true" />
+				<Icon
+					:name="platform.toLowerCase().replace(/\s+/g, '-')"
+					width="50"
+					height="50"
+					aria-hidden="true"
+				/>
 			</div>
 			<span>{{ platform }}</span>
 		</div>

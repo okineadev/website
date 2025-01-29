@@ -19,7 +19,7 @@
 		"build": "vue-tsc -b && vite build",
 		"preview": "vite preview",
 		"lint": "biome lint",
-		"format": "biome format --write",
+		"format": "prettier **/*.{vue,scss,md,html,yml} -w && biome format --write",
 		"svgo": "svgo src/assets/images/*.svg src/assets/icons/*.svg"
 	},
 	"dependencies": {
@@ -30,6 +30,7 @@
 		"@types/bun": "^1.1.14",
 		"@vitejs/plugin-vue": "^5.2.1",
 		"autoprefixer": "^10.4.20",
+		"prettier": "^3.4.2",
 		"sass-embedded": "^1.83.0",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.6",

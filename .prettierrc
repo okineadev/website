@@ -2,6 +2,7 @@
 	"useTabs": true,
 	"tabWidth": 4,
 	"printWidth": 120,
+	"semi": false,
 	"overrides": [
 		{
 			"files": "*.html",
@@ -16,7 +17,7 @@
 			}
 		},
 		{
-			"files": "*.json",
+			"files": "*.md",
 			"options": {
 				"tabWidth": 2
 			}

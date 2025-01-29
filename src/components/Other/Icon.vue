@@ -21,7 +21,12 @@ watchEffect(async () => {
 </script>
 
 <template>
-	<component :is="iconComponent" v-if="iconComponent" :class="['icon', name]" aria-hidden="true" />
+	<component
+		:is="iconComponent"
+		v-if="iconComponent"
+		:class="['icon', name]"
+		aria-hidden="true"
+	/>
 </template>
 
 <style lang="scss" scoped>

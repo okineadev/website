@@ -1,5 +1,7 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+
 	"[biome_syntax_tree]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
@@ -10,19 +12,25 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "Vue.volar"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[markdown]": {
-		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"vite.devCommand": "bun run dev",
-	"editor.formatOnSave": true,
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg"
+	},
+
 	"github.copilot.chat.codeGeneration.instructions": [
 		{
 			"file": "/architecture.md"
 		}
 	],
 	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
 	"links.resources": [
 		{
 			"url": "https://github.com/okineadev/okineadev-website",
@@ -43,8 +51,7 @@
 			"description": "Notes and attributions for this website."
 		}
 	],
+
 	"material-icon-theme.activeIconPack": "vue",
-	"[svg]": {
-		"editor.defaultFormatter": "jock.svg"
-	}
+	"vite.devCommand": "bun run dev"
 }

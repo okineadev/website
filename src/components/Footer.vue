@@ -12,8 +12,8 @@
 <style lang="scss" scoped>
 footer {
 	display: flex;
-  justify-content: center;
-  margin-block: 25px;
-  align-items: center;
+	justify-content: center;
+	margin-block: 25px;
+	align-items: center;
 }
 </style>
