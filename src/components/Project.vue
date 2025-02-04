@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import type { Project } from '../types'
+import type { Project } from '../types.d'
 import Icon from './Other/Icon.vue'
 
-defineProps<{
+const props = defineProps<{
 	project: Project
 }>()
+
+const name = props.project.repo.split('/')[1]
 </script>
 
 <template>
@@ -12,14 +14,14 @@ defineProps<{
 		:href="`https://github.com/${project.repo}`"
 		class="project-tab"
 		role="region"
-		:aria-labelledby="`${project.name}-title`"
+		:aria-labelledby="`${name}-title`"
 	>
 		<div class="main-tab">
 			<div class="project-header">
 				<div class="repo">
 					<!-- <i class="icon repo" aria-hidden="true"></i> -->
 					<Icon name="repo" />
-					<span class="name" :id="`${project.name}-title`">{{ project.name }}</span>
+					<span class="name" :id="`${name}-title`">{{ name }}</span>
 				</div>
 
 				<!-- <i class="icon open" aria-hidden="true"></i> -->

@@ -3,12 +3,6 @@
  */
 export type Project = {
 	/**
-	 * The display name of the project.
-	 * @example "dotload"
-	 */
-	name: string
-
-	/**
 	 * The GitHub repository of the project in the format "username/repo".
 	 * @example "okineadev/dotload"
 	 */
