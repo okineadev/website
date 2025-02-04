@@ -38,8 +38,7 @@ export default defineConfig({
 			minify: true,
 			inject: {
 				data: {
-					gtagScript:
-						process.env.NODE_ENV === 'production' ? googleTagScript : '',
+					gtagScript: process.env.NODE_ENV === 'production' ? googleTagScript : '',
 				},
 			},
 		}),

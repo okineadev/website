@@ -1,34 +1,9 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
+	"[javascript][typescript][json]": { "editor.defaultFormatter": "biomejs.biome" },
+	"[vue][scss][markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[svg]": { "editor.defaultFormatter": "jock.svg" },
 
-	"[biome_syntax_tree]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[vue]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[scss]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[svg]": {
-		"editor.defaultFormatter": "jock.svg"
-	},
-
-	"github.copilot.chat.codeGeneration.instructions": [
-		{
-			"file": "/architecture.md"
-		}
-	],
+	"github.copilot.chat.codeGeneration.instructions": [{ "file": "/architecture.md" }],
 	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
 
 	"links.resources": [

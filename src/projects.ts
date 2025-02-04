@@ -9,8 +9,7 @@ const myProjects: Project[] = [
 	{
 		name: 'cli-tips',
 		repo: 'okineadev/cli-tips',
-		description:
-			'💡 CLI tool that provides useful tips\nand commands for Linux users',
+		description: '💡 CLI tool that provides useful tips\nand commands for Linux users',
 	},
 	{
 		name: 'okineadev-website',
@@ -20,8 +19,7 @@ const myProjects: Project[] = [
 	{
 		name: 'platform-tools-installer-gui',
 		repo: 'okineadev/platform-tools-installer-gui',
-		description:
-			'📥 Unofficial platform-tools GUI installer\n(adb, fastboot) for Windows™',
+		description: '📥 Unofficial platform-tools GUI installer\n(adb, fastboot) for Windows™',
 	},
 ]
 

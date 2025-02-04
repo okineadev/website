@@ -51,9 +51,7 @@ const getColorPreference = () => {
 	if (localStorage.getItem(storageKey)) {
 		return localStorage.getItem(storageKey)
 	}
-	return window.matchMedia('(prefers-color-scheme: dark)').matches
-		? 'dark'
-		: 'light'
+	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
 const setPreference = () => {
@@ -70,9 +68,7 @@ const setPreference = () => {
  */
 const reflectPreference = () => {
 	document.body.setAttribute('class', theme.value)
-	document
-		.querySelector('#theme-toggle')
-		?.setAttribute('aria-label', theme.value)
+	document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value)
 
 	// Update theme-color meta tag based on CSS variable
 	const themeColorMeta = document.querySelector('meta[name="theme-color"]')
@@ -93,11 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		setPreference()
 	})
 
-	window
-		.matchMedia('(prefers-color-scheme: dark)')
-		.addEventListener('change', ({ matches: isDark }) => {
-			theme.value = isDark ? 'dark' : 'light'
-			setPreference()
-		})
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
+		theme.value = isDark ? 'dark' : 'light'
+		setPreference()
+	})
 })
 </script>

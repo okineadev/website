@@ -43,7 +43,5 @@
 	"optionalDependencies": {
 		"svgo": "^3.3.2"
 	},
-	"trustedDependencies": [
-		"@biomejs/biome"
-	]
+	"trustedDependencies": ["@biomejs/biome"]
 }

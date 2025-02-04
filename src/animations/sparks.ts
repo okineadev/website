@@ -19,9 +19,7 @@ const RANDOMNESS_ON = true
 function createTransformSteps() {
 	// biome-ignore lint/style/noArguments: <explanation>
 	if (Array.from(arguments).length === 0) {
-		throw new DOMException(
-			'arguments to createTransformSteps should never be empty!',
-		)
+		throw new DOMException('arguments to createTransformSteps should never be empty!')
 	}
 
 	// biome-ignore lint/style/noArguments: <explanation>
@@ -52,9 +50,7 @@ const dynamicAnimation = (name: string, rotation: any) => {
   3. keeps the spark in place while scaling it down
 */
 
-	const randomDist = RANDOMNESS_ON
-		? Math.floor((Math.random() - 0.5) * DISTANCE * 0.7)
-		: 0
+	const randomDist = RANDOMNESS_ON ? Math.floor((Math.random() - 0.5) * DISTANCE * 0.7) : 0
 
 	const [s1, s2, s3] = createTransformSteps(
 		`translate(-50%, -50%) rotate(${rotation}deg) translate(10px, 0px)`,
