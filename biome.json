@@ -2,7 +2,12 @@
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["dist", "node_modules", "tsconfig*.json", "bun.lock"]
+		"ignore": ["tsconfig*.json", "bun.lock"]
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
 	},
 	"formatter": {
 		"enabled": true,
