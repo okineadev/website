@@ -15,6 +15,6 @@ Commercial use, reproduction of the full project, or significant portions of it,
 
 ---
 
-Feel free to explore, contribute, and provide feedback!
+Feel free to explore!
 
 Happy coding! 😄
