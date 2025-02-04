@@ -66,3 +66,122 @@ const projects = ref(myProjects)
 
 	<Footer />
 </template>
+
+<style lang="scss">
+.content {
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-inline: 20px;
+	// padding-bottom: 40px;
+	width: 85%;
+	position: relative;
+
+	margin-top: 30px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	// overflow: hidden;
+
+	// position: relative;
+	z-index: 1;
+	// padding-top: 700px; // Adjust this value as needed to ensure content is not overlapped by #dots
+
+	// Animation of all first-level elements in .content
+	& > * {
+		@media (prefers-reduced-motion: no-preference) {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		&.animate {
+			animation: fadeInUp 0.8s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+// Magic pattern styles
+#dots {
+	width: 700px;
+	height: 700px;
+
+	mask-size: cover;
+	mask-image: url('../assets/images/dots.svg');
+
+	background-color: var(--dots-color);
+	position: absolute;
+	z-index: -1;
+
+	left: calc(((100% - 70rem) / 2) - 40px);
+	// left: -40px;
+	top: -80px;
+
+	object-position: left;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: fade 1s ease-out forwards;
+	}
+}
+
+#rock {
+	position: absolute;
+	width: 120px;
+
+	top: -42px;
+	left: -46px;
+	opacity: 0.9;
+
+	img {
+		width: inherit;
+	}
+}
+
+// Background gradient styles
+.background-gradient {
+	background: linear-gradient(135deg, rgba(0, 208, 255, 0.4), rgba(0, 255, 255, 0.3), rgba(0, 128, 128, 0.3));
+
+	width: 400px;
+	height: 300px;
+
+	border-radius: 100%;
+	z-index: -2;
+	position: absolute;
+
+	top: 420px;
+	left: -385px;
+
+	transform: rotate(90deg);
+	filter: blur(100px);
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: showGradient 1s ease-out forwards;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		left: -385px;
+	}
+}
+
+// Medium logo styles
+.medium-logo {
+	background-color: var(--medium-logo-background-color);
+	padding: 5px;
+}
+
+#my-projects > p {
+	margin-top: 0;
+}
+
+// Projects styles
+.projects-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 10px;
+	margin-bottom: 10px;
+	align-items: flex-start;
+}
+</style>

@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import './scss/style.scss'
 import App from './App.vue'
-import makeBurst from './animations/sparks'
+import makeBurst from './effects/sparks'
 
 const app = createApp(App)
 app.mount('#app')

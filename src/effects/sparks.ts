@@ -1,4 +1,5 @@
-// @ts-nocheck
+// @ts-nocheck AI generated
+
 // Taken from https://codepen.io/lucasdellabella/pen/RwMyzRd
 
 let styleSheet: HTMLStyleElement | null = null

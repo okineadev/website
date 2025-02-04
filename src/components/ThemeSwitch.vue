@@ -1,5 +1,3 @@
-<style lang="scss" src="../scss/theme-switch.scss"></style>
-
 <template>
 	<!-- Color theme switch slider -->
 	<button
@@ -10,25 +8,12 @@
 		aria-live="polite"
 		aria-pressed="false"
 	>
-		<svg
-			class="sun-and-moon"
-			aria-hidden="true"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-		>
+		<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 			<mask class="moon" id="moon-mask">
 				<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
 				<circle cx="24" cy="10" r="6" fill="black"></circle>
 			</mask>
-			<circle
-				class="sun"
-				cx="12"
-				cy="12"
-				r="6"
-				mask="url(#moon-mask)"
-				fill="currentColor"
-			></circle>
+			<circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
 			<g class="sun-beams" stroke="currentColor">
 				<line x1="12" y1="1" x2="12" y2="3"></line>
 				<line x1="12" y1="21" x2="12" y2="23"></line>
@@ -95,3 +80,128 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 })
 </script>
+
+<style lang="scss">
+.theme-toggle {
+	$size: 40px;
+	background: none;
+	border: none;
+
+	padding: 0;
+
+	position: absolute;
+
+	top: 30px;
+	right: 30px;
+
+	border-radius: $size;
+	cursor: pointer;
+	touch-action: manipulation;
+
+	-webkit-tap-highlight-color: transparent;
+	z-index: 9999;
+	width: $size;
+
+	& > svg {
+		inline-size: 100%;
+		block-size: 100%;
+
+		stroke-linecap: round;
+		display: block;
+	}
+
+	.sun-and-moon {
+		.moon,
+		.sun,
+		.sun-beams {
+			transform-origin: center center;
+		}
+
+		.moon,
+		.sun {
+			fill: var(--theme-switch-color);
+		}
+
+		.sun-beams {
+			stroke: var(--theme-switch-color);
+			stroke-width: 2px;
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			.sun {
+				transition: transform 0.5s var(--ease-elastic-3);
+			}
+
+			.sun-beams {
+				transition:
+					transform 0.5s var(--ease-elastic-4),
+					opacity 0.5s var(--ease-3);
+			}
+
+			.moon > circle {
+				transition: transform 0.25s var(--ease-out-5);
+			}
+
+			@supports (cx: 1) {
+				.moon > circle {
+					transition: cx 0.25s var(--ease-out-5);
+				}
+			}
+		}
+	}
+
+	&:hover,
+	&:focus-visible {
+		.sun-and-moon {
+			.moon,
+			.sun {
+				fill: var(--theme-switch-hover-color);
+			}
+
+			.sun-beams {
+				stroke: var(--theme-switch-hover-color);
+			}
+		}
+	}
+
+	&[aria-label='dark'] {
+		.sun-and-moon {
+			.sun {
+				transform: scale(1.75);
+			}
+			.sun-beams {
+				opacity: 0;
+			}
+			.moon > circle {
+				transform: translate(-7px);
+
+				@supports (cx: 1) {
+					transform: translate(0);
+					cx: 17;
+				}
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				.sun {
+					transform: scale(1.75);
+					transition-timing-function: var(--ease-3);
+
+					transition-duration: 0.25s;
+				}
+
+				.sun-beams {
+					transform: rotate(-25deg);
+
+					transition-duration: 0.15s;
+				}
+
+				.moon > circle {
+					transition-delay: 0.25s;
+
+					transition-duration: 0.5s;
+				}
+			}
+		}
+	}
+}
+</style>
