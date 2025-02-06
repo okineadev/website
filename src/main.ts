@@ -10,7 +10,9 @@ const app = createApp(App)
 app.mount('#app')
 
 // Initialize Lenis
-new Lenis()
+new Lenis({
+  autoRaf: true,
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 	if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
