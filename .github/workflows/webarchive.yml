@@ -1,0 +1,21 @@
+name: 🏛️ Web Archive
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 💾 Archive page
+        id: archive
+        uses: JamieMagee/wayback@v2.1.0
+        with:
+          url: okinea.dev
+          saveScreenshot: true
+
+      - run: echo "### ✅ Page successfully archived at ${{ steps.archive.outputs.wayback_url }}" >> $GITHUB_STEP_SUMMARY
