@@ -91,10 +91,10 @@ import Icon from '../Other/Icon.vue'
 
 	gap: 30px;
 	justify-content: center;
-	max-width: 1000px;
+	max-width: 1200px;
 
 	margin-inline: auto;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 
 	.section {
 		display: flex;
@@ -107,13 +107,10 @@ import Icon from '../Other/Icon.vue'
 			$icon-size: 50px;
 
 			display: flex;
-			flex-direction: row;
-
 			flex-wrap: wrap;
-			justify-content: flex-start;
 			gap: $gap;
 
-			min-width: 150px;
+			max-width: 640px;
 			width: 100%;
 
 			// Skill icon
@@ -191,6 +188,18 @@ import Icon from '../Other/Icon.vue'
 					opacity: 1;
 					width: 44px;
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 890px) {
+	.skills {
+		flex-wrap: wrap;
+		.section {
+			align-items: center;
+			.skills-list {
+				justify-content: center;
 			}
 		}
 	}

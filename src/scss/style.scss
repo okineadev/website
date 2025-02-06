@@ -1,75 +1,3 @@
-/*
-
-	This SCSS file is the main stylesheet for the okineadev website. It includes various modules and styles for different sections of the website.
-
-	Modules:
-	- variables.scss: Contains theme colors.
-	- /animations/keyframes.scss: Contains keyframes for animations.
-	- icons.scss: Contains icon styles.
-	- dynamic-blobs.scss: Contains styles for dynamic gradient blobs on the page.
-	- theme-switch.scss: Contains styles for the theme switcher.
-	- project-cards.scss: Contains styles for project cards.
-	- medium-posts.scss: Contains styles for the Medium posts section.
-
-	Google Fonts:
-	- Raleway: Used for headings (h1, h2, h3, h4).
-	- Readex Pro: Used for paragraphs (p) and spans.
-
-	Global Styles:
-	- Sets box-sizing to border-box for all elements.
-
-	Body Styles:
-	- Sets margin, overflow, padding, background color, and text color for the body.
-
-	Content Styles:
-	- Centers content and applies padding and width.
-	- Animates first-level elements within .content if prefers-reduced-motion is not set.
-
-	Font Family Styles:
-	- Applies Raleway font to headings.
-	- Applies Readex Pro font to paragraphs and spans.
-
-	Heading Styles:
-	- Sets font size and margin for h1.
-
-	Paragraph Styles:
-	- Sets font size for paragraphs.
-
-	Bold Text Styles:
-	- Sets font weight for bold text.
-
-	Link Styles:
-	- Sets color and white-space for links.
-	- Adds hover effect and transition for links if prefers-reduced-motion is not set.
-
-	Center Alignment:
-	- Centers text for elements with the .center class.
-
-	Magic Pattern Styles:
-	- Styles for the #dots element, including size, mask, background color, position, and animation.
-
-	Noise Filter Styles:
-	- Adds a noise filter overlay to the body.
-
-	Profile Card Styles:
-	- Styles for the .profile-card element, including layout and child elements (.info, .name, .meta-info, .meta-item, .description).
-
-	Skills Section Styles:
-	- Styles for the .skills section, including layout, gap, and hover effects for skill icons.
-
-	Background Gradient Styles:
-	- Styles for the .background-gradient element, including gradient, size, position, and animation.
-
-	Contacts Section Styles:
-	- Styles for the .contacts section, including layout and hover effects for social icons.
-
-	Rock Element Styles:
-	- Styles for the #rock element, including position and size.
-
-	Media Queries:
-	- Hides .dynamic-blobs-container on screens smaller than 890px.
-	- Adjusts .content width and .profile-card .info .name font size on screens smaller than 550px.
-*/
 @use '../animations/keyframes.scss'; // Keyframes for animations
 @use 'variables.scss'; // Theme colors
 @use '../effects/sparks.scss';
@@ -152,22 +80,6 @@ a {
 .center {
 	align-self: center;
 	text-align: center;
-}
-
-// Media queries
-@media (max-width: 890px) {
-	.skills {
-		flex-wrap: wrap;
-		.section {
-			align-items: center;
-			.skills-list {
-				justify-content: center;
-			}
-		}
-	}
-	.dynamic-blobs-container {
-		display: none;
-	}
 }
 
 @media (max-width: 550px) {

@@ -7,3 +7,11 @@
 		<div class="purple blob"></div>
 	</div>
 </template>
+
+<style lang="scss">
+@media (max-width: 890px) {
+	.dynamic-blobs-container {
+		display: none;
+	}
+}
+</style>
