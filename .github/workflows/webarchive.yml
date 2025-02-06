@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: 💾 Archive page
         id: archive
-        uses: JamieMagee/wayback@v2.0.0
+        uses: JamieMagee/wayback@a01961cced233578e9d5759a5acf4e573167e3a9 # v2.0.0
         with:
           url: okinea.dev
           saveScreenshot: true
