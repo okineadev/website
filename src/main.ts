@@ -3,8 +3,14 @@ import './scss/style.scss'
 import App from './App.vue'
 import makeBurst from './effects/sparks'
 
+// Smooth scrolling
+import Lenis from 'lenis'
+
 const app = createApp(App)
 app.mount('#app')
+
+// Initialize Lenis
+new Lenis()
 
 document.addEventListener('DOMContentLoaded', () => {
 	if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {

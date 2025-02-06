@@ -11,7 +11,7 @@ const myProjects: Project[] = [
 	},
 	{
 		repo: 'just-serverless/contributors-table',
-		description: '😎 Service for embedding the table of contributors in the readme of the project'
+		description: '😎 Service for embedding the table of contributors in the readme of the project',
 	},
 	{
 		repo: 'okineadev/okineadev-website',
@@ -28,7 +28,7 @@ const myProjects: Project[] = [
 	{
 		repo: 'cli-stuff/platform-tools-installer-windows',
 		description: '🏄‍♂️ Command line script to easily install platform-tools (adb, fastboot) on Windows™',
-	}
+	},
 ]
 
 export default myProjects

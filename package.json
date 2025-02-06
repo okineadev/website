@@ -23,6 +23,7 @@
 		"svgo": "svgo src/assets/images/*.svg src/assets/icons/*.svg"
 	},
 	"dependencies": {
+		"lenis": "^1.1.20",
 		"vue": "^3.5.13"
 	},
 	"devDependencies": {
