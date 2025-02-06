@@ -89,7 +89,7 @@ import Icon from '../Other/Icon.vue'
 	display: flex;
 	flex-direction: row;
 
-	gap: 30px;
+	gap: 48px;
 	justify-content: center;
 	max-width: 1200px;
 
@@ -189,6 +189,10 @@ import Icon from '../Other/Icon.vue'
 					width: 44px;
 				}
 			}
+		}
+
+		&.design .skills-list {
+			width: 115px;
 		}
 	}
 }
