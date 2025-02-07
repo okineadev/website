@@ -23,11 +23,6 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -41,23 +36,17 @@ jobs:
       - name: 📥 Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
-      - name: ⚙️ Setup Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-
       - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2.0.1
         with:
           bun-version: latest
 
-      # - name: 🩼
-      #   run: 'bun install @esbuild/linux-x64 sass-embedded-linux-x64 --dev --no-save'
-
-      - name: 📦 Cache Bun dependencies
-        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4
-        with:
-          path: |
-            ~/.bun/install/cache
-          key: bun-cache-${{ hashFiles('**/bun.lock') }}
+      # - name: 📦 Cache Bun dependencies
+      #   uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4
+      #   with:
+      #     path: |
+      #       ~/.bun/install/cache
+      #     key: bun-cache-${{ hashFiles('**/bun.lock') }}
 
       - name: 📦 Install Bun dependencies
         run: bun install
@@ -68,7 +57,7 @@ jobs:
       - name: 📤 Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: 'dist'
+          path: dist
 
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
