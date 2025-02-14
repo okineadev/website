@@ -47,7 +47,7 @@ export default defineConfig({
 		}),
 		// @ts-expect-error
 		viteCompression({ filter: /\.(js|css|html)$/i }),
-		Sitemap({ hostname: DOMAIN }),
+		Sitemap({ hostname: `https://${DOMAIN}` }),
 	],
 	css: {
 		postcss: {
