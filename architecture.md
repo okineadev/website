@@ -4,7 +4,7 @@
 
 ### 1. Configurations
 
-- [`vite.config.js`](vite.config.js): [Vite configuration file](https://vitejs.dev/config/) containing plugins and settings.
+- [`vite.config.js`](vite.config.js): [Vite configuration file](https://vite.dev/config) containing plugins and settings.
 - [`svgo.config.js`](svgo.config.js): [SVGO](https://svgo.dev) configuration file
 
 ### 2. Images and Icons
@@ -20,6 +20,6 @@
 
 ## Tools and Technologies
 
-- **[Vite](https://vitejs.dev/)**: Used for project build and development.
-- **[Bun](https://bun.sh/)**: Used as the JavaScript runtime.
-- **[SCSS](https://sass-lang.com/)**: Used for styling.
+- **[Vite](https://vite.dev)**: Used for project build and development.
+- **[Bun](https://bun.sh)**: Used as the JavaScript runtime.
+- **[SCSS](https://sass-lang.com)**: Used for styling.

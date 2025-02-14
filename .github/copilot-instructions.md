@@ -15,6 +15,6 @@
 
 ## 📚 Resources
 
-- [Vite Documentation](https://vitejs.dev/)
+- [Vite Documentation](https://vite.dev/)
 - [Bun Documentation](https://bun.sh/docs)
 - [SCSS Documentation](https://sass-lang.com/documentation)
