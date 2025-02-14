@@ -6,6 +6,8 @@ import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
 
+import DOMAIN from './CNAME'
+
 const googleTagID = 'G-0TM7HRVX06'
 
 /** Google Tag Manager script to be included in the HTML */
@@ -39,12 +41,13 @@ export default defineConfig({
 			inject: {
 				data: {
 					gtagScript: process.env.NODE_ENV === 'production' ? googleTagScript : '',
+					DOMAIN,
 				},
 			},
 		}),
 		// @ts-expect-error
 		viteCompression({ filter: /\.(js|css|html)$/i }),
-		Sitemap({ hostname: 'https://okinea.dev' }),
+		Sitemap({ hostname: DOMAIN }),
 	],
 	css: {
 		postcss: {

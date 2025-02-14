@@ -28,5 +28,6 @@
 	],
 
 	"material-icon-theme.activeIconPack": "vue",
-	"vite.devCommand": "bun run dev"
+	"vite.devCommand": "bun run dev",
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
