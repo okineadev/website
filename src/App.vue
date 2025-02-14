@@ -109,7 +109,7 @@ const projects = ref(myProjects)
 	height: 700px;
 
 	mask-size: cover;
-	mask-image: url('../assets/images/dots.svg');
+	mask-image: url('./assets/images/dots.svg');
 
 	background-color: var(--dots-color);
 	position: absolute;
