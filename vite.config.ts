@@ -6,7 +6,7 @@ import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
 
-import DOMAIN from './CNAME'
+import DOMAIN from './CNAME.ts'
 
 const googleTagID = 'G-0TM7HRVX06'
 
@@ -41,7 +41,7 @@ export default defineConfig({
 			inject: {
 				data: {
 					gtagScript: process.env.NODE_ENV === 'production' ? googleTagScript : '',
-					DOMAIN,
+					DOMAIN: DOMAIN,
 				},
 			},
 		}),
@@ -54,5 +54,9 @@ export default defineConfig({
 			// @ts-expect-error idk how to fix it...
 			plugins: [autoprefixer()],
 		},
+	},
+
+	define: {
+		DOMAIN: JSON.stringify(DOMAIN),
 	},
 })

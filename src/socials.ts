@@ -1,6 +1,6 @@
 import type { Socials } from './types'
 
-import DOMAIN from '../CNAME'
+declare const DOMAIN: string
 
 const socials: Socials = {
 	GitHub: 'https://github.com/okineadev',

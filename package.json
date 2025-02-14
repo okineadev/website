@@ -15,9 +15,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite",
 		"build": "vue-tsc -b && vite build",
 		"preview": "vite preview",
+		"dev": "vite",
 		"lint": "biome lint",
 		"format": "prettier **/*.{vue,scss,md,html,yml} -w && biome format --write",
 		"svgo": "svgo src/assets/images/*.svg src/assets/icons/*.svg"
