@@ -19,7 +19,7 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: 🌍 Get the current domain
-        run: cat "CNAME" >> $GITHUB_ENV
+        run: echo "CNAME=$(cat CNAME)" >> $GITHUB_ENV
 
       - name: 💾 Archive page
         id: archive
