@@ -8,8 +8,7 @@ on:
       - 'other/*'
       - '.gitignore'
       - 'package.json'
-      - 'bunfig.toml'
-      - 'vite.config.js'
+      - 'vite.config.ts'
       # - "svgo.config.js"
       - 'src/**'
       - '.github/workflows/**'
@@ -22,7 +21,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
 
 jobs:
   deploy:
