@@ -51,7 +51,7 @@ const getCssString = (styles: CSSProperties) => {
 }
 
 const getBlurHTMLString = (blurDetail: number, imageSource: string, imageAlt: string) => {
-	const blurDivs = Array.from({ length: blurDetail }, (_, i) => `<div class="blur"></div>`).join('')
+	const blurDivs = Array.from({ length: blurDetail }, () => `<div class="blur"></div>`).join('')
 	return `<div class="wrapper"><div class="progressive-blur">${blurDivs}</div>
 <img src="${imageSource}" alt="${imageAlt}" /></div>`
 }
