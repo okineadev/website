@@ -11,31 +11,11 @@ app.mount('#app')
 
 // Initialize Lenis
 new Lenis({
-  autoRaf: true,
+	autoRaf: true,
 })
 
 document.addEventListener('DOMContentLoaded', () => {
 	if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-		const contentElements = document.querySelectorAll('.content > *')
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry, index) => {
-					if (entry.isIntersecting) {
-						setTimeout(() => {
-							entry.target.classList.add('animate')
-							observer.unobserve(entry.target) // Stop observing once animated
-						}, index * 200) // Apply delay based on index
-					}
-				})
-			},
-			{ threshold: 0.1 },
-		) // Adjust threshold as needed
-
-		// biome-ignore lint/complexity/noForEach: <explanation>
-		contentElements.forEach((element) => {
-			observer.observe(element)
-		})
-
 		// Cool click effect
 		document.addEventListener('click', (e) => {
 			const center = { x: e.pageX, y: e.pageY }

@@ -89,16 +89,12 @@ const projects = ref(myProjects)
 	z-index: 1;
 	// padding-top: 700px; // Adjust this value as needed to ensure content is not overlapped by #dots
 
-	// Animation of all first-level elements in .content
-	& > * {
-		@media (prefers-reduced-motion: no-preference) {
-			visibility: hidden;
-			opacity: 0;
-		}
-
-		&.animate {
-			animation: fadeInUp 0.8s;
-			animation-fill-mode: forwards;
+	// 🎬 https://youtu.be/0TnO1GzKWPc?si=OWpLDau7D08R8ITm
+	@media (prefers-reduced-motion: no-preference) {
+		& > * {
+			animation: appear linear;
+			animation-timeline: view();
+			animation-range: entry 0% cover 30%;
 		}
 	}
 }
