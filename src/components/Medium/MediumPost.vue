@@ -102,7 +102,6 @@ defineProps<{
 
 			z-index: -1;
 			opacity: 0.2;
-			filter: url(#noiseFilter);
 		}
 
 		h2,

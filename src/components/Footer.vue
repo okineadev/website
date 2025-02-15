@@ -13,7 +13,8 @@
 footer {
 	display: flex;
 	justify-content: center;
-	margin-block: 25px;
+	margin-top: 25px;
+	margin-bottom: 70px;
 	align-items: center;
 }
 </style>

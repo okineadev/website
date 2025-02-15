@@ -9,6 +9,7 @@ import Socials from './components/Socials/Socials.vue'
 import Code from './components/Code.vue'
 import MediumPosts from './components/Medium/MediumPosts.vue'
 import Footer from './components/Footer.vue'
+import ProgressiveBlur from './components/ProgressiveBlur™.vue'
 
 import Icon from './components/Other/Icon.vue'
 
@@ -65,6 +66,8 @@ const projects = ref(myProjects)
 	</div>
 
 	<Footer />
+
+	<ProgressiveBlur :blurHeight="70" />
 </template>
 
 <style lang="scss">
