@@ -31,5 +31,6 @@ watchEffect(async () => {
 	aspect-ratio: 1/1;
 	// vertical-align: -0.125em;
 	margin: 0 3px 0 0;
+	user-select: none;
 }
 </style>

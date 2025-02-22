@@ -40,6 +40,8 @@ defineProps<{
 	min-width: 300px;
 	max-width: 100%;
 
+	user-select: none;
+
 	position: relative;
 	overflow: hidden; // Ensure content is clipped to fit the container
 
@@ -77,6 +79,8 @@ defineProps<{
 		right: 0;
 		left: 0;
 		bottom: 0;
+
+		user-select: text;
 
 		border-bottom-left-radius: inherit;
 		border-bottom-right-radius: inherit;

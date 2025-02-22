@@ -120,6 +120,7 @@ import Icon from '../Other/Icon.vue'
 				margin: calc(-1 * $gap);
 				padding: $gap;
 				flex: 0 0 auto;
+				user-select: none;
 
 				img {
 					display: block;
