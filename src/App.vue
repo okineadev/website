@@ -84,11 +84,7 @@ const projects = ref(myProjects)
 	flex-direction: column;
 	gap: 50px;
 
-	// overflow: hidden;
-
-	// position: relative;
 	z-index: 1;
-	// padding-top: 700px; // Adjust this value as needed to ensure content is not overlapped by #dots
 
 	// 🎬 https://youtu.be/0TnO1GzKWPc?si=OWpLDau7D08R8ITm
 	@media (prefers-reduced-motion: no-preference) {
@@ -113,7 +109,6 @@ const projects = ref(myProjects)
 	z-index: -1;
 
 	left: calc(((100% - 70rem) / 2) - 40px);
-	// left: -40px;
 	top: -80px;
 
 	object-position: left;

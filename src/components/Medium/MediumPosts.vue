@@ -36,6 +36,5 @@ import renderedRoom_Jpg from '../../assets/images/illustration-2.jpg'
 
 	gap: 20px;
 	justify-content: center;
-	// margin-top: 40px;
 }
 </style>

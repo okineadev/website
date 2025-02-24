@@ -1,5 +1,4 @@
 import { ViteSSG } from 'vite-ssg/single-page'
-// import { onMounted } from 'vue'
 import './scss/style.scss'
 import App from './App.vue'
 import makeBurst from './effects/sparks'

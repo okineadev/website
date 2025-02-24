@@ -43,9 +43,9 @@ defineProps<{
 	user-select: none;
 
 	position: relative;
-	overflow: hidden; // Ensure content is clipped to fit the container
+	overflow: hidden;
 
-	flex: 1 1 300px; // Allow the post to stretch between 300px and 500px
+	flex: 1 1 300px;
 
 	@media (prefers-reduced-motion: no-preference) {
 		transition: transform 0.3s ease-in-out;

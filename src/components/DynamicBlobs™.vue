@@ -22,8 +22,6 @@
 
 	width: 250px;
 	height: 250px;
-	/* position: absolute; */
-	/* right: calc((100% - 50rem) / 2 + 25px); */
 	top: 40px;
 
 	margin-inline: auto;
