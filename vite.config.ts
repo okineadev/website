@@ -51,7 +51,6 @@ export default defineConfig({
 	],
 	css: {
 		postcss: {
-			// @ts-expect-error idk how to fix it...
 			plugins: [autoprefixer()],
 		},
 	},
