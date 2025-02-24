@@ -75,9 +75,7 @@ const projects = ref(myProjects)
 	margin-left: auto;
 	margin-right: auto;
 
-	padding-inline: 20px;
-	// padding-bottom: 40px;
-	width: 85%;
+	width: clamp(85%, 85%, 85%);
 	position: relative;
 
 	margin-top: 30px;
