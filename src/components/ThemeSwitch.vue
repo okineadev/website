@@ -1,13 +1,7 @@
 <template>
 	<!-- Color theme switch slider -->
-	<button
-		class="theme-toggle"
-		id="theme-toggle"
-		title="Toggle light and dark theme"
-		aria-label="Toggle light and dark theme"
-		aria-live="polite"
-		aria-pressed="false"
-	>
+	<button class="theme-toggle" id="theme-toggle" title="Toggle light and dark theme"
+		aria-label="Toggle light and dark theme" aria-live="polite" aria-pressed="false">
 		<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 			<mask class="moon" id="moon-mask">
 				<rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
@@ -30,55 +24,60 @@
 
 <script setup lang="ts">
 // @ts-nocheck
+import { onMounted } from 'vue'
+
 const storageKey = 'theme-preference'
 
-const getColorPreference = () => {
-	if (localStorage.getItem(storageKey)) {
-		return localStorage.getItem(storageKey)
+onMounted(() => {
+	const getColorPreference = () => {
+		if (localStorage.getItem(storageKey)) {
+			return localStorage.getItem(storageKey)
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 	}
-	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-}
 
-const setPreference = () => {
-	localStorage.setItem(storageKey, theme.value)
-	reflectPreference()
-}
+	const setPreference = () => {
+		localStorage.setItem(storageKey, theme.value)
+		reflectPreference()
+	}
 
-/**
- * Updates the document's theme based on the current theme preference.
- *
- * This function sets the body's class attribute to the current theme value,
- * updates the aria-label of the theme toggle button, and adjusts the
- * theme-color meta tag to match the CSS variable for the theme color.
- */
-const reflectPreference = () => {
-	document.body.setAttribute('class', theme.value)
-	document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value)
+	/**
+	 * Updates the document's theme based on the current theme preference.
+	 *
+	 * This function sets the body's class attribute to the current theme value,
+	 * updates the aria-label of the theme toggle button, and adjusts the
+	 * theme-color meta tag to match the CSS variable for the theme color.
+	 */
+	const reflectPreference = () => {
+		document.body.setAttribute('class', theme.value)
+		document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value)
 
-	// Update theme-color meta tag based on CSS variable
-	const themeColorMeta = document.querySelector('meta[name="theme-color"]')
-	const computedStyles = getComputedStyle(document.body)
-	const themeColor = computedStyles.getPropertyValue('--theme-color').trim()
-	themeColorMeta.setAttribute('content', themeColor)
-}
+		// Update theme-color meta tag based on CSS variable
+		const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+		const computedStyles = getComputedStyle(document.body)
+		const themeColor = computedStyles.getPropertyValue('--theme-color').trim()
+		themeColorMeta.setAttribute('content', themeColor)
+	}
 
-const theme = {
-	value: getColorPreference(),
-}
+	const theme = {
+		value: getColorPreference(),
+	}
 
-document.addEventListener('DOMContentLoaded', () => {
-	reflectPreference()
+	document.addEventListener('DOMContentLoaded', () => {
+		reflectPreference()
 
-	document.querySelector('#theme-toggle').addEventListener('click', () => {
-		theme.value = theme.value === 'light' ? 'dark' : 'light'
-		setPreference()
-	})
+		document.querySelector('#theme-toggle').addEventListener('click', () => {
+			theme.value = theme.value === 'light' ? 'dark' : 'light'
+			setPreference()
+		})
 
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
-		theme.value = isDark ? 'dark' : 'light'
-		setPreference()
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
+			theme.value = isDark ? 'dark' : 'light'
+			setPreference()
+		})
 	})
 })
+
 </script>
 
 <style lang="scss">

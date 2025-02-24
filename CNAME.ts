@@ -1,3 +1,4 @@
+// @ts-ignore
 import fs from 'node:fs'
 
 /**

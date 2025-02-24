@@ -1,30 +1,8 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg/single-page'
+// import { onMounted } from 'vue'
 import './scss/style.scss'
 import App from './App.vue'
 import makeBurst from './effects/sparks'
-
-// Smooth scrolling
-import Lenis from 'lenis'
-
-const app = createApp(App)
-app.mount('#app')
-
-// Initialize Lenis
-new Lenis({
-	autoRaf: true,
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-	if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-		// Cool click effect
-		document.addEventListener('click', (e) => {
-			const center = { x: e.pageX, y: e.pageY }
-			if (center.x && center.y) {
-				makeBurst(center)
-			}
-		})
-	}
-})
 
 const messageStyle = `
 	background-color: white;
@@ -38,9 +16,32 @@ const messageStyle = `
 	margin: 3px;
 `
 
-console.log(
-	'%c🐈 Sources are available at: https://github.com/okineadev/okineadev-website%cPlease consider giving it a ⭐ if you like it\n' +
-		'My Telegram channel: https://t.me/okinea_blog',
-	messageStyle,
-	messageStyle,
-)
+export const createApp = ViteSSG(App, ({ isClient }) => {
+	if (isClient) {
+		import('lenis').then((module) => {
+			const Lenis = module.default
+
+			// Initialize Lenis
+			new Lenis({ autoRaf: true })
+
+			document.addEventListener('DOMContentLoaded', () => {
+				if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+					// Cool click effect
+					document.addEventListener('click', (e) => {
+						const center = { x: e.pageX, y: e.pageY }
+						if (center.x && center.y) {
+							makeBurst(center)
+						}
+					})
+				}
+			})
+
+			console.log(
+				'%c🐈 Sources are available at: https://github.com/okineadev/okineadev-website%cPlease consider giving it a ⭐ if you like it\n' +
+					'My Telegram channel: https://t.me/okinea_blog',
+				messageStyle,
+				messageStyle,
+			)
+		})
+	}
+})
