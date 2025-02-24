@@ -77,7 +77,6 @@ onMounted(() => {
 		})
 	})
 })
-
 </script>
 
 <style lang="scss">
