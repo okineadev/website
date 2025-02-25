@@ -19,7 +19,7 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true,
-		"types": ["@types/bun"]
+		"types": ["bun-types"]
 	},
 	"include": ["vite.config.ts", "CNAME.ts"]
 }

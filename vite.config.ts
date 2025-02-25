@@ -1,10 +1,20 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+
+import Vue from '@vitejs/plugin-vue'
+
+// Unplugin icons
+import Components from 'unplugin-vue-components/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+
+// Compressors
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { compression as viteCompression } from 'vite-plugin-compression2'
+
+// Other
 import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
-import svgLoader from 'vite-svg-loader'
 
 import DOMAIN from './CNAME.ts'
 
@@ -31,10 +41,20 @@ const googleTagScript = `
  */
 export default defineConfig({
 	plugins: [
-		vue(),
-		svgLoader({
-			defaultImport: 'component',
-			// svgo: false,
+		Vue(),
+		Components({
+			resolvers: [
+				IconsResolver({
+					customCollections: ['other'],
+				}),
+			],
+		}),
+		Icons({
+			defaultClass: 'icon',
+			autoInstall: true,
+			customCollections: {
+				other: FileSystemIconLoader('./src/assets/icons'),
+			},
 		}),
 		createHtmlPlugin({
 			minify: true,
@@ -50,9 +70,7 @@ export default defineConfig({
 		Sitemap({ hostname: `https://${DOMAIN}` }),
 	],
 	css: {
-		postcss: {
-			plugins: [autoprefixer()],
-		},
+		postcss: { plugins: [autoprefixer()] },
 	},
 
 	define: {

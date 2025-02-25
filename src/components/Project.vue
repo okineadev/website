@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Project } from '../types.d'
-import Icon from './Other/Icon.vue'
 
 const props = defineProps<{
 	project: Project
@@ -19,13 +18,11 @@ const name = props.project.repo.split('/')[1]
 		<div class="main-tab">
 			<div class="project-header">
 				<div class="repo">
-					<!-- <i class="icon repo" aria-hidden="true"></i> -->
-					<Icon name="repo" />
+					<i-octicon-repo-16 />
 					<span class="name" :id="`${name}-title`">{{ name }}</span>
 				</div>
 
-				<!-- <i class="icon open" aria-hidden="true"></i> -->
-				<Icon name="open" />
+				<i-octicon-link-external-16 class="open" />
 			</div>
 
 			<div class="description">

@@ -20,7 +20,9 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"noUncheckedSideEffectImports": true
+		"noUncheckedSideEffectImports": true,
+
+		"types": ["unplugin-icons/types/vue3"]
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

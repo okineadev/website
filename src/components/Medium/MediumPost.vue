@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Icon from '../Other/Icon.vue'
-
 defineProps<{
 	link: string
 	titleId: string
@@ -14,8 +12,7 @@ defineProps<{
 
 <template>
 	<a class="post" :href="link" role="article" :aria-labelledby="titleId">
-		<!-- <i class="icon open" aria-hidden="true"></i> -->
-		<Icon name="open" />
+		<i-octicon-link-external-16 class="open"/>
 		<picture>
 			<source :srcset="imageWebp" type="image/webp" />
 			<source :srcset="imageJpg" type="image/jpg" />

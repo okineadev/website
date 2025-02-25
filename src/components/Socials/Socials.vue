@@ -5,7 +5,13 @@ import socials from '../../socials'
 
 <template>
 	<div class="contacts" aria-labelledby="socials">
-		<SocialIcon v-for="(url, platform) in socials" :key="platform" :platform="platform" :url="url"></SocialIcon>
+		<!-- 🩼 -->
+		<SocialIcon caption="GitHub" :url="socials.GitHub"><i-octicon-mark-github-24 /></SocialIcon>
+		<SocialIcon caption="Unsplash" :url="socials.Unsplash"><i-other-unsplash /></SocialIcon>
+		<SocialIcon caption="Telegram" :url="socials.Telegram"><i-logos-telegram /></SocialIcon>
+		<SocialIcon caption="Medium" :url="socials.Medium"><i-other-medium-icon /></SocialIcon>
+		<SocialIcon caption="Discord" :url="socials.Discord"><i-logos-discord-icon /></SocialIcon>
+		<SocialIcon caption="Stack Overflow" :url="socials['Stack Overflow']"><i-logos-stackoverflow-icon /></SocialIcon>
 	</div>
 </template>
 

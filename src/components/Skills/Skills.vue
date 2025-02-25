@@ -2,26 +2,24 @@
 import DesignSection from './Sections/DesignSection.vue'
 import ProgrammingSection from './Sections/ProgrammingSection.vue'
 import ToolsSection from './Sections/ToolsSection.vue'
-
-import Icon from '../Other/Icon.vue'
 </script>
 
 <template>
 	<div class="skills">
 		<div class="section programming" aria-labelledby="programming-skills-title">
-			<h2 id="programming-skills-title"><Icon name="code" /> Programming</h2>
+			<h2 id="programming-skills-title"><i-lucide-code-xml /> Programming</h2>
 
 			<ProgrammingSection />
 		</div>
 
 		<div class="section design" aria-labelledby="design-skills-title">
-			<h2 id="design-skills-title"><Icon name="palette" /> Design</h2>
+			<h2 id="design-skills-title"><i-lucide-palette /> Design</h2>
 
 			<DesignSection />
 		</div>
 
 		<div class="section tools" aria-labelledby="tools-skills-title">
-			<h2 id="tools-skills-title"><Icon name="tools" /> Tools</h2>
+			<h2 id="tools-skills-title"><i-octicon-tools-16 /> Tools</h2>
 
 			<ToolsSection />
 		</div>

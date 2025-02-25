@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import Icon from '../Other/Icon.vue'
-
 defineProps<{
-	platform: string
+	caption: string
 	url: string
 }>()
 </script>
 
 <template>
-	<a :href="url" target="_blank" :aria-label="platform">
+	<a :href="url" target="_blank" :aria-label="caption">
 		<div class="social">
 			<div class="social-icon">
-				<Icon
-					:name="platform.toLowerCase().replace(/\s+/g, '-')"
+				<slot
 					width="50"
 					height="50"
 					aria-hidden="true"
 				/>
 			</div>
-			<span>{{ platform }}</span>
+			<span>{{ caption }}</span>
 		</div>
 	</a>
 </template>

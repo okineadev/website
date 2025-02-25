@@ -1,5 +1,4 @@
 <script setup>
-import Icon from './Other/Icon.vue'
 import { ref } from 'vue'
 
 const copied = ref(false)
@@ -29,11 +28,20 @@ const copyCode = () => {
 			<slot></slot>
 		</code>
 		<div class="icon-wrapper">
-			<Icon
-				:name="copied ? 'check' : 'copy'"
-				@click="copyCode"
-				:title="copied ? 'Copied!' : 'Copy to clipboard'"
-			/>
+			<div v-if="copied">
+				<i-lucide-check
+					@click="copyCode"
+					title="Copied!"
+					class="icon"
+				/>
+			</div>
+			<div v-else>
+				<i-lucide-copy
+					@click="copyCode"
+					title="Copy to clipboard"
+					class="icon"
+				/>
+			</div>
 			<span class="tooltip" :class="{ show: showTooltip }">Copied!</span>
 		</div>
 	</div>

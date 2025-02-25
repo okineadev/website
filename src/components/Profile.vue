@@ -2,7 +2,6 @@
 import DynamicBlobs from './DynamicBlobs™.vue'
 
 import Emoji from './Other/Emoji.vue'
-import Icon from './Other/Icon.vue'
 </script>
 
 <template>
@@ -11,12 +10,12 @@ import Icon from './Other/Icon.vue'
 			<h1 class="name" id="profile-card-title">Okinea Dev</h1>
 			<div class="meta-info">
 				<span class="meta-item">
-					<Icon name="location" />
+					<i-octicon-location-16 />
 					<Emoji name="ua-flag" />
 					<span>Ukraine</span>
 				</span>
 				<span class="meta-item">
-					<Icon name="github" />
+					<i-octicon-mark-github />
 					<a href="https://github.com/okineadev">
 						<span>okineadev</span>
 					</a>
