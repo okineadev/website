@@ -45,7 +45,7 @@ const projects = ref(myProjects)
 			</div>
 		</div>
 
-		<h1 class="center skills-title" id="skills"><i-lucide-zap/> Skills</h1>
+		<h1 class="center skills-title" id="skills"><i-lucide-zap /> Skills</h1>
 
 		<Skills />
 

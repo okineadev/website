@@ -1,0 +1,13 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"public": true,
+
+	"framework": "vite",
+
+	"rewrites": [{ "source": "/cli", "destination": "/api/cli.tsx" }],
+	"functions": {
+		"api/cli.tsx": {
+			"includeFiles": "{package.json,./node_modules/yoga-wasm-web/dist/yoga.wasm}"
+		}
+	}
+}

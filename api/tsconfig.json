@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+
+		"jsx": "react-jsx",
+
+		"types": ["@types/node", "@types/react"]
+	},
+	"include": ["**/*.tsx", "**/*.ts"]
+}
