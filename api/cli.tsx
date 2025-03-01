@@ -7,6 +7,8 @@ import { Box, Newline, Text, type BoxProps, Spacer } from 'ink'
 import Divider from 'ink-divider'
 import Link from 'ink-link'
 
+process.env.FORCE_COLOR = 'true'
+
 const SearchBar = () => (
 	<Box width="100%" justifyContent="center" position="absolute">
 		<Text>
