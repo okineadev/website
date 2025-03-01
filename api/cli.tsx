@@ -1,13 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 import { render } from 'ink-testing-library'
-// biome-ignore lint/style/useImportType: <explanation>
-import React from 'react'
+
 import { Box, Newline, Text, type BoxProps, Spacer } from 'ink'
 import Divider from 'ink-divider'
 import Link from 'ink-link'
-
-process.env.FORCE_COLOR = 'true'
 
 const SearchBar = () => (
 	<Box width="100%" justifyContent="center" position="absolute">
