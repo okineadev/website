@@ -99,7 +99,7 @@ const MediumPost: React.FC<MediumPostProps> = ({ title, description, link, minWi
 	</Box>
 )
 
-import socials from './_socials.ts'
+import socials from './_socials.js'
 
 // @ts-ignore
 import projects from '../src/projects.js'
