@@ -18,20 +18,16 @@ import autoprefixer from 'autoprefixer'
 
 import DOMAIN from './CNAME.ts'
 
-const googleTagID = 'G-0TM7HRVX06'
-
-/** Google Tag Manager script to be included in the HTML */
-const googleTagScript = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${googleTagID}"></script>
+/**
+ * Vercel Analytics script to be included in the HTML
+ *
+ * @see https://vercel.com/docs/analytics/quickstart#add-the-script-tag-to-your-site
+ */
+const vercelAnalyticsScript = `
 <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-
-	gtag("js", new Date());
-	gtag("config", "${googleTagID}");
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 `
 
 /**
@@ -60,7 +56,7 @@ export default defineConfig({
 			minify: true,
 			inject: {
 				data: {
-					gtagScript: process.env.NODE_ENV === 'production' ? googleTagScript : '',
+					vercelAnalytics: process.env.NODE_ENV === 'production' ? vercelAnalyticsScript : '',
 					DOMAIN: DOMAIN,
 				},
 			},
