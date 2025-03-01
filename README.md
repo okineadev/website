@@ -4,6 +4,12 @@
 
 Welcome to the repository for my personal website, built with [**Vite**](https://vite.dev) and [**Bun**](https://bun.sh)
 
+Btw, this site has a simple **CLI** version :)
+
+Try it 👉 `curl -L okinea.dev`
+
+![CLI version of the website](assets/cli-version.png)
+
 ## 📝 License
 
 ```plaintext
