@@ -8,6 +8,8 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
+import ogPlugin from 'vite-plugin-open-graph'
+
 // Compressors
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { compression as viteCompression } from 'vite-plugin-compression2'
@@ -52,6 +54,23 @@ export default defineConfig({
 				other: FileSystemIconLoader('./src/assets/icons'),
 			},
 		}),
+		ogPlugin({
+			basic: {
+				title: 'Okinea Dev',
+				url: `https://${DOMAIN}`,
+				siteName: DOMAIN,
+				image: {
+					secureUrl: `https://${DOMAIN}/assets/preview.png`,
+					width: 1024,
+					height: 576,
+				},
+				description: 'Information about me',
+				locale: 'en_US',
+			},
+			twitter: {
+				card: 'summary_large_image',
+			},
+		}),
 		createHtmlPlugin({
 			minify: true,
 			inject: {
@@ -72,4 +91,5 @@ export default defineConfig({
 	define: {
 		DOMAIN: JSON.stringify(DOMAIN),
 	},
+	publicDir: 'src/public',
 })
