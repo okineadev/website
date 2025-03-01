@@ -60,7 +60,7 @@ export default defineConfig({
 				url: `https://${DOMAIN}`,
 				siteName: DOMAIN,
 				image: {
-					secureUrl: `https://${DOMAIN}/assets/preview.png`,
+					url: `https://${DOMAIN}/assets/preview.png`,
 					width: 1024,
 					height: 576,
 				},
