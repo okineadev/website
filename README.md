@@ -1,4 +1,6 @@
-# okienadev-website
+<!-- markdownlint-disable first-line-h1 -->
+
+![Website banner](assets/website-banner.png)
 
 Welcome to the repository for my personal website, built with [**Vite**](https://vite.dev) and [**Bun**](https://bun.sh)
 
