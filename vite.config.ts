@@ -17,7 +17,6 @@ import { compression as viteCompression } from 'vite-plugin-compression2'
 
 // Other
 import Sitemap from 'vite-plugin-sitemap'
-import autoprefixer from 'autoprefixer'
 import type { Person, WithContext } from 'schema-dts'
 
 import DOMAIN from './CNAME.ts'
@@ -151,9 +150,6 @@ export default defineConfig({
 		Sitemap({ hostname: `https://${DOMAIN}` }),
 	],
 	publicDir: 'src/public',
-	css: {
-		postcss: { plugins: [autoprefixer()] },
-	},
 
 	define: {
 		DOMAIN: JSON.stringify(DOMAIN),
