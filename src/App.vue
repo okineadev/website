@@ -87,9 +87,9 @@ const projects = ref(myProjects)
 	// 🎬 https://youtu.be/0TnO1GzKWPc
 	@media (prefers-reduced-motion: no-preference) {
 		& > * {
-			animation: appear linear;
+			animation: appear ease-in-out;
 			animation-timeline: view();
-			animation-range: entry 0% cover 30%;
+			animation-range: entry 0% cover 180px;
 		}
 	}
 }
