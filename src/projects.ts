@@ -1,4 +1,4 @@
-import type { Project } from './types.d.ts'
+import type { Project } from './types.d.js'
 
 const myProjects: Project[] = [
 	{
