@@ -53,7 +53,7 @@ const projects = ref(myProjects)
 
 		<Socials />
 
-		<Code class="center">npx okineadev</Code>
+		<Code class="center">curl -L okinea.dev</Code>
 
 		<h1 class="center" id="medium-posts-title">
 			<i-lucide-newspaper /> My posts on
