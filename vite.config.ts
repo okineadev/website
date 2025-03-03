@@ -9,6 +9,7 @@ import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 import ogPlugin from 'vite-plugin-open-graph'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // Compressors
 import { createHtmlPlugin } from 'vite-plugin-html'
@@ -22,7 +23,7 @@ import type { Person, WithContext } from 'schema-dts'
 import DOMAIN from './CNAME.ts'
 
 const previewImage = {
-	url: '/assets/preview.png',
+	url: '/preview.png',
 	width: 1024,
 	height: 576,
 }
@@ -91,6 +92,47 @@ export default defineConfig({
 				card: 'summary_large_image',
 				site: DOMAIN,
 				image: previewImage.url,
+			},
+		}),
+		VitePWA({
+			manifest: {
+				name: basicPreviewMetadata.title,
+				description: '🌐 My personal portfolio website showcasing my projects, blog posts, and contacts',
+				display: 'standalone',
+				background_color: '#101010',
+				theme_color: '#262525',
+				icons: [
+					{
+						src: '/favicon.svg',
+						sizes: 'any',
+						type: 'image/svg+xml',
+					},
+					{
+						src: '/favicon-16x16.png',
+						sizes: '16x16',
+						type: 'image/png',
+					},
+					{
+						src: '/favicon-32x32.png',
+						sizes: '32x32',
+						type: 'image/png',
+					},
+					{
+						src: '/android-chrome-192x192.png',
+						sizes: '192x192',
+						type: 'image/png',
+					},
+					{
+						src: '/android-chrome-512x512.png',
+						sizes: '512x512',
+						type: 'image/png',
+					},
+					{
+						src: '/apple-touch-icon.png',
+						sizes: '180x180',
+						type: 'image/png',
+					},
+				],
 			},
 		}),
 		createHtmlPlugin({
