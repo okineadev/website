@@ -17,8 +17,32 @@ import { compression as viteCompression } from 'vite-plugin-compression2'
 // Other
 import Sitemap from 'vite-plugin-sitemap'
 import autoprefixer from 'autoprefixer'
+import type { Person, WithContext } from 'schema-dts'
 
 import DOMAIN from './CNAME.ts'
+
+const previewImage = {
+	url: '/assets/preview.png',
+	width: 1024,
+	height: 576,
+}
+
+const basicPreviewMetadata = {
+	title: 'Okinea Dev',
+	description: 'Information about me',
+}
+
+const JSONld: WithContext<Person> = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'okineadev',
+	url: `https://${DOMAIN}`,
+	birthDate: '2008',
+	gender: 'male',
+	nationality: 'Ukrainian',
+	sameAs: ['https://github.com/okineadev', `https://telegram.${DOMAIN}`],
+	jobTitle: 'Software Developer',
+}
 
 /**
  * Vercel Analytics script to be included in the HTML
@@ -56,19 +80,17 @@ export default defineConfig({
 		}),
 		ogPlugin({
 			basic: {
-				title: 'Okinea Dev',
+				...basicPreviewMetadata,
 				url: `https://${DOMAIN}`,
 				siteName: DOMAIN,
-				image: {
-					url: `https://${DOMAIN}/assets/preview.png`,
-					width: 1024,
-					height: 576,
-				},
-				description: 'Information about me',
+				image: previewImage,
 				locale: 'en_US',
 			},
 			twitter: {
+				...basicPreviewMetadata,
 				card: 'summary_large_image',
+				site: DOMAIN,
+				image: previewImage.url,
 			},
 		}),
 		createHtmlPlugin({
@@ -76,6 +98,8 @@ export default defineConfig({
 			inject: {
 				data: {
 					vercelAnalytics: process.env.NODE_ENV === 'production' ? vercelAnalyticsScript : '',
+					...basicPreviewMetadata,
+					JSONld: JSON.stringify(JSONld),
 					DOMAIN: DOMAIN,
 				},
 			},
@@ -84,6 +108,7 @@ export default defineConfig({
 		viteCompression({ filter: /\.(js|css|html)$/i }),
 		Sitemap({ hostname: `https://${DOMAIN}` }),
 	],
+	publicDir: 'src/public',
 	css: {
 		postcss: { plugins: [autoprefixer()] },
 	},
@@ -91,5 +116,4 @@ export default defineConfig({
 	define: {
 		DOMAIN: JSON.stringify(DOMAIN),
 	},
-	publicDir: 'src/public',
 })

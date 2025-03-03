@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Okinea Dev</title>
+		<title><%- title %></title>
+		<meta name="description" content="<%- description %>" />
 
 		<link rel="icon" type="image/x-icon" sizes="48x48" href="src/assets/favicon.ico" />
 		<link rel="icon" type="image/svg+xml" sizes="any" href="src/assets/favicon.svg" />
@@ -16,17 +17,7 @@
 		<meta name="theme-color" content="#262525" media="(prefers-color-scheme: dark)" />
 
 		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"name": "okineadev",
-				"url": "https://<%- DOMAIN %>",
-				"birthDate": "2008",
-				"gender": "male",
-				"nationality": "Ukrainian",
-				"sameAs": ["https://github.com/okineadev", "https://telegram.<%- DOMAIN %>"],
-				"jobTitle": "Software Developer"
-			}
+			<%- JSONld %>
 		</script>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +26,7 @@
 		<link rel="preconnect" href="https://skillicons.dev" />
 		<link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-		<!-- Vercel Analytics -->
+		<!-- ▲ Vercel Analytics -->
 		<%- vercelAnalytics %>
 	</head>
 	<body>

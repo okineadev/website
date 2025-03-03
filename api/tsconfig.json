@@ -11,5 +11,6 @@
 
 		"types": ["@types/node", "@types/react"]
 	},
-	"include": ["**/*.tsx", "**/*.ts"]
+	"include": ["**/*.tsx", "**/*.ts"],
+	"exclude": ["node_modules"]
 }
