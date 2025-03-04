@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import DesignSection from './Sections/DesignSection.vue'
 import ProgrammingSection from './Sections/ProgrammingSection.vue'
-import ToolsSection from './Sections/ToolsSection.vue'
 </script>
 
 <template>
