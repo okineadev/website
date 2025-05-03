@@ -11,5 +11,6 @@
 			"maxDuration": 6,
 			"memory": 256
 		}
-	}
+	},
+	"installCommand": "bun install --frozen-lockfile"
 }
