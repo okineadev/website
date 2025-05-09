@@ -2,6 +2,10 @@ import type { Project } from './types.d.js'
 
 const myProjects: Project[] = [
 	{
+		repo: 'okineadev/vitepress-plugin-llms',
+		description: '📜 A VitePress plugin for generating LLM-friendly documentation',
+	},
+	{
 		repo: 'okineadev/material-icons-figma-plugin',
 		description: '🍱 Material Icons for Figma',
 	},
@@ -24,10 +28,6 @@ const myProjects: Project[] = [
 	{
 		repo: 'okineadev/platform-tools-installer-gui',
 		description: '📥 Unofficial platform-tools GUI installer (adb, fastboot) for Windows™',
-	},
-	{
-		repo: 'cli-stuff/platform-tools-installer-windows',
-		description: '🏄‍♂️ Command line script to easily install platform-tools (adb, fastboot) on Windows™',
 	},
 ]
 
