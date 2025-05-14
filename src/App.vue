@@ -53,7 +53,13 @@ const projects = ref(myProjects)
 
 		<Socials />
 
-		<Code class="center">curl -L okinea.dev</Code>
+		<div style="display: flex; flex-direction: column">
+			<p class="center">This site is also available in the terminal, try it 👀</p>
+
+			<Code class="center">
+				<pre>curl -L okinea.dev</pre>
+			</Code>
+		</div>
 
 		<h1 class="center" id="medium-posts-title">
 			<i-lucide-newspaper /> My posts on

@@ -24,23 +24,13 @@ const copyCode = () => {
 
 <template>
 	<div class="code">
-		<code>
-			<slot></slot>
-		</code>
+		<slot></slot>
 		<div class="icon-wrapper">
 			<div v-if="copied">
-				<i-lucide-check
-					@click="copyCode"
-					title="Copied!"
-					class="icon"
-				/>
+				<i-lucide-check @click="copyCode" title="Copied!" class="icon" style="color: #00ff70" />
 			</div>
 			<div v-else>
-				<i-lucide-copy
-					@click="copyCode"
-					title="Copy to clipboard"
-					class="icon"
-				/>
+				<i-lucide-copy @click="copyCode" title="Copy to clipboard" class="icon" />
 			</div>
 			<span class="tooltip" :class="{ show: showTooltip }">Copied!</span>
 		</div>
@@ -55,7 +45,7 @@ const copyCode = () => {
 	color: var(--code-font-color);
 	border-radius: 15px;
 	overflow-x: auto;
-	width: 100%;
+	width: fit-content;
 	max-width: 500px;
 	display: flex;
 	flex-direction: row;
@@ -63,8 +53,10 @@ const copyCode = () => {
 	justify-content: space-between;
 	font-size: 15px;
 	box-shadow: var(--box-shadow);
+	align-items: center;
 
 	.icon-wrapper {
+		align-self: start;
 		position: relative;
 
 		.icon {
@@ -73,6 +65,7 @@ const copyCode = () => {
 			transition: transform 0.2s ease;
 			padding: 5px;
 			margin: -5px;
+			margin-left: 5px;
 			box-sizing: content-box;
 
 			&:hover {
