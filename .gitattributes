@@ -3,9 +3,5 @@
 # Normalize EOL for all files that Git considers text files
 * text=auto eol=lf
 
-# Bun lockfile
-bun.lock text -diff
-
 # Fixes syntax highlighting on GitHub to allow comments
-tsconfig.json linguist-language=JSON-with-Comments
-
+tsconfig*.json linguist-language=JSON-with-Comments

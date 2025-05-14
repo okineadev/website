@@ -2,9 +2,7 @@
 defineProps<{
 	link: string
 	titleId: string
-	imageWebp: string
-	imageJpg: string
-	imageAlt: string
+	image: string
 	title: string
 	description: string
 }>()
@@ -12,12 +10,8 @@ defineProps<{
 
 <template>
 	<a class="post" :href="link" role="article" :aria-labelledby="titleId">
-		<i-octicon-link-external-16 class="open"/>
-		<picture>
-			<source :srcset="imageWebp" type="image/webp" />
-			<source :srcset="imageJpg" type="image/jpg" />
-			<img :src="imageJpg" :alt="imageAlt" />
-		</picture>
+		<i-octicon-link-external-16 class="open" />
+		<img :src="image" />
 		<div class="info">
 			<h2 :id="titleId">{{ title }}</h2>
 			<p>{{ description }}</p>
@@ -27,15 +21,18 @@ defineProps<{
 
 <style lang="scss" scoped>
 .post {
-	border-radius: 20px;
 	box-shadow: 0 4px 6px #0000001a;
+	background-color: var(--project-tab-background-color);
+	$padding: 10px;
+	padding: $padding;
+	$img-border-radius: 20px;
+	border-radius: calc($img-border-radius + $padding);
 
 	cursor: pointer;
 
 	width: 100%;
-	height: 300px;
 	min-width: 300px;
-	max-width: 100%;
+	max-width: 500px;
 
 	user-select: none;
 
@@ -63,28 +60,19 @@ defineProps<{
 	}
 
 	img {
-		border-radius: inherit;
-		height: 100%;
+		border-radius: $img-border-radius;
+		aspect-ratio: 2 / 1;
 
 		width: 100%;
 		object-fit: cover; // Ensure the image is covered without stretching
 	}
 
 	.info {
-		position: absolute;
-
-		right: 0;
-		left: 0;
-		bottom: 0;
-
 		user-select: text;
+		padding-inline: 10px;
 
 		border-bottom-left-radius: inherit;
 		border-bottom-right-radius: inherit;
-
-		backdrop-filter: blur(5px);
-		padding: 20px;
-		overflow: hidden;
 
 		transition: opacity 0.3s ease-out;
 		box-shadow: 0 -4px 20px 0px #0000001a;
@@ -105,11 +93,6 @@ defineProps<{
 			opacity: 0.2;
 		}
 
-		h2,
-		p {
-			text-shadow: 2px 2px 20px #0000005e;
-		}
-
 		h2 {
 			color: var(--medium-post-title-color);
 			margin-top: 5px;
@@ -117,7 +100,7 @@ defineProps<{
 
 		p {
 			margin-block: 10px;
-			font-size: 17px;
+			font-size: 14px;
 
 			color: var(--medium-post-caption-color);
 		}
