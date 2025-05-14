@@ -13,6 +13,11 @@ export type Project = {
 	 * @example "🌠 Simple tool for installing dotfiles on any machine!"
 	 */
 	description: string
+
+	/**
+	 * The number of stars the project has on GitHub.
+	 */
+	stars: number
 }
 
 /**

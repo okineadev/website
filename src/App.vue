@@ -32,7 +32,7 @@ const projects = ref(myProjects)
 
 	<div class="content">
 		<!-- Info about me -->
-		<Profile></Profile>
+		<Profile />
 
 		<h1 class="center" id="projects"><i-lucide-table-2 /> My projects</h1>
 
