@@ -42,7 +42,7 @@ defineProps<{
 	flex: 1 1 300px;
 
 	@media (prefers-reduced-motion: no-preference) {
-		transition: transform 0.3s ease-in-out;
+		transition: transform 0.2s ease-in-out;
 	}
 
 	.icon.open {
@@ -56,6 +56,7 @@ defineProps<{
 		transition: opacity 0.3s ease-in-out;
 		opacity: 0;
 
+		color: white;
 		fill: white;
 	}
 
@@ -75,7 +76,6 @@ defineProps<{
 		border-bottom-right-radius: inherit;
 
 		transition: opacity 0.3s ease-out;
-		box-shadow: 0 -4px 20px 0px #0000001a;
 
 		text-wrap-mode: wrap;
 
@@ -94,7 +94,7 @@ defineProps<{
 		}
 
 		h2 {
-			color: var(--medium-post-title-color);
+			color: var(--text-color);
 			margin-top: 5px;
 		}
 
@@ -102,12 +102,12 @@ defineProps<{
 			margin-block: 10px;
 			font-size: 14px;
 
-			color: var(--medium-post-caption-color);
+			color: var(--text-color-primary);
 		}
 	}
 
 	&:hover {
-		transform: scale(1.05);
+		transform: translateY(-10px);
 
 		.icon.open {
 			opacity: 1;

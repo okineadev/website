@@ -11,7 +11,9 @@ import socials from '../../socials'
 		<SocialIcon caption="Telegram" :url="socials.Telegram"><i-logos-telegram /></SocialIcon>
 		<SocialIcon caption="Medium" :url="socials.Medium"><i-other-medium-icon /></SocialIcon>
 		<SocialIcon caption="Discord" :url="socials.Discord"><i-logos-discord-icon /></SocialIcon>
-		<SocialIcon caption="Stack Overflow" :url="socials['Stack Overflow']"><i-logos-stackoverflow-icon /></SocialIcon>
+		<SocialIcon caption="Stack Overflow" :url="socials['Stack Overflow']"
+			><i-logos-stackoverflow-icon
+		/></SocialIcon>
 	</div>
 </template>
 
@@ -76,7 +78,7 @@ import socials from '../../socials'
 				margin-top: 5px;
 				padding-inline: 4px;
 
-				color: var(--project-tab-description-text-color);
+				color: var(--text-color-primary);
 
 				@media (prefers-reduced-motion: no-preference) {
 					transition: color 0.2s ease-in-out;

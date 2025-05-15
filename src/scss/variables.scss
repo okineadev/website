@@ -13,8 +13,6 @@
 	--purple-gradient-blob-color: #9700c4;
 
 	--medium-logo-background-color: #00ff90;
-	--medium-post-title-color: white;
-	--medium-post-caption-color: #979797;
 }
 
 // ====== Dark and light themes ======
@@ -24,6 +22,7 @@
 	// Background and text colors
 	--background-color: #101010;
 	--text-color: white;
+	--text-color-primary: #939393;
 
 	--socials-caption-hover-color: white;
 
@@ -43,7 +42,6 @@
 
 	// Project tab colors
 	--project-tab-background-color: #262525;
-	--project-tab-description-text-color: #939393;
 
 	// Shadows
 	--box-shadow:
@@ -62,6 +60,7 @@
 	// Background and text colors
 	--background-color: #fff;
 	--text-color: black;
+	--text-color-primary: #757575;
 
 	--socials-caption-hover-color: black;
 
@@ -81,7 +80,6 @@
 
 	// Project tab colors
 	--project-tab-background-color: #ffffff;
-	--project-tab-description-text-color: #757575;
 
 	// Shadows
 	--box-shadow:

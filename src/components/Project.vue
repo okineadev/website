@@ -135,7 +135,7 @@ a {
 
 	.description p {
 		font-size: 12px;
-		color: var(--project-tab-description-text-color);
+		color: var(--text-color-primary);
 
 		margin: 4px 0 0;
 		text-wrap-mode: wrap;
@@ -150,7 +150,7 @@ a {
 		align-items: center;
 
 		& .icon {
-			color: var(--project-tab-description-text-color);
+			color: var(--text-color-primary);
 		}
 	}
 
