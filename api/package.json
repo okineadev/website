@@ -1,6 +1,7 @@
 {
 	"name": "okineadev-website-serverless-functions",
 	"private": true,
+	"type": "module",
 	"dependencies": {
 		"ink": "^5.2.0",
 		"ink-divider": "^4.1.0",
