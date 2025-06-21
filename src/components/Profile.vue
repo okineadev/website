@@ -24,7 +24,7 @@ import Emoji from './Other/Emoji.vue'
 			<div class="description">
 				<p>
 					Hello
-					<Emoji name="hello" />, my name is <b>Yura</b>, I'm 16 years old, programmer, designer, I create
+					<Emoji name="hello" />, my name is <b>Yura</b>, I'm 17 years old, programmer, designer, I create
 					cool websites, amazing CLI applications and I also write posts on Medium from time to time :)
 				</p>
 				<p>
