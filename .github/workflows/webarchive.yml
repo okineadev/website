@@ -23,7 +23,7 @@ jobs:
 
       - name: 💾 Archive page
         id: archive
-        uses: JamieMagee/wayback@a01961cced233578e9d5759a5acf4e573167e3a9 # v2.0.0
+        uses: JamieMagee/wayback@cb9c732c93e9c0221956a78557702c0b5cc9a211 # v2.1.0
         with:
           url: ${{ env.CNAME }}
           saveScreenshot: true
