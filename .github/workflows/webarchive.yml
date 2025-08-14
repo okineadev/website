@@ -11,21 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-        with:
-          # Only fetch the `CNAME` file
-          sparse-checkout: 'CNAME'
-          sparse-checkout-cone-mode: true
-
-      - name: 🌍 Get the current domain
-        run: echo "CNAME=$(cat CNAME)" >> $GITHUB_ENV
-
       - name: 💾 Archive page
         id: archive
         uses: JamieMagee/wayback@cb9c732c93e9c0221956a78557702c0b5cc9a211 # v2.1.0
         with:
-          url: ${{ env.CNAME }}
+          url: okinea.dev
           saveScreenshot: true
 
       - run: echo "### ✅ Page successfully archived at ${{ steps.archive.outputs.wayback_url }}" >> $GITHUB_STEP_SUMMARY

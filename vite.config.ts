@@ -19,8 +19,6 @@ import { compression as viteCompression } from 'vite-plugin-compression2'
 import Sitemap from 'vite-plugin-sitemap'
 import type { Person, WithContext } from 'schema-dts'
 
-import DOMAIN from './CNAME.ts'
-
 const previewImage = {
 	url: '/preview.png',
 	width: 1024,
@@ -36,11 +34,11 @@ const JSONld: WithContext<Person> = {
 	'@context': 'https://schema.org',
 	'@type': 'Person',
 	name: 'okineadev',
-	url: `https://${DOMAIN}`,
+	url: 'https://okinea.dev',
 	birthDate: '2008',
 	gender: 'male',
 	nationality: 'Ukrainian',
-	sameAs: ['https://github.com/okineadev', `https://telegram.${DOMAIN}`],
+	sameAs: ['https://github.com/okineadev', 'https://telegram.okinea.dev'],
 	jobTitle: 'Software Developer',
 }
 
@@ -81,15 +79,15 @@ export default defineConfig({
 		ogPlugin({
 			basic: {
 				...basicPreviewMetadata,
-				url: `https://${DOMAIN}`,
-				siteName: DOMAIN,
+				url: 'https://okinea.dev',
+				siteName: 'okinea.dev',
 				image: previewImage,
 				locale: 'en_US',
 			},
 			twitter: {
 				...basicPreviewMetadata,
 				card: 'summary_large_image',
-				site: DOMAIN,
+				site: 'okinea.dev',
 				image: previewImage.url,
 			},
 		}),
@@ -141,17 +139,13 @@ export default defineConfig({
 					vercelAnalytics: process.env.NODE_ENV === 'production' ? vercelAnalyticsScript : '',
 					...basicPreviewMetadata,
 					JSONld: JSON.stringify(JSONld),
-					DOMAIN: DOMAIN,
+					'okinea.dev': 'okinea.dev',
 				},
 			},
 		}),
 		// @ts-expect-error
 		viteCompression({ filter: /\.(js|css|html)$/i }),
-		Sitemap({ hostname: `https://${DOMAIN}` }),
+		Sitemap({ hostname: 'https://okinea.dev' }),
 	],
 	publicDir: 'src/public',
-
-	define: {
-		DOMAIN: JSON.stringify(DOMAIN),
-	},
 })
