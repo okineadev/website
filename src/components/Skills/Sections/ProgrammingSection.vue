@@ -3,14 +3,14 @@
 		<a href="https://www.python.org/" target="_blank" aria-label="Python">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=py" alt="python logo" width="45" height="45" />
 		</a>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" aria-label="JavaScript">
-			<img src="https://go-skill-icons.vercel.app/api/icons?i=js" alt="javascript logo" width="45" height="45" />
-		</a>
 		<a href="https://www.typescriptlang.org/" target="_blank" aria-label="TypeScript">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=ts" alt="typescript logo" width="45" height="45" />
 		</a>
 		<a href="https://vite.dev/" target="_blank" aria-label="Vite">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=vite" alt="vite logo" width="45" height="45" />
+		</a>
+		<a href="https://vitest.dev/" target="_blank" aria-label="Vitest">
+			<img src="https://go-skill-icons.vercel.app/api/icons?i=vitest" alt="vitest logo" width="45" height="45" />
 		</a>
 		<a href="https://vuejs.org/" target="_blank" aria-label="Vue.js">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=vue" alt="vuejs logo" width="45" height="45" />
@@ -38,6 +38,9 @@
 		<a href="https://elysiajs.com/" target="_blank" aria-label="ElysiaJS">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=elysia" alt="elysia logo" width="45" height="45" />
 		</a>
+		<a href="https://vercel.com/" target="_blank" aria-label="Vercel">
+			<img src="https://go-skill-icons.vercel.app/api/icons?i=vercel" alt="vercel logo" width="45" height="45" />
+		</a>
 		<a href="https://github.com/features/actions" target="_blank" aria-label="GitHub Actions">
 			<img
 				src="https://go-skill-icons.vercel.app/api/icons?i=githubactions"
@@ -45,26 +48,6 @@
 				width="45"
 				height="45"
 			/>
-		</a>
-		<!-- <a href="https://jquery.com/" target="_blank" aria-label="jQuery">
-			<img src="https://go-skill-icons.vercel.app/api/icons?i=jquery" alt="jquery logo" width="45" height="45" />
-		</a>
-		<a href="https://babeljs.io/" target="_blank" aria-label="Babel">
-			<img src="https://go-skill-icons.vercel.app/api/icons?i=babel" alt="babel logo" width="45" height="45" />
-		</a> -->
-		<a href="https://jestjs.io/" target="_blank" aria-label="Jest">
-			<img src="https://go-skill-icons.vercel.app/api/icons?i=jest" alt="jest logo" width="45" height="45" />
-		</a>
-		<a href="https://webpack.js.org/" target="_blank" aria-label="Webpack">
-			<img
-				src="https://go-skill-icons.vercel.app/api/icons?i=webpack"
-				alt="webpack logo"
-				width="45"
-				height="45"
-			/>
-		</a>
-		<a href="https://gulpjs.com/" target="_blank" aria-label="Gulp">
-			<img src="https://go-skill-icons.vercel.app/api/icons?i=gulp" alt="gulp logo" width="45" height="45" />
 		</a>
 		<a href="https://wikipedia.org/wiki/Bash" target="_blank" aria-label="Bash">
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=bash" alt="bash logo" width="45" height="45" />
