@@ -32,8 +32,10 @@ const basicPreviewMetadata = {
 const JSONld: WithContext<Person> = {
 	'@context': 'https://schema.org',
 	'@type': 'Person',
-	name: 'okineadev',
+	name: 'Yurii Bogdan',
 	url: 'https://okinea.dev',
+	address: 'Warsaw, Poland',
+	email: 'hi@okinea.dev',
 	birthDate: '2008',
 	gender: 'male',
 	nationality: 'Ukrainian',
