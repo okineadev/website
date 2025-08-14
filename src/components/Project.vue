@@ -1,28 +1,11 @@
 <script setup lang="ts">
 import type { Project } from '../types.d'
-import { onMounted, ref } from 'vue'
-import { fetchGitHubStars } from '../helpers/github-api'
 
 const props = defineProps<{
 	project: Project
 }>()
 
 const name = props.project.repo.split('/')[1]
-
-const stars = ref(0)
-const isLoading = ref(true)
-
-onMounted(async () => {
-	try {
-		const fetchedStars = await fetchGitHubStars(props.project.repo)
-		if (fetchedStars > 0) {
-			stars.value = fetchedStars
-			isLoading.value = false
-		}
-	} catch (error) {
-		console.error('Error fetching stars:', error)
-	}
-})
 </script>
 
 <template>
@@ -45,12 +28,6 @@ onMounted(async () => {
 			<div class="description">
 				<p>{{ project.description }}</p>
 			</div>
-		</div>
-
-		<div class="stars">
-			<i-octicon-star-16 />
-			<span v-if="!isLoading">{{ stars }}</span>
-			<span v-else class="skeleton"></span>
 		</div>
 	</a>
 </template>
@@ -142,18 +119,6 @@ a {
 		// white-space: pre-line
 	}
 
-	.stars {
-		font-size: 0.9em;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: center;
-
-		& .icon {
-			color: var(--text-color-primary);
-		}
-	}
-
 	&::before {
 		content: '';
 		z-index: -9999;
@@ -190,30 +155,6 @@ a {
 
 		background: inherit;
 		border-radius: inherit;
-	}
-}
-
-.skeleton {
-	display: inline-block;
-	width: 40px;
-	height: 1em;
-	background: linear-gradient(
-		90deg,
-		rgba(224, 224, 224, 0.1) 25%,
-		rgba(240, 240, 240, 0.12) 50%,
-		rgba(224, 224, 224, 0.1) 75%
-	);
-	background-size: 200% 100%;
-	animation: shimmer 1.5s infinite;
-	border-radius: 4px;
-}
-
-@keyframes shimmer {
-	0% {
-		background-position: 200% 0;
-	}
-	100% {
-		background-position: -200% 0;
 	}
 }
 </style>
