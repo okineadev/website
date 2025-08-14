@@ -49,7 +49,6 @@
 		"unplugin-vue-components": "^29.0.0",
 		"vercel": "^45.0.9",
 		"vite": "^7.1.2",
-		"vite-plugin-compression2": "^2.2.0",
 		"vite-plugin-html": "^3.2.2",
 		"vite-plugin-open-graph": "^2.0.6",
 		"vite-plugin-pwa": "^1.0.2",

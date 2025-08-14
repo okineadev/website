@@ -13,7 +13,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // Compressors
 import { createHtmlPlugin } from 'vite-plugin-html'
-import { compression as viteCompression } from 'vite-plugin-compression2'
 
 // Other
 import Sitemap from 'vite-plugin-sitemap'
@@ -139,12 +138,9 @@ export default defineConfig({
 					vercelAnalytics: process.env.NODE_ENV === 'production' ? vercelAnalyticsScript : '',
 					...basicPreviewMetadata,
 					JSONld: JSON.stringify(JSONld),
-					'okinea.dev': 'okinea.dev',
 				},
 			},
 		}),
-		// @ts-expect-error
-		viteCompression({ filter: /\.(js|css|html)$/i }),
 		Sitemap({ hostname: 'https://okinea.dev' }),
 	],
 	publicDir: 'src/public',
