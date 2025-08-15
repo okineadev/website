@@ -12,18 +12,31 @@
 				{
 					"type": "header",
 					"key": "user-agent",
-					"value": "$curl/.+"
+					"value": "^curl/.+"
 				}
 			],
 			"destination": "/cli.txt"
 		},
 		{
 			"source": "/cli",
+			"has": [
+				{
+					"type": "header",
+					"key": "user-agent",
+					"value": "^curl/.+"
+				}
+			],
+			"destination": "/cli.txt"
+		}
+	],
+	"redirects": [
+		{
+			"source": "/cli",
 			"missing": [
 				{
 					"type": "header",
 					"key": "user-agent",
-					"value": "$curl/.+"
+					"value": "^curl/.+"
 				}
 			],
 			"destination": "https://github.com/okineadev/website/tree/main/cli"
