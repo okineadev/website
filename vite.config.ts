@@ -18,6 +18,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import Sitemap from 'vite-plugin-sitemap'
 import type { Person, WithContext } from 'schema-dts'
 
+//#region Metadata
 const previewImage = {
 	url: '/preview.png',
 	width: 1024,
@@ -42,6 +43,7 @@ const JSONld: WithContext<Person> = {
 	sameAs: ['https://github.com/okineadev', 'https://telegram.okinea.dev'],
 	jobTitle: 'Software Developer',
 }
+//#endregion
 
 /**
  * Vercel Analytics script to be included in the HTML

@@ -3,14 +3,32 @@
 	"public": true,
 
 	"framework": "vite",
+	"buildCommand": "bun run render:cli && bun run build",
 
-	"rewrites": [{ "source": "/cli", "destination": "/api/cli.tsx" }],
-	"functions": {
-		"api/cli.tsx": {
-			"includeFiles": "{package.json,./node_modules/yoga-wasm-web/dist/yoga.wasm}",
-			"maxDuration": 6,
-			"memory": 256
+	"rewrites": [
+		{
+			"source": "/",
+			"has": [
+				{
+					"type": "header",
+					"key": "user-agent",
+					"value": "$curl/.+"
+				}
+			],
+			"destination": "/cli.txt"
+		},
+		{
+			"source": "/cli",
+			"missing": [
+				{
+					"type": "header",
+					"key": "user-agent",
+					"value": "$curl/.+"
+				}
+			],
+			"destination": "https://github.com/okineadev/website/tree/main/cli"
 		}
-	},
+	],
+
 	"installCommand": "bun install --frozen-lockfile"
 }

@@ -9,8 +9,7 @@
 
 		"jsx": "react-jsx",
 
-		"types": ["@types/node", "@types/react"]
+		"types": ["bun-types", "@types/react"]
 	},
 	"include": ["**/*.tsx", "**/*.ts"],
-	"exclude": ["node_modules"]
 }

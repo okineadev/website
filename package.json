@@ -19,11 +19,12 @@
 		"build": "vue-tsc -b && vite-ssg build",
 		"preview": "vite preview",
 		"dev": "vite",
+		"render:cli": "bun run --filter=./cli render",
 		"lint": "biome lint",
 		"format": "prettier **/*.{vue,scss,md,html,yml} -w && biome format --write",
 		"svgo": "svgo src/assets/images/*.svg src/assets/icons/*.svg"
 	},
-	"workspaces": ["api"],
+	"workspaces": ["cli"],
 	"dependencies": {
 		"lenis": "^1.3.8",
 		"vue": "^3.5.18"
@@ -38,7 +39,6 @@
 		"@iconify-json/octicon": "^1.2.10",
 		"@vitejs/plugin-vue": "^6.0.1",
 		"@vue/compiler-sfc": "^3.5.18",
-		"autoprefixer": "^10.4.20",
 		"bun-types": "^1.2.20",
 		"prettier": "^3.6.2",
 		"sass-embedded": "^1.90.0",

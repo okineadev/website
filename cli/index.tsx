@@ -1,11 +1,8 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
-
-import { render } from 'ink-testing-library'
-
 import { Box, Newline, Text, type BoxProps, Spacer } from 'ink'
 import Divider from 'ink-divider'
 import Link from 'ink-link'
 
+//#region Components
 const SearchBar = () => (
 	<Box width="100%" justifyContent="center" position="absolute">
 		<Text>
@@ -35,7 +32,7 @@ interface SafariNavbarProps {
 	countryCode?: string
 }
 
-const SafariNavbar: React.FC<SafariNavbarProps> = ({ countryCode }) => (
+const SafariNavbar = () => (
 	<Box>
 		{macOSControlButtons}
 		<Box columnGap={3} marginLeft={3}>
@@ -44,10 +41,7 @@ const SafariNavbar: React.FC<SafariNavbarProps> = ({ countryCode }) => (
 		</Box>
 		<SearchBar />
 		<Spacer />
-		<Text>
-			{countryCode && `${countryCode} `}
-			<Text bold>+</Text>
-		</Text>
+		<Text bold>+</Text>
 	</Box>
 )
 
@@ -97,8 +91,9 @@ const MediumPost: React.FC<MediumPostProps> = ({ title, description, link, minWi
 		<Text dimColor>{description}</Text>
 	</Box>
 )
+//#endregion
 
-import socials from './_socials.js'
+import socials from './socials.js'
 
 // @ts-ignore
 import projects from '../src/projects.js'
@@ -108,11 +103,7 @@ const BORDER_STYLE: BoxProps['borderStyle'] = 'round'
 const PADDING = 1
 const BORDER_COLOR: BoxProps['borderColor'] = 'gray'
 
-interface AppProps {
-	countryCode?: string
-}
-
-const App: React.FC<AppProps> = ({ countryCode }) => (
+const App = () => (
 	<Box
 		borderStyle={BORDER_STYLE}
 		borderColor={BORDER_COLOR}
@@ -124,7 +115,7 @@ const App: React.FC<AppProps> = ({ countryCode }) => (
 		width={95}
 	>
 		<Box flexDirection="column">
-			<SafariNavbar countryCode={countryCode} />
+			<SafariNavbar />
 			<Divider />
 
 			<Text>
@@ -207,30 +198,4 @@ const App: React.FC<AppProps> = ({ countryCode }) => (
 	</Box>
 )
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-	try {
-		const countryCodeHeader = req.headers['x-vercel-ip-country']
-		const countryCode: string | undefined =
-			typeof countryCodeHeader === 'string'
-				? countryCodeHeader
-				: Array.isArray(countryCodeHeader)
-					? countryCodeHeader[0]
-					: undefined
-
-		// Use the ink-testing-library's render function
-		const { lastFrame } = render(<App countryCode={countryCode} />)
-
-		const renderedText = lastFrame()
-
-		// Set the content type to plain text
-		res.setHeader('Content-Type', 'text/plain; charset=utf-8')
-		res.setHeader('Cache-Control', 'public, max-age=86400')
-
-		// Send the rendered output
-		res.status(200).send(renderedText)
-	} catch (error) {
-		console.error('Error rendering Ink component:', error)
-		// @ts-ignore
-		res.status(500).send(`Error: ${error.message}`)
-	}
-}
+export default App

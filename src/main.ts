@@ -3,7 +3,7 @@ import './scss/style.scss'
 import App from './App.vue'
 import makeBurst from './effects/sparks'
 
-const messageStyle = `
+const consoleMessageStyle = `
 	background-color: white;
 	color: black;
 	font-size: 14px;
@@ -17,9 +17,7 @@ const messageStyle = `
 
 export const createApp = ViteSSG(App, () => {
 	if (!import.meta.env.SSR) {
-		import('lenis').then((module) => {
-			const Lenis = module.default
-
+		import('lenis').then(({ default: Lenis }) => {
 			// Initialize Lenis
 			new Lenis({ autoRaf: true })
 
@@ -33,12 +31,7 @@ export const createApp = ViteSSG(App, () => {
 				})
 			}
 
-			console.log(
-				'%c🐈 Sources are available at: https://github.com/okineadev/okineadev-website%cPlease consider giving it a ⭐ if you like it\n' +
-					'My Telegram channel: https://t.me/okinea_blog',
-				messageStyle,
-				messageStyle,
-			)
+			console.log('%c🐈 Sources are available at: https://github.com/okineadev/website', consoleMessageStyle)
 		})
 	}
 })
