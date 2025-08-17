@@ -20,15 +20,20 @@
 	}
 }
 
-// 🎬 https://youtu.be/0TnO1GzKWPc?si=OWpLDau7D08R8ITm
+// 🎬 https://youtu.be/0TnO1GzKWPc
 @keyframes appear {
 	0% {
-		opacity: 0;
+		opacity: 0.1;
 		transform: translateY(30px) scale(0.95);
+		filter: blur(4px);
+	}
+	80% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
 	}
 	100% {
-		opacity: 1;
-		transform: translateY(0) scale(1);
+		transform: scale(1);
 	}
 }
 

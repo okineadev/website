@@ -71,6 +71,8 @@ import Emoji from './Other/Emoji.vue'
 			margin: 0;
 			text-shadow: -4px -4px 20px #0000001c;
 			letter-spacing: -1px;
+			font-family: 'Raleway', sans-serif !important;
+			font-weight: 700;
 		}
 
 		// Meta info styles

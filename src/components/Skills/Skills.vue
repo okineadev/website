@@ -16,68 +16,6 @@ import ProgrammingSection from './Sections/ProgrammingSection.vue'
 
 			<DesignSection />
 		</div>
-
-		<!-- <div class="section tools" aria-labelledby="tools-skills-title">
-			<h2 id="tools-skills-title"><i-octicon-tools-16 /> Tools</h2>
-
-			<ToolsSection />
-		</div> -->
-
-		<!-- <div class="hosting">
-					<h2>Other</h2>
-
-					<div class="skills-list">
-						<a href="https://vercel.com/" target="_blank">
-							<img
-								src="https://go-skill-icons.vercel.app/api/icons?i=vercel"
-								alt="vercel logo"
-								width="45"
-								height="45"
-							/>
-						</a>
-						<a href="https://cloud.google.com/" target="_blank">
-							<img
-								src="https://go-skill-icons.vercel.app/api/icons?i=gcp"
-								alt="Google Cloud logo"
-								width="45"
-								height="45"
-							/>
-						</a>
-						<a href="https://azure.microsoft.com/" target="_blank">
-							<img
-								src="https://go-skill-icons.vercel.app/api/icons?i=azure"
-								alt="Azure logo"
-								width="45"
-								height="45"
-							/>
-						</a>
-						<a href="https://www.digitalocean.com/" target="_blank">
-							<img
-								src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
-								alt="digitalocean logo"
-								width="45"
-								height="45"
-							/>
-						</a>
-						<a href="https://git-scm.com/" target="_blank"
-							><img src="https://go-skill-icons.vercel.app/api/icons?i=git" alt="git logo" width="45" height="45"
-						/></a>
-						<a href="https://wikipedia.org/wiki/Linux" target="_blank"
-							><img
-								src="https://go-skill-icons.vercel.app/api/icons?i=linux"
-								alt="linux logo"
-								width="45"
-								height="45"
-						/></a>
-						<a href="https://ubuntu.com/" target="_blank"
-							><img
-								src="https://go-skill-icons.vercel.app/api/icons?i=ubuntu"
-								alt="ubuntu logo"
-								width="45"
-								height="45"
-						/></a>
-					</div>
-				</div> -->
 	</div>
 </template>
 

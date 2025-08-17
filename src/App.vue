@@ -9,7 +9,6 @@ import Socials from './components/Socials/Socials.vue'
 import Code from './components/Code.vue'
 import MediumPosts from './components/Medium/MediumPosts.vue'
 import Footer from './components/Footer.vue'
-import ProgressiveBlur from './components/ProgressiveBlur™.vue'
 
 import myProjects from './projects'
 
@@ -70,8 +69,6 @@ const projects = ref(myProjects)
 	</div>
 
 	<Footer />
-
-	<ProgressiveBlur :blurHeight="70" />
 </template>
 
 <style lang="scss">
@@ -95,7 +92,8 @@ const projects = ref(myProjects)
 		& > * {
 			animation: appear ease-in-out;
 			animation-timeline: view();
-			animation-range: entry 0% cover 180px;
+			animation-range: entry 0% cover 150px;
+			will-change: transform, opacity, filter;
 		}
 	}
 }
