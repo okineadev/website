@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import Cursor from './components/Other/Cursor.vue'
 import ThemeSwitch from './components/ThemeSwitch.vue'
 import Profile from './components/Profile.vue'
 import Project from './components/Project.vue'
@@ -16,6 +17,7 @@ const projects = ref(myProjects)
 </script>
 
 <template>
+	<Cursor />
 	<ThemeSwitch />
 	<div class="background-gradient" aria-hidden="true"></div>
 
