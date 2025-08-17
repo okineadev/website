@@ -1,11 +1,12 @@
-<!-- <script setup lang="ts">
-// import ChromeDino from './ChromeDino.vue';
-</script> -->
+<script setup lang="ts">
+import Cursorphobic from './Other/Cursorphobic.vue'
+</script>
 
 <template>
 	<footer>
-		<!-- <img src="../images/chrome-dino.svg" id="dino" alt="Chrome Dino 🦖" height="60"> -->
-		<a href="https://github.com/okineadev/okineadev-website">Source Code</a>
+		<Cursorphobic multiplier="0.3"
+			><a href="https://github.com/okineadev/okineadev-website">Source Code</a></Cursorphobic
+		>
 	</footer>
 </template>
 
