@@ -4,11 +4,11 @@ import Cursorphobic from './Other/Cursorphobic.vue'
 
 <template>
 	<footer>
-		<Cursorphobic multiplier="0.3"
+		<Cursorphobic :multiplier="0.3"
 			><a href="https://github.com/okineadev/okineadev-website">Source Code</a></Cursorphobic
 		>
 
-		<img src="../assets/cat.svg" style="margin-top: 40px" width="600" height="75" />
+		<img src="../assets/cat.svg" style="margin-top: 40px" width="600" height="75" id="catpuccin-cat" />
 	</footer>
 </template>
 
@@ -20,5 +20,10 @@ footer {
 	margin-top: 25px;
 	margin-bottom: 70px;
 	align-items: center;
+
+	#catpuccin-cat {
+		max-width: 100%;
+		object-fit: cover;
+	}
 }
 </style>
