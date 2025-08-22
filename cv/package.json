@@ -1,0 +1,25 @@
+{
+	"name": "okineadev-cv",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"render:pdf": "bun scripts/pdf.ts"
+	},
+	"dependencies": {
+		"lucide-vue-next": "^0.541.0",
+		"vue": "catalog:"
+	},
+	"devDependencies": {
+		"@sparticuz/chromium": "^138.0.2",
+		"@tailwindcss/vite": "^4.1.12",
+		"@vitejs/plugin-vue": "catalog:",
+		"puppeteer-core": "^24.17.0",
+		"tailwindcss": "^4.1.12",
+		"typescript": "catalog:",
+		"vite": "catalog:",
+		"vite-plugin-singlefile": "^2.3.0"
+	}
+}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@300;400;500;600;700&family=Sora&display=swap");
+@import "tailwindcss";
+
+/* CSS Reset styles */
+@import "tailwindcss/preflight.css" layer(base);
+
+@layer base {
+	p {
+		@apply font-poppins text-[24px] my-4;
+	}
+	b {
+		@apply font-semibold;
+	}
+}
+
+@theme {
+	--font-poppins: "Poppins", sans-serif;
+	--default-font-family: "Poppins", sans-serif;
+}
