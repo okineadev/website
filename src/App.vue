@@ -11,14 +11,21 @@ import Code from './components/Code.vue'
 import MediumPosts from './components/Medium/MediumPosts.vue'
 import Footer from './components/Footer.vue'
 
+import { VueLenis } from 'lenis/vue'
+
 import myProjects from './projects'
 
 const projects = ref(myProjects)
 </script>
 
 <template>
+	<!-- Global smooth scrolling-->
+	<VueLenis root />
+	<!-- Fancy cursor -->
 	<Cursor />
+
 	<ThemeSwitch />
+
 	<div class="background-gradient" aria-hidden="true"></div>
 
 	<!-- Decorative elements -->

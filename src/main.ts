@@ -17,21 +17,16 @@ const consoleMessageStyle = `
 
 export const createApp = ViteSSG(App, () => {
 	if (!import.meta.env.SSR) {
-		import('lenis').then(({ default: Lenis }) => {
-			// Initialize Lenis
-			new Lenis({ autoRaf: true })
+		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+			// Cool click effect
+			document.addEventListener('click', (e) => {
+				const center = { x: e.pageX, y: e.pageY }
+				if (center.x && center.y) {
+					makeBurst(center)
+				}
+			})
+		}
 
-			if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-				// Cool click effect
-				document.addEventListener('click', (e) => {
-					const center = { x: e.pageX, y: e.pageY }
-					if (center.x && center.y) {
-						makeBurst(center)
-					}
-				})
-			}
-
-			console.log('%c🐈 Sources are available at: https://github.com/okineadev/website', consoleMessageStyle)
-		})
+		console.log('%c🐈 Sources are available at: https://github.com/okineadev/website', consoleMessageStyle)
 	}
 })
