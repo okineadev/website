@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin, type ResolvedConfig } from 'vite'
+import path from 'node:path'
 
 import Vue from '@vitejs/plugin-vue'
 
@@ -9,7 +10,6 @@ import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 import ogPlugin from 'vite-plugin-open-graph'
-import { VitePWA } from 'vite-plugin-pwa'
 
 // Compressors
 import { createHtmlPlugin } from 'vite-plugin-html'
@@ -94,47 +94,6 @@ export default defineConfig({
 				image: previewImage.url,
 			},
 		}),
-		VitePWA({
-			manifest: {
-				name: basicPreviewMetadata.title,
-				description: '🌐 My personal portfolio website showcasing my projects, blog posts, and contacts',
-				display: 'standalone',
-				background_color: '#101010',
-				theme_color: '#262525',
-				icons: [
-					{
-						src: '/favicon.svg',
-						sizes: 'any',
-						type: 'image/svg+xml',
-					},
-					{
-						src: '/favicon-16x16.png',
-						sizes: '16x16',
-						type: 'image/png',
-					},
-					{
-						src: '/favicon-32x32.png',
-						sizes: '32x32',
-						type: 'image/png',
-					},
-					{
-						src: '/android-chrome-192x192.png',
-						sizes: '192x192',
-						type: 'image/png',
-					},
-					{
-						src: '/android-chrome-512x512.png',
-						sizes: '512x512',
-						type: 'image/png',
-					},
-					{
-						src: '/apple-touch-icon.png',
-						sizes: '180x180',
-						type: 'image/png',
-					},
-				],
-			},
-		}),
 		createHtmlPlugin({
 			minify: true,
 			inject: {
@@ -146,6 +105,32 @@ export default defineConfig({
 			},
 		}),
 		Sitemap({ hostname: 'https://okinea.dev' }),
+		((): Plugin => {
+			let publicDir: ResolvedConfig['publicDir']
+
+			return {
+				name: 'minify-manifest',
+				apply: 'build',
+
+				configResolved(resolvedConfig) {
+					publicDir = resolvedConfig.publicDir
+				},
+
+				async generateBundle() {
+					const manifestPath = path.join(publicDir, 'manifest.json')
+					const manifest = Bun.file(manifestPath)
+
+					const content = await manifest.text()
+					const minified = JSON.stringify(JSON.parse(content))
+
+					this.emitFile({
+						type: 'asset',
+						fileName: 'manifest.json',
+						source: minified,
+					})
+				},
+			}
+		})(),
 	],
 	publicDir: 'src/public',
 })
