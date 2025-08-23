@@ -43,5 +43,4 @@ dist
 /components.d.ts
 .vercel
 
-src/public/cli.txt
 .env*.local

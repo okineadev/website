@@ -3,7 +3,7 @@
 	"public": true,
 
 	"framework": "vite",
-	"buildCommand": "bun run --bun render:cli && bun run --bun build:all",
+	"buildCommand": "bun run --bun build:all && bun run --bun render:cli",
 
 	"rewrites": [
 		{
