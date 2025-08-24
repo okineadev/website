@@ -1,102 +1,12 @@
-import { Box, Newline, Text, type BoxProps, Spacer } from 'ink'
+import { Box, Newline, Text, type BoxProps } from 'ink'
 import Divider from 'ink-divider'
 import Link from 'ink-link'
 
-//#region Components
-const SearchBar = () => (
-	<Box width="100%" justifyContent="center" position="absolute">
-		<Text>
-			<Text dimColor={true}>【</Text>
-			{'         '}
-			<Text color="whiteBright">
-				<Link url="https://okinea.dev" fallback={false}>
-					okinea.dev
-				</Link>
-			</Text>
-			{'      '}
-			<Text>
-				↻{'  '}
-				<Text dimColor={true}>】</Text>
-			</Text>
-		</Text>
-	</Box>
-)
-
-const macOSControlButtons = (
-	<Text>
-		<Text color="red">●</Text> <Text color="yellow">●</Text> <Text color="green">●</Text>
-	</Text>
-)
-
-interface SafariNavbarProps {
-	countryCode?: string
-}
-
-const SafariNavbar = () => (
-	<Box>
-		{macOSControlButtons}
-		<Box columnGap={3} marginLeft={3}>
-			<Text>⯇</Text>
-			<Text dimColor={true}>⯈</Text>
-		</Box>
-		<SearchBar />
-		<Spacer />
-		<Text bold>+</Text>
-	</Box>
-)
-
-interface MediumPostProps {
-	/**
-	 * The title of the post, displayed inside the component.
-	 */
-	title: string
-
-	/**
-	 * The description of the post, shown below the title.
-	 */
-	description: string
-
-	/**
-	 * Link to the post
-	 */
-	link: string
-
-	/**
-	 * The minimum width of the post box (in characters).
-	 * @default 30
-	 */
-	minWidth?: string
-
-	/**
-	 * Additional properties passed to the `Box` component from the `ink` library.
-	 */
-	boxProps?: BoxProps
-}
-
-const MediumPost: React.FC<MediumPostProps> = ({ title, description, link, minWidth = 30, boxProps }) => (
-	<Box
-		flexDirection="column"
-		padding={1}
-		borderStyle="round"
-		borderColor="cyan"
-		flexGrow={1}
-		width={minWidth}
-		{...boxProps}
-	>
-		<Link url={link} fallback={false}>
-			<Text color="blue" bold>
-				{title}
-			</Text>
-		</Link>
-		<Text dimColor>{description}</Text>
-	</Box>
-)
-//#endregion
-
-import socials from './socials.js'
-
-// @ts-ignore
-import projects from '../src/projects.js'
+import socials from '../src/data/socials.ts'
+import projects from '../src/data/projects.ts'
+import MediumPost from './components/MediumPost.tsx'
+import SafariNavbar from './components/Safari™/SafariNavbar.tsx'
+import mediumPosts from '../src/data/medium-posts.ts'
 
 // Constants
 const BORDER_STYLE: BoxProps['borderStyle'] = 'round'
@@ -112,27 +22,24 @@ const App = () => (
 		flexDirection="row"
 		alignSelf="flex-start"
 		gap={4}
-		width={95}
+		width={100}
 	>
 		<Box flexDirection="column">
-			<SafariNavbar />
+			<SafariNavbar url="https://okinea.dev" />
 			<Divider />
 
 			<Text>
-				Hello 👋, my name is <Text bold>Yura</Text>, I'm 16 years old, programmer, designer, I create cool websites,
-				amazing CLI applications and I also write posts on Medium from time to time :)
+				Hello 👋, my name is <Text bold>Yura</Text>, I'm 17 years old, programmer, designer, I create cool websites,
+				TypeScript libraries and amazing CLI applications :)
 				<Newline />
 			</Text>
 			<Text>
-				I work on open source projects, create my own and help others. I am the (ex) maintainer of the{' '}
-				<Link url="https://github.com/material-extensions/vscode-material-icon-theme" fallback={false}>
+				I work on open-source projects that solve real-world problems, and I love seeing my work make a genuine impact.
+				Formerly contributed to the development of {}
+				<Link url="https://github.com/material-extensions/vscode-material-icon-theme">
 					<Text bold>Material Icon Theme</Text>
-				</Link>{' '}
-				extension for VS Code, Co-founder of{' '}
-				<Link url="https://github.com/ZGalera" fallback={false}>
-					<Text bold>Zgalera Inc</Text>
 				</Link>
-				.
+				{} extension for VS Code.
 				<Newline />
 			</Text>
 
@@ -182,16 +89,9 @@ const App = () => (
 
 			<Box flexDirection="column" marginTop={1}>
 				<Box flexDirection="row" alignItems="stretch" flexWrap="wrap" gap={1}>
-					<MediumPost
-						title="How to get a free macOS machine for testing?"
-						description="if you have created a program and want to test it on different operating systems (including macOS), but if..."
-						link="https://medium.com/@okineadev/how-to-get-a-free-macos-machine-for-testing-b2f6c72415fd"
-					/>
-					<MediumPost
-						title="How to set up VNC on a headless Raspberry Pi..."
-						description="If you have Ubuntu Server installed on your Raspberry Pi and you want to connect to its interface without a monitor or mouse?"
-						link="https://medium.com/@okineadev/how-to-set-up-vnc-on-a-headless-raspberry-pi-with-ubuntu-server-24-04-96cc8ddf65bc"
-					/>
+					{mediumPosts.map((post) => (
+						<MediumPost key={post.link} title={post.title} description={post.description} link={post.link} />
+					))}
 				</Box>
 			</Box>
 		</Box>

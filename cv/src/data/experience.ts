@@ -28,7 +28,7 @@ type WorkExperience = {
 	description: string
 }[]
 
-const workExperience = [
+export default [
 	{
 		icon: MaterialExtensionsOrgIcon,
 		organization: 'Material Extensions',
@@ -37,5 +37,3 @@ const workExperience = [
 			'Worked on the most popular open source extension Material Icon Theme for vscode (<b class="font-medium">180M+ downloads</b>), was involved in project management, automation, security and CI efficiency improvements in the repository, added icons, reviewed pull requests, participated in solving issues regarding the further life of the project and other reforms',
 	},
 ] as const satisfies WorkExperience
-
-export default workExperience

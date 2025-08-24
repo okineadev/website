@@ -8,4 +8,4 @@ export default {
 	'CI/CD': ['GitHub Actions'],
 	Design: ['Figma', 'Photoshop', 'Inkscape'],
 	Databases: ['SQLite'],
-}
+} as const satisfies { [key: string]: string[] }

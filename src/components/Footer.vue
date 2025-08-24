@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import Cursorphobic from './Other/Cursorphobic.vue'
-</script>
-
 <template>
 	<footer>
 		<Cursorphobic :multiplier="0.3"

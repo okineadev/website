@@ -1,14 +1,10 @@
-type LanguageProficiencyLevel = 'Native' | 'Fluent' | 'Conversational' | 'Basic' | '1B'
+export type LanguageProficiencyLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | 'Native'
 
-type LanguageEntry = {
+type LanguageProficiency = {
 	[key: string]: LanguageProficiencyLevel
 }
 
-type LanguageProficiency = LanguageEntry
-
-const languages: LanguageProficiency = {
+export default {
 	Ukrainian: 'Native',
-	English: '1B',
-}
-
-export default languages
+	English: 'B1',
+} as const satisfies LanguageProficiency

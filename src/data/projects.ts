@@ -1,6 +1,21 @@
-import type { Project } from './types.d.js'
+/**
+ * Represents a project with its metadata.
+ */
+export type Project = {
+	/**
+	 * The GitHub repository of the project in the format "username/repo".
+	 * @example "okineadev/dotload"
+	 */
+	repo: string
 
-const myProjects: Project[] = [
+	/**
+	 * A short description of the project, often with emojis for context.
+	 * @example "🌠 Simple tool for installing dotfiles on any machine!"
+	 */
+	description: string
+}
+
+export default [
 	{
 		repo: 'okineadev/vitepress-plugin-llms',
 		description: '📜 A VitePress plugin for generating LLM-friendly documentation',
@@ -29,6 +44,4 @@ const myProjects: Project[] = [
 		repo: 'okineadev/platform-tools-installer-gui',
 		description: '📥 Unofficial platform-tools GUI installer (adb, fastboot) for Windows™',
 	},
-]
-
-export default myProjects
+] as const satisfies Project[]

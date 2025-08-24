@@ -13,7 +13,7 @@ import Footer from './components/Footer.vue'
 
 import { VueLenis } from 'lenis/vue'
 
-import myProjects from './projects'
+import myProjects from './data/projects'
 
 const projects = ref(myProjects)
 </script>

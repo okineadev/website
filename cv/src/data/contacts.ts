@@ -27,7 +27,7 @@ export type Contacts = {
 	[key: string]: ContactValue
 }
 
-const contacts = {
+export default {
 	email: { text: 'hi@okinea.dev', link: 'mailto:hi@okinea.dev', icon: Mail },
 	website: { text: 'okinea.dev', link: 'https://okinea.dev', icon: Globe },
 	github: {
@@ -42,5 +42,3 @@ const contacts = {
 	},
 	discord: { text: 'okineadev', icon: Discord },
 } as const satisfies Contacts
-
-export default contacts

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SocialIcon from './SocialIcon.vue'
-import socials from '../../socials'
+import socials from '../../data/socials'
 </script>
 
 <template>
