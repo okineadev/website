@@ -2,7 +2,9 @@ import { Box, Text, type BoxProps } from 'ink'
 import Link from 'ink-link'
 import type { MediumPost as MediumPostType } from '../../src/data/medium-posts.ts'
 
-interface MediumPostProps extends Omit<MediumPostType, 'image'> {
+interface MediumPostProps {
+	post: Omit<MediumPostType, 'image'>
+
 	/**
 	 * The minimum width of the post box (in characters).
 	 * @default 30
@@ -15,7 +17,7 @@ interface MediumPostProps extends Omit<MediumPostType, 'image'> {
 	boxProps?: BoxProps
 }
 
-const MediumPost: React.FC<MediumPostProps> = ({ title, description, link, minWidth = 30, boxProps }) => (
+const MediumPost: React.FC<MediumPostProps> = ({ post, minWidth = 30, boxProps }) => (
 	<Box
 		flexDirection="column"
 		padding={1}
@@ -25,12 +27,12 @@ const MediumPost: React.FC<MediumPostProps> = ({ title, description, link, minWi
 		width={minWidth}
 		{...boxProps}
 	>
-		<Link url={link} fallback={false}>
+		<Link url={post.link} fallback={false}>
 			<Text color="blue" bold>
-				{title}
+				{post.title}
 			</Text>
 		</Link>
-		<Text dimColor>{description}</Text>
+		<Text dimColor>{post.description}</Text>
 	</Box>
 )
 

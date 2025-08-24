@@ -90,7 +90,7 @@ const App = () => (
 			<Box flexDirection="column" marginTop={1}>
 				<Box flexDirection="row" alignItems="stretch" flexWrap="wrap" gap={1}>
 					{mediumPosts.map((post) => (
-						<MediumPost key={post.link} title={post.title} description={post.description} link={post.link} />
+						<MediumPost key={post.link} post={post} />
 					))}
 				</Box>
 			</Box>

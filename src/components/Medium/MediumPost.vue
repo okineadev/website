@@ -1,20 +1,19 @@
 <script setup lang="ts">
+import type { MediumPost } from '../../data/medium-posts'
+
 defineProps<{
-	link: string
+	post: MediumPost
 	titleId: string
-	image: string
-	title: string
-	description: string
 }>()
 </script>
 
 <template>
-	<a class="post" :href="link" role="article" :aria-labelledby="titleId">
+	<a class="post" :href="post.link" role="article" :aria-labelledby="titleId">
 		<i-octicon-link-external-16 class="open" />
-		<img :src="image" />
+		<img :src="post.image" />
 		<div class="info">
-			<h2 :id="titleId">{{ title }}</h2>
-			<p>{{ description }}</p>
+			<h2 :id="titleId">{{ post.title }}</h2>
+			<p>{{ post.description }}</p>
 		</div>
 	</a>
 </template>

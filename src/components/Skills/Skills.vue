@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import DesignSection from './Sections/DesignSection.vue'
-import ProgrammingSection from './Sections/ProgrammingSection.vue'
-</script>
-
 <template>
 	<div class="skills">
 		<div class="section programming" aria-labelledby="programming-skills-title">

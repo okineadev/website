@@ -4,14 +4,7 @@ import mediumPosts from '../../data/medium-posts'
 
 <template>
 	<div class="medium-posts-container" aria-labelledby="medium-posts-title">
-		<MediumPost
-			v-for="(post, index) in mediumPosts"
-			:link="post.link"
-			:image="post.image"
-			:title="post.title"
-			:description="post.description"
-			:titleId="`post-${index}-title`"
-		/>
+		<MediumPost v-for="(post, index) in mediumPosts" :post :titleId="`post-${index}-title`" />
 	</div>
 </template>
 
