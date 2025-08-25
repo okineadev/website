@@ -26,5 +26,5 @@
 
 		"types": ["unplugin-icons/types/vue3"]
 	},
-	"include": ["src/**/*.ts", "src/**/*.vue"]
+	"include": ["src/**/*.ts", "src/**/*.vue", "components.d.ts"]
 }

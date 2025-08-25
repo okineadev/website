@@ -1,11 +1,11 @@
 export default {
-	Languages: ['Python', 'JavaScript', 'TypeScript', 'Bash', 'PowerShell'],
-	Frontend: ['Vue', 'Svelte', 'SCSS', 'HTML'],
+	Languages: ['JavaScript', 'TypeScript', 'Python', 'Bash', 'PowerShell'],
+	Frontend: ['Vue', 'Svelte', 'SCSS'],
+	'UI Frameworks': ['Tailwind CSS', 'shadcn/ui'],
+	Design: ['Figma', 'Inkscape'],
 	Backend: ['Docker', 'ElysiaJS', 'Vercel Serverless Functions'],
-	'UI Frameworks': ['TailwindCSS', 'shadcn/ui'],
 	'Build tools': ['Vite', 'Bun', 'Gulp', 'Webpack'],
 	Testing: ['Bun', 'Vitest', 'Jest'],
 	'CI/CD': ['GitHub Actions'],
-	Design: ['Figma', 'Photoshop', 'Inkscape'],
 	Databases: ['SQLite'],
 } as const satisfies { [key: string]: string[] }

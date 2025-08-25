@@ -5,6 +5,8 @@
 	},
 	"[svg]": { "editor.defaultFormatter": "jock.svg" },
 
+	"editor.formatOnSave": true,
+
 	"github.copilot.chat.codeGeneration.instructions": [{ "file": "/architecture.md" }],
 	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
 
@@ -30,6 +32,18 @@
 	],
 
 	"material-icon-theme.activeIconPack": "vue",
+	"material-icon-theme.folders.associations": {
+		"cli/components": "react-components"
+	},
+	"material-icon-theme.folders.customClones": [
+		{
+			"name": "cv",
+			"base": "admin",
+			"color": "blue-400",
+			"folderNames": ["cv"]
+		}
+	],
+
 	"vite.devCommand": "bun run dev",
 	"typescript.tsdk": "node_modules/typescript/lib"
 }

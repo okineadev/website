@@ -1,3 +1,12 @@
 {
-	"recommendations": ["davidanson.vscode-markdownlint", "jock.svg", "biomejs.biome"]
+	"recommendations": [
+		"davidanson.vscode-markdownlint",
+		"jock.svg",
+		"biomejs.biome",
+		"stivo.tailwind-fold",
+		"bradlc.vscode-tailwindcss",
+		"esbenp.prettier-vscode",
+		"csstools.postcss",
+		"pushqrdx.inline-html"
+	]
 }
