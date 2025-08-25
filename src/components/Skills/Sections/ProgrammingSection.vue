@@ -67,12 +67,7 @@
 			<img src="https://go-skill-icons.vercel.app/api/icons?i=sqlite" alt="sqlite logo" width="45" height="45" />
 		</a>
 		<a href="https://www.electronjs.org/" target="_blank" aria-label="Electron">
-			<img
-				src="https://go-skill-icons.vercel.app/api/icons?i=electron"
-				alt="electron logo"
-				width="45"
-				height="45"
-			/>
+			<img src="https://go-skill-icons.vercel.app/api/icons?i=electron" alt="electron logo" width="45" height="45" />
 		</a>
 	</div>
 </template>

@@ -1,6 +1,8 @@
 {
-	"[javascript][typescript][json]": { "editor.defaultFormatter": "biomejs.biome" },
-	"[vue][scss][markdown][html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[javascript][typescript][json][scss]": { "editor.defaultFormatter": "biomejs.biome" },
+	"[vue][markdown][html][github-actions-workflow][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[svg]": { "editor.defaultFormatter": "jock.svg" },
 
 	"github.copilot.chat.codeGeneration.instructions": [{ "file": "/architecture.md" }],

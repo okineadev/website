@@ -4,8 +4,8 @@ import Body from './layouts/Body.vue'
 </script>
 
 <template>
-  <div>
-    <Header />
-    <Body />
-  </div>
+	<div>
+		<Header />
+		<Body />
+	</div>
 </template>

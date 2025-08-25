@@ -5,19 +5,7 @@
 	"semi": false,
 	"overrides": [
 		{
-			"files": "*.html",
-			"options": {
-				"tabWidth": 2
-			}
-		},
-		{
-			"files": "*.yml",
-			"options": {
-				"tabWidth": 2
-			}
-		},
-		{
-			"files": "*.md",
+			"files": "*.(html|yml|vue)",
 			"options": {
 				"tabWidth": 2
 			}

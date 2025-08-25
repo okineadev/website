@@ -24,12 +24,7 @@ const name = props.project.repo.split('/')[1]
 </script>
 
 <template>
-	<a
-		:href="`https://github.com/${project.repo}`"
-		class="project-tab"
-		role="region"
-		:aria-labelledby="`${name}-title`"
-	>
+	<a :href="`https://github.com/${project.repo}`" class="project-tab" role="region" :aria-labelledby="`${name}-title`">
 		<div class="info">
 			<div class="project-header">
 				<div class="repo">

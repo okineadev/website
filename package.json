@@ -25,7 +25,7 @@
 		"dev:cv": "bun run --cwd=cv dev",
 		"render:cli": "bun run --filter=./cli render",
 		"lint": "biome lint",
-		"format": "prettier **/*.{vue,scss,md,html,yml} -w && biome format --write",
+		"format": "prettier '**/*.{vue,md,html,yml}' -w && biome format --write",
 		"svgo": "svgo src/assets/images/*.svg src/assets/icons/*.svg"
 	},
 	"workspaces": {

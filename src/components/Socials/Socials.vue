@@ -10,9 +10,7 @@ import socials from '../../data/socials'
 		<SocialIcon caption="Telegram" :url="socials.Telegram"><i-logos-telegram /></SocialIcon>
 		<SocialIcon caption="Medium" :url="socials.Medium"><i-other-medium-icon /></SocialIcon>
 		<SocialIcon caption="Discord" :url="socials.Discord"><i-logos-discord-icon /></SocialIcon>
-		<SocialIcon caption="Stack Overflow" :url="socials['Stack Overflow']"
-			><i-logos-stackoverflow-icon
-		/></SocialIcon>
+		<SocialIcon caption="Stack Overflow" :url="socials['Stack Overflow']"><i-logos-stackoverflow-icon /></SocialIcon>
 	</div>
 </template>
 

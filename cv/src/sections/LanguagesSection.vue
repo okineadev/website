@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <HeaderWithUnderline>Languages</HeaderWithUnderline>
-    <p v-for="[language, level] in Object.entries(languages)" class="my-3">
-      <b>{{ language }}</b
-      >: {{ level }}
-    </p>
-  </div>
+	<div>
+		<HeaderWithUnderline>Languages</HeaderWithUnderline>
+		<p v-for="[language, level] in Object.entries(languages)" class="my-3">
+			<b>{{ language }}</b
+			>: {{ level }}
+		</p>
+	</div>
 </template>
 
 <script setup>

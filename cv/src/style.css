@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@300;400;500;600;700&family=Sora&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@300;400;500;600;700&family=Sora&display=swap');
+@import 'tailwindcss';
 
 /* CSS Reset styles */
-@import "tailwindcss/preflight.css" layer(base);
+@import 'tailwindcss/preflight.css' layer(base);
 
 @layer base {
 	p {
@@ -11,9 +11,19 @@
 	b {
 		@apply font-semibold;
 	}
+
+	ul {
+		@apply list-inside list-disc;
+	}
+
+	/* https://stackoverflow.com/a/55965363/21165921 */
+	ul li::before {
+		content: '';
+		margin-left: -0.5rem;
+	}
 }
 
 @theme {
-	--font-poppins: "Poppins", sans-serif;
-	--default-font-family: "Poppins", sans-serif;
+	--font-poppins: 'Poppins', sans-serif;
+	--default-font-family: 'Poppins', sans-serif;
 }

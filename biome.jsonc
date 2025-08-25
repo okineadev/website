@@ -24,6 +24,11 @@
 			"semicolons": "asNeeded"
 		}
 	},
+	"css": {
+		"formatter": {
+			"quoteStyle": "single"
+		}
+	},
 
 	"overrides": [
 		{
