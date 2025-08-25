@@ -29,13 +29,13 @@ const App = () => (
 			<Divider />
 
 			<Text>
-				Hello 👋, my name is <Text bold>Yura</Text>, I'm 17 years old, programmer, designer, I create cool websites,
-				TypeScript libraries and amazing CLI applications :)
+				Hello 👋, my name is <Text bold>Yura</Text>, I'm 17 years old, programmer, designer, I create cool
+				websites, TypeScript libraries and amazing CLI applications :)
 				<Newline />
 			</Text>
 			<Text>
-				I work on open-source projects that solve real-world problems, and I love seeing my work make a genuine impact.
-				Formerly contributed to the development of {}
+				I work on open-source projects that solve real-world problems, and I love seeing my work make a
+				genuine impact. Formerly contributed to the development of {}
 				<Link url="https://github.com/material-extensions/vscode-material-icon-theme">
 					<Text bold>Material Icon Theme</Text>
 				</Link>

@@ -11,5 +11,5 @@
 
 		"types": ["bun-types", "@types/react"]
 	},
-	"include": ["**/*.tsx", "**/*.ts"],
+	"include": ["**/*.tsx", "**/*.ts"]
 }
