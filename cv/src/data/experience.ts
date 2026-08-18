@@ -38,12 +38,12 @@ export default [
 		organization: 'vitepress-plugin-llms',
 		role: 'Creator & maintainer',
 		description: /* html */ `
-<p>Built and maintain a VitePress plugin with <b>11,000</b>+ weekly downloads on npm.</p>
+<p>Built and maintain a VitePress plugin with <b>50,000</b>+ weekly downloads on npm.</p>
 
 <ul>
 	<li>Tech stack: TypeScript, Vue.</li>
 	<li>Adopted widely across the VitePress ecosystem; highlighted by Evan You on X.</li>
-	<li>Adopted by the most popular documentation websites such as <u>vite.dev</u>, <u>vuejs.org</u>, <u>docs.meteor.com</u> and many others.</li>
+	<li>Adopted by the most popular documentation websites such as <u>vite.dev</u>, <u>vuejs.org</u>, <u>docs.meteor.com</u> and 950+ other websites.</li>
 </ul>`.trim(),
 		period: '2025 - present',
 	},

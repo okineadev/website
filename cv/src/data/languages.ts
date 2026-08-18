@@ -6,5 +6,6 @@ type LanguageProficiency = {
 
 export default {
 	Ukrainian: 'Native',
+	Polish: 'B2',
 	English: 'B1',
 } as const satisfies LanguageProficiency

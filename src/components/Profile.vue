@@ -24,19 +24,20 @@ import Emoji from './Other/Emoji.vue'
 			<div class="description">
 				<p>
 					Hello
-					<Emoji name="hello" />, my name is <b>Yura</b>, I'm 17 years old, programmer, designer, I create cool
-					websites, TypeScript libraries and amazing CLI applications :)
+					<Emoji name="hello" />, my name is <b>Yura</b>, I'm a full-stack developer and designer focused on building developer tools, TypeScript libraries, CLI applications, and modern web experiences.
 				</p>
 				<p>
-					I work on open-source projects that solve real-world problems, and I love seeing my work make a genuine
-					impact. Formerly contributed to the development of
+					I work on open-source projects that solve real-world problems, and I love seeing my work make a genuine impact.
+				</p>
+				<p>
+					Developer of <a href="https://npmx.dev/package/vitepress-plugin-llms">vitepress-plugin-llms</a>, with <b>50,000</b>+ weekly downloads. Formerly contributed to the development of
 					<a href="https://github.com/material-extensions/vscode-material-icon-theme"><b>Material Icon Theme</b></a>
 					extension for VS Code.
 				</p>
 				<p>
 					Once <a href="https://x.com/youyuxi/status/1918134176261521827">mentioned</a> by
-					<a href="https://github.com/yyx990803"><b>Evan You</b></a> — creator of <b>Vue.js</b> & <b>Vite</b> for my
-					<a href="https://github.com/okineadev/vitepress-plugin-llms">vitepress-plugin-llms</a> 🔥
+					<a href="https://github.com/yyx990803"><b>Evan You</b></a> - creator of <b>Vue.js</b> & <b>Vite</b> for my
+					<a href="https://github.com/okineadev/vitepress-plugin-llms">vitepress-plugin-llms</a> 💡
 				</p>
 			</div>
 		</div>
